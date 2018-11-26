@@ -1,0 +1,134 @@
+
+<div class="container-fluid">
+  <div class="col-md-9">
+    <!-- breadcrumb start-->
+    <ul class="breadcrumb">
+      <li><a href="">Home</a></li>
+      <li><a href="">Tools</a></li>
+      <li>BT</li>
+    </ul>
+    <!-- breadcrumb end-->
+
+
+    <h4 class="primary-color" id="BT_IDC">BT spoc in IDC</h4>
+
+    <table class="table table-bordered shadow-box">
+      <thead>
+        <tr class="bg-primary">
+          <th class="text-center">Point of Contact</th>
+          <th class="text-center">Name</th>
+          <th class="text-center">Mail Id</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <center>1st</center>
+          </td>
+          <td>
+            <center>Ankit Kumar</center>
+          </td>
+          <td>
+            <center><a href="mailto:ankit.ah.kumar@accenture.com">ankit.ah.kumar@accenture.com </a></center>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <center>2nd</center>
+          </td>
+          <td>
+            <center>Himanshi Dhoke</center>
+          </td>
+          <td>
+            <center><a href="mailto:himanshi.dhoke@accenture.com">himanshi.dhoke@accenture.com </a></center>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <center>For Escalation</center>
+          </td>
+          <td>
+            <center>Sudhanshu Gupta</center>
+          </td>
+          <td>
+            <center><a href="mailto:sudhanshu.f.gupta@accenture.com">sudhanshu.f.gupta@accenture.com </a></center>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4 class="primary-color" id="General_request">General BT request</h4>
+    <ul>
+      <li>Do not submit any BT request if changes are not live until it is promotion, wait for a day then next day we can submit the BT if changes are still not in live environment.</li>
+      <li>If there may be any potential escalation from market then submit the BT</li>
+      <li>Review the BT feedback, take necessary follow ups with LAL&rsquo;s/Developers and close the BT on time</li>
+      <li>Check the issues internally with other teams, before raise any BT request</li>
+      <li>Don&rsquo;t escalate any BT to Alessandro directly and inform LAL also, contact Sudhanshu for any super urgent issue, he may contact Alessandro</li>
+      <li>Make sure you are sending the report on specified time to Vijaya so that she can escalate BTs on time</li>
+      <li>Thursday is &ldquo;ELOQUA Market Day&rdquo; so we escalate all BTs on Wednesday once in a week</li>
+    </ul>
+    <h4 class="primary-color" id="Eloqua_request">Eloqua BT request</h4>
+    <ul>
+      <li>Always check with your internal Eloqua SPOC and contact Ankit for ELOQUA BT escalation</li>
+      <li>Select only Eloqua project from project list in BT following are the priority level of ELOQUA:</li>
+      <li>1-Block: if leads are invalid, or forms are invisible in live website, brochure is not downloading, forms are not submitting or something really critical,</li>
+      <li>2-Urgent-2: incorrect validation of form in live, site any super urgent request from market</li>
+      <li>3-High: Form validation changes, adding new business field in Auth or any issue which has greater priority than normal</li>
+      <li>4- Normal: All request other than above</li>
+      <li>Summary: Marketxx_Brandxx_Form_Issue e.g. Belgium_Alfaromeo_Test drive form lead error</li>
+      <li>Description: try to make it more clear and always attach the necessary screenshots in document</li>
+    </ul>
+    <h4 class="primary-color" id="CONFIGURATOR_request">Car CONFIGURATOR BT request</h4>
+    <ul>
+      <li>Always raise car configurator BT inside correct project see the below SS brand xx CC market xx</li>
+      <li>Assign CC BTs to Wedoo Support team see below screenshots</li>
+      <li>Escalation will be managed by Vijaya 2 times in a week to Angela</li>
+    </ul>
+
+    <a data-fancybox="gallery" href="img/bt/bugtracker.png"><img img class="img-responsive" src="/img/tools/bt/bugtracker.png"></a>
+
+
+
+
+  </div>
+  <nav class="col-sm-3" id="myScrollspy">
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active"><a href="#BT_IDC">BT spoc in IDC</a></li>
+      <li class=""><a href="#General_request">General BT request</a></li>
+      <li class=""><a href="#Eloqua_request">Eloqua BT request</a></li>
+      <li class=""><a href="#CONFIGURATOR_request">Car CONFIGURATOR BT request</a></li>
+
+
+    </ul>
+  </nav>
+</div>
+
+
+
+
+<script>
+  $(document).ready(function() {
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function() {
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  });
+</script>

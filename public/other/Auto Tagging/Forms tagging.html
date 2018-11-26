@@ -1,0 +1,117 @@
+
+	   <div class="container-fluid"> 
+	   <div class="col-sm-12">
+     
+	   <h3 class="primary-color text-center"> Forms tagging </h3>
+	  <p>Basically the forms tagging is the population of &ldquo;form&rdquo; section under page.component section of digitalData variable, the valorization will change during the various step of the form (start, dealer selection, thank you</p>
+	  <figure>
+        <a data-fancybox="gallery" href="/img/autotagging/form1.png"><img src="/img/autotagging/form1.png" class="img-responsive img-rounded zoom shadow-box"></a>
+      </figure>
+	  <p><br /><br /></p>
+	  <p>Usually the first step of form data is populated by data entry during the SEO tagging, the other steps will be populated by javascript.</p>
+	  <p>This is an example of code for the thank you page if the request is submitted with success:</p>
+	  <p><br /><br /><code></code></p>
+	  <pre>DTMtracker.track("permission", {
+	  page: {
+		   component: {
+			  form: {
+					   stepName: "thankyou",
+					   nameType: "permission:kmi"
+				  }
+			  }
+		  }
+	  }, modelCode);
+	  </pre>
+	  <p>&nbsp;</p>
+	  <h4>Implementation:</h4>
+	  <p>&nbsp;</p>
+	  <p>For the first step of the form usually is enough to populate the form section in the dataentry for SEO tagging.</p>
+	  <p>If the form is contained in an iFrame (e.g. Fiat Professional), you have to include in the iFrame code the correct adobedtm and pagebottom scripts and the declaration of digitalData variable with the form fields populated.</p>
+	  <p>&nbsp;</p>
+	  <p>e.g. test drive (form section):</p>
+	  <pre>"form" : {
+			  "brochureDeliveryMethod" : "",
+			  "contactMethod" : "",
+			  "leadType" : "test-drive-request",
+			  "models" : "",
+			  "nameType" : "lead:test-drive-request",
+			  "purchaseTimeframe" : "",
+			  "stepName" : "form",
+			  "transactionID" : ""
+			  },
+	  </pre>
+	  <p>In the other forms step, when the form is submitted (POST), in case of success the DTMTracker.track function has to be called passing the other velues of form section (leadType, nameType, stepName and brochureDeliveryMethod in case of brochures that can be delivered in different ways).</p>
+	  <p>Usually there are three types of stepName valorization:</p>
+	  <ul>
+	  <li><strong>form</strong>: at form start</li>
+	  <li><strong>dealerselection</strong>: if there is a step where you can select the dealer</li>
+	  <li><strong>thankyou</strong>: if the form is submitted correctly and the thank you page is visualized</li>
+	  </ul>
+	  <p>&nbsp;</p>
+	  <p>Example of valorization when the thank you page is showed</p>
+	  <figure>
+        <a data-fancybox="gallery" href="/img/autotagging/form2.png"><img src="/img/autotagging/form2.png" class="img-responsive img-rounded zoom shadow-box"></a>
+      </figure>
+	  <p>&nbsp;</p>
+	  <p>For the valorization of leadType and nameType fields you can refer to form data population about the tagging of SEO (page 6).</p>
+	  <p>leadType Adobe form Name</p>
+	  <p>nameType Adobe form Name:Adobe Form Type</p>
+	  <p>E.g. Quote Request:</p>
+	  <p>&nbsp;</p>
+	  <figure>
+        <a data-fancybox="gallery" href="/img/autotagging/form3.png"><img src="/img/autotagging/form3.png" class="img-responsive img-rounded zoom shadow-box"></a>
+      </figure>
+	  <p>&nbsp;</p>
+	  <p>leadType: quote-request</p>
+	  <p>nameType: lead:quote-request</p>
+	  <p>&nbsp;</p>
+	  <h4>Common errors:</h4>
+	  <p>The most common reported errors are the following:</p>
+	  <ul>
+	  <li>wrong leadType or nameType</li>
+	  <li>missing &ldquo;thankyou&rdquo; valorization for stepName when the form is successfully submitted</li>
+	  <li>missing &ldquo;dealerselection&rdquo; valorization for stepName ad dealer selection page visualization</li>
+	  </ul>
+	  <p>&nbsp;</p>
+	  <h4>Checks of correctness:</h4>
+	  <ul>
+	  <li>Digit &ldquo;digitalData&rdquo; in the browser console</li>
+	  <li>Verify if the values inserted in page &gt; component &gt; form are correct in every step of the form</li>
+	  </ul>
+
+
+
+	<hr class="breakline"/>
+	<div class="content">
+
+	</div>
+     </div>
+    </div>
+         
+      </div>
+      <br>
+
+	<script>$(document).ready(function(){
+			// Add smooth scrolling to all links
+			$("a").on('click', function(event) {
+		  
+			  // Make sure this.hash has a value before overriding default behavior
+			  if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+		  
+				// Store hash
+				var hash = this.hash;
+		  
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+				  scrollTop: $(hash).offset().top
+				}, 800, function(){
+			 
+				  // Add hash (#) to URL when done scrolling (default click behavior)
+				  window.location.hash = hash;
+				});
+			  } // End if
+			});
+		  });</script>

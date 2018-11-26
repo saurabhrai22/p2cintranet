@@ -1,0 +1,317 @@
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+           <ul>
+            <li><strong>Below outlined are the retail account details on AdWords:</strong></li>
+           </ul>
+            <table class="table table-bordered  shadow-box">
+                                        <tbody>
+                                            <tr>
+                                                <th class="text-center">
+                                                    <p><strong>Brands</strong></p>
+                                                </th>
+                                                <th class="text-center">
+                                                    <p><strong>Account Name (Retail)</strong></p>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>FIAT</p>
+                                                </td>
+                                                <td>
+                                                    <p>DK FCA Fiat</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>JEEP</p>
+                                                </td>
+                                                <td>
+                                                    <p>DK FCA Jeep</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>ALFA ROMEO</p>
+                                                </td>
+                                                <td>
+                                                    <p>DK FCA Alfa Romeo</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>FIAT PROFESSIONAL</p>
+                                                </td>
+                                                <td>
+                                                    <p>DK FCA Fiat Professional</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+									
+                                   
+                                    <ul>
+                                        <li><strong>Reports to download for Automations (Raw Data from AdWords): Change date range to last month</strong>
+                                            <ul>
+                                                <li>Apply Filter: <strong>dk &ndash;</strong>
+                                                    <ol>
+                                                        <li>DK - Kwds report - Main Report - All 4 Accounts</li>
+                                                        <li>DK - Kwds report - Conversion Split - All 4 Accounts</li>
+                                                        <li>DK - Top Kwds report - 4 Accounts</li>
+                                                        <li>DK - Remarketing - 4 Accounts - No Conv Split</li>
+                                                        <li>DK - Remarketing - 4 Accounts - With Conv Split</li>
+                                                    </ol>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><strong>The points need to be noted while creating reports:</strong>
+                                            <ol>
+                                                <li>Copy-Paste previous month folder and rename it with present month date (ex. From <strong>January 2018 </strong>to <strong>February 2018)</strong></li>
+                                                <li>Change the dates of the reporting spreadsheets and insights document to present reporting month.</li>
+                                            </ol>
+                                        </li>
+                                        <br>
+                                        <li><strong>Formatting:</strong>
+                                            <ol start="3">
+                                                <li>Copy paste &lsquo;This Month&rsquo; row data to &lsquo;Last Month&rsquo; row.</li>
+                                                <li>At the MoM grouping data &ndash; Enter a new row before the last Month&rsquo;s row.</li>
+                                                <li>Copy the entire last row and <strong>paste values </strong>to the new row.</li>
+                                                <li>Delete data from the last row</li>
+                                                <li>Enter the date range in the last row, according to which period the reports will be prepared without changing the format</li>
+                                                <li>Group the data to represent 13 Months data (* last row being blank).</li>
+                                                <li>Weekly Tab,
+                                                    <ol>
+                                                        <li>Add 4/5 rows (depending on the number of weeks for the month) after the last week and group the weekly data to display last 7/8 weeks plus additional 4/5 newly added rows.</li>
+                                                    </ol>
+                                                </li>
+                                                <li>Channel, Brand Type, Model, -
+                                                    <ol>
+                                                        <li>Copy data for 1<sup>st</sup> two months data and paste it at the date range of currently seen 2<sup>nd</sup> month.</li>
+                                                    </ol>
+                                                </li>
+                                                <li>Top Keywords and Top Ad Text:
+                                                    <ol>
+                                                        <li>Delete all the data</li>
+                                                    </ol>
+                                                </li>
+                                                <li>All tabs - Update the <strong>Date Range:</strong> according to the period, for which reports will be prepared without changing the format</li>
+                                                <li>**3 Months rolling data.</li>
+                                            </ol>
+                                        </li>
+                                    </ul>
+                                    
+                                    <ul>
+                                        <li><strong>**Notes: Reports are automated, and the procedure is same as Weekly.</strong></li>
+                                    </ul>
+                            
+                                    <ul>
+                                        <li><strong>Automation (Monthly):</strong></li>
+                                    </ul>
+                                    <ol>
+                                        <li>Open the automation file <strong>ETE_Automation All Brands (DK)_v3 </strong>for one brand and raw data file of the same.</li>
+                                        <li>Del data &ndash;
+                                            <ol>
+                                                <li>QS &ndash; Raw Data tab- Delete the data from A4:M4 row till the end &ndash; then delete D3:F3</li>
+                                                <li>Raw Data-ConvSplit - Delete the data from A4:K4 row till the end &ndash; then delete E3:F3</li>
+                                                <li>Raw Data-QS - Delete the data from A4:U4 row till the end &ndash; then delete D3:U3</li>
+                                            </ol>
+                                        </li>
+                                        <li>Enter the required data to the columns in grey for all three tabs
+                                            <ol>
+                                                <li>For Raw Data Tab - from DK - Kwds report - Main Report - All 4 Accounts and drag the Formula for Account Type, Brand Type and Model Type</li>
+                                                <li>For Raw Data-ConvSplit - DK - Kwds report - Conversion Split - All 4 Accounts and drag the formula for Account Type, Brand Type, Model Type and Concatenate</li>
+                                                <li>For Raw Data-QS from DK - Kwds report - Main Report - All 4 Accounts and drag the data for column A, B, C, J, K, L, M, N, O, P, Q, R, S, T and U</li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                    <p>Del the columns with blanks or &lsquo;--&lsquo; QS</p>
+                                    
+                                    <ol start="4">
+                                        <li>Respective Brand wise - Top Keywords from: DK - Top Kwds report - 4 Accounts
+                                            <ol>
+                                                <li>Arrange the columns as per the top keywords table in the Automation sheet (brands tab)</li>
+                                                <li>Update &lt; 10% or &gt; 90% to 10% and 90% respectively.</li>
+                                                <li>Add custom filter &ndash; Conversions then Clicks (largest to smallest)</li>
+                                                <li>Filter each brand and copy paste the top 25 keywords data to the respective brand tab</li>
+                                                <li>Cross verify the totals of conversion column to the sum of conversion name columns and edit the conversion numbers accordingly if required.</li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                    <ol start="5">
+                                        <li>If there are NotFound under the ModelType column, update the mapping tab with this data (mapping procedure in DK &ndash; SOP - Weekly)</li>
+                                        <li>The required data for reports will be now available in the <strong>respective brand tabs.</strong></li>
+                                    </ol>
+                                    <p>The value for all the totals (spends, clicks, impressions, CTR, Leads, Engagements, etc.) should match with each other (i.e with weekly data = brands = models and so on) and with the google dashboard for the period.</p>
+                                    <ul>
+                                        <li><strong>Monthly Report</strong></li>
+                                    </ul>
+                                    <ol>
+                                        <li>According to the header of the table start pasting the data (by values) in the respective tabs of the (brands) Monthly report.</li>
+                                        <li>Weekly tab - Data to be extracted from the last weekly reports created for the brand.</li>
+                                        <li>For the grouped data in the Monthly tab, Monthly Data will be entered.</li>
+                                        <li>Update the IS and Is lost budget for all Brands (Brand type and model wise &ndash; filters same as weekly)</li>
+                                    </ol>
+                                    <p><strong>Note: </strong>While saving the file, curser will be in the Date Range: cell for all tabs and displaying the weekly tab.</p>
+                                    <p><strong>Cross Market: Reports for monthly: </strong></p>
+                                    <ul>
+                                        <li><strong>Monthly Model report (Fiat/Jeep/ Alfa Romeo): - </strong>Format as per the monthly process (3 months rolling data) Copy Paste data from Automation &ndash; Monthly tab.</li>
+                                        <li><strong>YoY:</strong> Extract all the required data from monthly automation but for <strong>spends convert DKK to Euros.</strong> Once data is entered for all the brands &ndash; verify Denmark summary data with Ad Words dashboard. OR Extract the totals from Google Dashboard.
+                                            <ul>
+                                                <li><strong>Leads = </strong>Quotation + Test Drive + Contact</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Whom, How and What to send:</strong>
+                                            <ul>
+                                                <li>All the Reports to be zipped and attached to the mail.</li>
+                                                <li>Mail To: Piotrowska, Marta&lt;marta.piotrowska@accenture.com&gt;; Jezak, Hubert <a href="mailto:hubert.jezak@accenture.com">jezak@accenture.com</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CC: Laskowska, Zuzanna &lt;zuzanna.laskowska@accenture.com&gt;; FIAT_P2C_Mumbai_SEM <a href="mailto:FIAT_P2C_Mumbai_SEM@accenture.com">FIAT_P2C_Mumbai_SEM@accenture.com</a></p>
+                                    <p>&nbsp;&nbsp; Subject: Denmark SEM Monthly Report | February 2018 <strong>(change month)</strong></p>
+
+                                    <ul>
+                                        <li><strong>Below outlined are the retail account details on AdWords:</strong></li>
+                                    </ul>
+                                    
+                                    <table class="table table-bordered  shadow-box">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">Brands</th>
+                                                <th class="text-center">Account Name (Retail)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>FIAT</td>
+                                                <td>DK FCA Fiat</td>
+                                            </tr>
+                                            <tr>
+                                                <td>JEEP</td>
+                                                <td>DK FCA Jeep</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ALFA ROMEO</td>
+                                                <td>DK FCA Alfa Romeo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>FIAT PROFESSIONAL</td>
+                                                <td>DK FCA Fiat Professional</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <br>
+                                    <ul>
+                                        <li><strong>Reports to download for Automations (Raw Data from AdWords): Date range &ndash; (last month)</strong></li>
+                                        <li>Apply Filter: DK<strong> (include space after DK)</strong>
+                                            <ol>
+                                                <li>DK - Kwds report - Conversion Split - (New Automation)</li>
+                                                <li>DK - Kwds report - Main Report - (New Automation)</li>
+                                                <li>DK - Top Kwds report - 4 Accounts (New Automation)</li>
+
+                                            </ol>
+                                        </li>
+                                    </ul>
+
+                                    <ul>
+                                        <li><strong>The points need to be noted while creating reports:</strong>
+                                            <ul>
+                                                <li>Copy-Paste previous week folder and rename it with present week date (ex. From <strong>Jan 18 </strong>to Feb<strong> 18)</strong></li>
+                                                <li>Automation sheets
+                                                    <ul>
+                                                        <li><strong>ETE_Denmark_Google Ads_All Brands_v1</strong></li>
+                                                    </ul>
+                                                </li>
+                                                <li>When using - <strong>&ldquo;ETE_Denmark_Google Ads_All Brands_v1&rdquo;: </strong>
+                                                    <ol style="list-style-type: lower-roman;">
+                                                        <li>Click on &ldquo;Run - Weekly&rdquo; button in the Raw Data sheet to create regular monthly spreadsheets, remarketing spreadsheets with Top keywords (provide the required file names that pop up)</li>
+                                                        <li><strong>Note</strong>: If there are new campaigns added to the market &ndash; the automation will be interrupted and &ldquo;map the not founds&rdquo;. Follow the step no.5 &gt; save the automation sheet &gt; close all the other excels other than automation and re-run it.</li>
+                                                    </ol>
+                                                </li>
+                                                <li>About Mapping:
+                                                    <ol style="list-style-type: lower-roman;">
+                                                        <li>In mapping sheet of automations, you will notice 2 different tables:
+                                                            <ol>
+                                                                <li>Account Name table: This is straightforward, account name is mapped to respective brand name.</li>
+                                                                <li>Campaign Name table: In case automation give a popup of <strong>not found</strong> campaigns map them as per below steps:</li>
+                                                            </ol>
+                                                        </li>
+                                                    </ol>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <table class="table table-bordered  shadow-box">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">Campaign Name</th>
+                                                <th class="text-center">Brand Type</th>
+                                                <th class="text-center">Model Type</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>If campaign name contains “GNRC” or “Generic” or Inspiration</td>
+                                                <td>(BrandName) NonBrand JeepNonBrand</td>
+                                                <td>(BrandName) NonBrand JeepNonBrand</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apply custom filter at the concate column -> contains “ModelName” Ex. Contains “Renegade”
+                                                </td>
+                                                <td>JeepBrand</td>
+                                                <td>Renegade</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Once finished mapping all models and still you find unmapped campaigns, map them to respective (brandGeneric)</td>
+                                                <td>JeepBrand</td>
+                                                <td>JeepBrand</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                    <ul>
+                                        <li><strong>Monthly Report</strong></li>
+                                    </ul>
+                                    <ol>
+                                        <li>Weekly tab - Data to be extracted from the last weekly reports created for the brand. (Group to show 13 rows)</li>
+                                        <li>For the grouped data in the Monthly tab, Monthly Data will be entered (Group to show 13 rows).</li>
+                                        <li>Update the IS and Is lost budget for all Brands (Brand type and model wise &ndash; filters same as weekly) &ndash; use GDS (Google Data Studio) IS dashboard to populate the data model as well brand wise.</li>
+                                    </ol>
+                                    <p><strong>Note: </strong>While saving the file, curser will be in the Date Range: cell for all tabs and displaying the weekly tab.</p>
+
+        </div>
+    </div>
+                        
+       
+    <br>
+
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>

@@ -1,0 +1,40 @@
+
+
+
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+                <div class="dashboard-title" for="c0"> <a href="/">Home</a> </div>
+            <ul class="nav tree" id="side-menu">
+                
+                    <li><label class="tree_label tree_custom home" for=""> SEM PROCESS FLOW</label> </li>
+                <li>
+                    
+                    <ul>
+                         
+                        <% for (var i = 0; i < sem.length; i++) { %>
+                        <li>
+                            <input type="checkbox" id="brands<%= i %>" />
+                            <label for="brands<%= i %>" class="tree_parent">
+                                <%= sem[i].name %></label>
+                            <ul class="file">
+                                <% for (var j = 0; j < sem[i].list.length; j++) { %>
+                                <li><span class="tree_sublabel"><a class="viewload" href="/sem/<%= sem[i].name %>/<%= sem[i].list[j] %>">
+                                            <%= sem[i].list[j].split('.').slice(0, -1).join('.') %></a>
+                                    </span></li>
+                                <% } %>
+                            </ul>
+                        </li>
+                        <% } %>
+
+
+                        
+
+            </ul>
+
+</li>
+
+            </ul>
+        </div>
+        <!-- /.sidebar-collapse -->
+    </div>
+    <!-- /.navbar-static-side -->

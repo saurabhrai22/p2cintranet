@@ -1,0 +1,379 @@
+
+
+        <div class="container-fluid">
+		<div class="col-md-12">
+			<!-- breadcrumb start-->
+			<!-- <ul class="breadcrumb">
+				<li><a href="">Home</a></li>
+				<li><a href="">Brands</a></li>
+				<li><a href="">Fiat Professional</a></li>
+				<li>Ourcars HUB Page</li>
+			</ul> -->
+			<!-- breadcrumb end-->
+            <h3 class="primary-color text-center" >Deepcrawl Weekly Report SOP</h3>
+
+			<h4 class="primary-color" >1. General Instruction</h4>
+            <ul>
+                <li>Technical work books to be delivered every week; Tuesday - major locales DE, FR &amp; IT and Wednesday &ndash; minor locales.</li>
+                <li>Technical workbook: Deep crawl tool to be used for reporting the data</li>
+                <li>The brands to be reported are Fiat, Jeep, Alfa Romeo, Lancia, Abarth and Fiat Pro and locales are Italy, France, Germany, Belgium, Netherland, Denmark, Luxemburg, Poland, Austria &amp; Spain</li>
+                <li>Reporting to be done separately for Desktop and Mobile channels</li>
+                <li>The standard technical workbook document is used for reporting</li>
+                <li>Nomenclature for the reports and documents is as follows:</li>
+            </ul>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DeepCrawl_website_issues_Brand Name (Local Name)_Desktop_Crawl day_MonthName'17</p>
+     
+            <h4 class="primary-color" >2. Reporting Data for Technical Workbook</h4>
+
+            <p>Through this section we will understand the most important checkpoints for the process and provide recommendations for implementation using Deep crawl tool.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note:</p>
+            <ul>
+                <li>Highlight the new issues in blue color in file.</li>
+                <li>If any brand doesn&rsquo;t have any issues then report the brand with pervious week&rsquo;s file that contain the data and mention the email about the same</li>
+                <li>If mobile site goes responsive, then no need to report the mobile site of that brand</li>
+                <li>Title and description issues are reported as common in one tab for &ldquo;Title Problem&rdquo; and &ldquo;Description Problem&rdquo; respectively.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <p>You can find all checkpoints by clicking on "Reports" option. Please have a look below screenshot.</p>
+
+            <center> <a data-fancybox="gallery" href="/img/seo/deep_crawl_weekly_report/1.jpg"><img src="/img/seo/deep_crawl_weekly_report/1.jpg" class="img-responsive"></a></center>
+
+            <p>Checkpoints:</p>
+<ul>
+	<li>Duplicate Pages</li>
+	<li>Non-Indexable Pages</li>
+	<ul>
+		<li>No Index Pages</li>
+		<li>No Followed Pages</li>
+		<li>Canonicalized Pages</li>
+	</ul>
+	<li>Non-200 Status</li>
+	<ul>
+		<li>Non-301 redirect</li>
+		<li>5xx Errors</li>
+		<li>4xx Errors</li>
+	</ul>
+	<li>Failed URLs</li>
+	<li>Uncrawled URLs</li>
+	<ul>
+		<li>Disallowed URLs</li>
+		<li>Malformed URLs</li>
+		<li>Excluded URLs</li>
+		<li>Non-HTML URLs</li>
+	</ul>
+	<li>Titles &amp; Descriptions</li>
+	<ul>
+		<li>Pages with duplicate titles</li>
+		<li>Pages with duplicate descriptions</li>
+		<li>Missing Titles</li>
+		<li>Short Titles</li>
+		<li>Max Title Length</li>
+		<li>Missing Descriptions</li>
+		<li>Short Descriptions</li>
+		<li>Max Description Length</li>
+	</ul>
+</ul>
+
+
+
+            <table  class="table table-bordered  shadow-box">
+				<thead>
+			<tr class="bg-primary">
+				<th class="text-center">
+					Checkpoint
+				</th>
+				<th class="text-center">
+					Description
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+            <tr>
+                <td width="99"><strong>Checkpoint</strong></td>
+                <td width="467"><strong>Description</strong></td>
+            </tr>
+            <tr>
+                <td width="99">Duplicate Pages</td>
+                <td width="467">Pages having almost same information in terms of title, description and content with other pages found in same crawl excluding the primary page URL. Please have a look on below image. Open the report in the new tab.<center><img src="http://10.212.190.222:4000//img/seo/seo_sem/2.jpg" alt="" /></center></td>
+            </tr>
+            <tr>
+                <td width="99">No Index Pages</td>
+                <td width="467">Pages can be crawled but not indexed by search engines, having no index attribute mentioned in robots.txt or robots meta tag. Please have a look on below image. Open the report in the new tab.<center><img src="http://10.212.190.222:4000//img/seo/seo_sem/3.jpg" alt="" /></center></td>
+            </tr>
+            <tr>
+                <td width="99">No Followed Pages</td>
+                <td width="467">Pages are created with &ldquo;Nofollow&rdquo; attribute (includes a rel =&rdquo;nofollow&rdquo; &amp; located in robots =&rdquo;nofollow&rdquo;) Please have a look on below image. Open the report in the new tab. &nbsp;
+                    <p><strong>Note: Report the &ldquo;Found At&rdquo; URL corresponds to primary URL</strong></p>
+                    <center><img src="http://10.212.190.222:4000//img/seo/seo_sem/4.jpg" alt="" /></center></td>
+            </tr>
+            <tr>
+                <td width="99">Canonicalized Pages</td>
+                <td width="467">Pages with wrong canonicals to be reported in this tab.<center><img src="http://10.212.190.222:4000//img/seo/seo_sem/5.jpg" alt="" /></center>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    Dynamic URLs should not be included. Track only those pages who report wrong canonicals</td>
+            </tr>
+            <tr>
+                <td width="99">Non-301 redirect</td>
+                <td width="467">Pages with &ldquo;302&rdquo; meta redirect attribute inform the search engine that redirect the page temporary.
+                    <p>&nbsp;</p>
+                    <p><strong>Note: Don't include URL which having redirected URL of different domain.</strong></p>
+                    Please have a look on below image. Open the report in the new tab.<center><img src="http://10.212.190.222:4000//img/seo/seo_sem/6.png" alt="" /></center></td>
+            </tr>
+            <tr>
+                <td width="99">5xx Errors</td>
+                <td width="467">Pages throws any 5xx server error like &ldquo;503&rdquo; which is caused by temporary server issue occurs at the time of crawling.
+                    <p>&nbsp;</p>
+                    Please have a look on below image. Open the report in the new tab.<center><img src="http://10.212.190.222:4000//img/seo/seo_sem/7.jpg" alt="" /></center></td>
+            </tr>
+            <tr>
+                <td width="99">4xx Errors</td>
+                <td width="467">Pages which having &ldquo;404 -Page Not Found&rdquo; are reported. In this we also report the pages from google search console for the same issue.
+                    <p>&nbsp;</p>
+                    <p><strong>Note: Report the &ldquo;Found At&rdquo; URL corresponds to primary URL</strong></p>
+                    <p>&nbsp;</p>
+                    Please have a look on below image. Open the report in the new tab.<center><img src="http://10.212.190.222:4000//img/seo/seo_sem/8.jpg" alt="" /></center>
+                    <p>&nbsp;</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="99">Failed URL</td>
+                <td width="467">URLs are crawled but didn&rsquo;t respond at the time of crawling.
+                    <p>&nbsp;</p>
+                    Please have a look on below image. Open the report in the new tab.<center><img src="http://10.212.190.222:4000//img/seo/seo_sem/9.jpg" alt="" /></center>
+                    <p>&nbsp;</p>
+                    Open the URL in browser to check if it is landing on error page.</td>
+            </tr>
+            <tr>
+                <td width="99">Disallowed URL</td>
+                <td width="467">URLs are created with &ldquo;Disallow&rdquo; attribute in robots.txt file on site.
+                    <p>&nbsp;</p>
+                    Please have a look on below image. Open the report in the new tab.<center><img src="http://10.212.190.222:4000//img/seo/seo_sem/10.jpg" alt="" /></center></td>
+            </tr>
+            <tr>
+                <td width="99">Malformed URL</td>
+                <td width="467">URLs which are not valid or may be don&rsquo;t have proper folder path. Please have a look on below image. Open the report in the new tab.<center><img src="http://10.212.190.222:4000//img/seo/seo_sem/11.jpg" alt="" /></center>
+                    <p>&nbsp;</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="99">
+                    <p>Excluded URL</p>
+                </td>
+                <td width="467">URLs which are excluded from crawl added in script code. Please have a look on below image. Open the report in the new tab.<center><img src="http://10.212.190.222:4000//img/seo/seo_sem/12.jpg" alt="" /></center></td>
+            </tr>
+            <tr>
+                <td width="99">Non-HTML URL</td>
+                <td width="467">URLs included in crawl which are not HTML pages having other file extension like pdf, img, video, flash.
+                    <p>&nbsp;</p>
+                    Please have a look on below image. Open the report in the new tab.<center><img src="http://10.212.190.222:4000//img/seo/seo_sem/14.jpg" alt="" /></center>
+                    <p>&nbsp;</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="99">Pages with Duplicate Title</td>
+                <td width="467">Two pages having same meta title. Those pages are not indexed by search engine.
+                    <p>&nbsp;</p>
+                    <p><strong>Note: Report the &ldquo;Found At&rdquo; URL corresponds to primary URL</strong></p>
+                    <p>&nbsp;</p>
+                    Please have a look on below image. Open the report in the new tab.<center><img src="http://10.212.190.222:4000//img/seo/seo_sem/15.jpg" alt="" /></center></td>
+            </tr>
+            <tr>
+                <td width="99">
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    Pages with Duplicate Description</td>
+                <td width="467">Two pages having same meta description. Those pages are not indexed by search engine.
+                    <p>&nbsp;</p>
+                    <p><strong>Note: Report the &ldquo;Found At&rdquo; URL corresponds to primary URL</strong></p>
+                    <p>&nbsp;</p>
+                    Please have a look on below image. Open the report in the new tab.<center><img src="http://10.212.190.222:4000//img/seo/seo_sem/16.jpg" alt="" /></center></td>
+            </tr>
+            <tr>
+                <td width="99">
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    Missing Title</td>
+                <td width="467">Pages created without meta title are reported for this issue. Its length must be &ldquo;0&rdquo;.
+                    <p>&nbsp;</p>
+                    Please have a look on below image. Open the report in the new tab. .<center><img src="http://10.212.190.222:4000//img/seo/seo_sem/17.jpg" alt="" /></center></td>
+            </tr>
+            <tr>
+                <td width="99">
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    Short Title</td>
+                <td width="467">Pages having short meta title are reported for this issue.
+                    <p>&nbsp;</p>
+                    Please have a look on below image. Open the report in the new tab.<center><img src="http://10.212.190.222:4000//img/seo/seo_sem/18.jpg" alt="" /></center></td>
+            </tr>
+            <tr>
+                <td width="99">
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    Max Title Length</td>
+                <td width="467">Pages with highest meta title length are reported for this issue.
+                    <p>&nbsp;</p>
+                    Please have a look on below image. Open the report in the new tab.<center><img src="http://10.212.190.222:4000//img/seo/seo_sem/19.jpg" alt="" /></center></td>
+            </tr>
+            <tr>
+                <td width="99">
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    Missing Description</td>
+                <td width="467">Pages created without meta description are reported for this issue. Its length must be &ldquo;0&rdquo;.
+                    <p>&nbsp;</p>
+                    Please have a look on below image. Open the report in the new tab.<center><img src="http://10.212.190.222:4000//img/seo/seo_sem/20.jpg" alt="" /></center></td>
+            </tr>
+            <tr>
+                <td width="99">
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    Short Description</td>
+                <td width="467">
+                    <p>Pages having short meta description are reported for this issue.</p>
+                    <p>&nbsp;</p>
+                    Please have a look on below image. Open the report in the new tab.
+                    <p>&nbsp;</p>
+                    <center><img src="http://10.212.190.222:4000//img/seo/seo_sem/21.jpg" alt="" /></center></td>
+            </tr>
+            <tr>
+                <td width="99">
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>Max description</p>
+                    <p>Length</p>
+                </td>
+                <td width="467">Pages with highest meta description length are reported for this issue.
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    Please have a look on below image. Open the report in the new tab.<center><img src="http://10.212.190.222:4000//img/seo/seo_sem/22.jpg" alt="" /></center></td>
+            </tr>
+		
+		</tbody>
+	</table>
+<br/>
+    <h4><strong>From Deep crawl</strong></h4>
+
+    <h4 class="primary-color" >2.1. Auditing of the website</h4>
+
+    <ul>
+        <ul>
+            <li>In the Deep crawl tool, go to Reports for the corresponding sites to be crawled.</li>
+            <li>Go to Crawl Control tab, here you will find the details of last crawl. Before commencing crawling for latest crawl report make sure to set appropriate crawl limit, Repeat schedule and Compare to parameters.</li>
+            <li>Once the crawl is complete the details will be reflected on the dashboard</li>
+            <li>To view the particular checkpoints , select appropriate brands from All Projects</li>
+            <li>Download the corresponding data for each checkpoint in .xls format</li>
+            <li>Provide recommendations based on the data retrieved from deep crawl for each point which is to be remediated</li>
+            <li>Recommendations are provided in different excel sheets for Content as well as ICT team based on checkpoints that need to be remediated</li>
+            <li>Please find the specimen format for technical workbooks separately.</li>
+        </ul>
+    </ul>
+    <p><a href="http://10.212.190.222:4000//img/seo/seo_sem/Worksheet%20Weekly.xlsx">ACCENTURE CONTENT-SEO Fiat</a></p>
+    <p><a href="http://10.212.190.222:4000//img/seo/seo_sem/Worksheet_1%20Weekly.xlsx">ICT_SEO</a></p>
+
+    <h4 class="primary-color" >3. Reporting Data for Keyword Ranking Report</h4>
+
+    <p>Follow the below steps for preparing a weekly report for keyword rankings:</p>
+    <ul>
+        <li>Login to Searchlight Conductor tool</li>
+        <li>Select appropriate account to be reported for the week &ndash; France or Italy or Germany etc.</li>
+    </ul>
+
+
+
+
+            <center> <a data-fancybox="gallery" href="/img/seo/weekly_conductor/1.png"><img src="/img/seo/weekly_conductor/1.png" class="img-responsive"></a></center>
+            <ul>
+                <li>Go to&nbsp;<strong>Measure Visibility</strong>&nbsp;-&gt;&nbsp;<strong>Visibility Performance</strong>&nbsp;to land on the below dashboard</li>
+                <li>Always use&nbsp;<strong>Standard Rank</strong></li>
+            </ul>
+
+
+             <center> <a data-fancybox="gallery" href="/img/seo/weekly_conductor/2.png"><img src="/img/seo/weekly_conductor/2.png" class="img-responsive"></a></center>
+
+             <ul>
+                <li>Use appropriate channels &ndash; Desktop or Mobile from above and below images resp.</li>
+            </ul>
+             
+            <center> <a data-fancybox="gallery" href="/img/seo/weekly_conductor/3.png"><img src="/img/seo/weekly_conductor/3.png" class="img-responsive"></a></center>
+             
+            <ul>
+                <li>Consider appropriate date as per the week as in below images</li>
+            </ul>
+             
+            <center> <a data-fancybox="gallery" href="/img/seo/weekly_conductor/4.png"><img src="/img/seo/weekly_conductor/4.png" class="img-responsive"></a></center>
+             
+            <ul>
+                <li>Extract data (download) from below 4 drop reports:
+                    <ul>
+                        <li>Drop off 1<sup>st</sup>&nbsp;pages</li>
+                        <li>No longer ranking for</li>
+                        <li>Dropped out of Top 3</li>
+                        <li>Drop from Position 1</li>
+                    </ul>
+                </li>
+            </ul>
+             
+            <center> <a data-fancybox="gallery" href="/img/seo/weekly_conductor/5.png"><img src="/img/seo/weekly_conductor/5.png" class="img-responsive"></a></center>
+             
+            <center> <a data-fancybox="gallery" href="/img/seo/weekly_conductor/6.png"><img src="/img/seo/weekly_conductor/6.png" class="img-responsive"></a></center>
+             
+            <ul>
+                <li>Place the appropriate data in the excel reporting sheet</li>
+                <li>Sort (large to small) using Monthly searches. Place all occurring NA&rsquo;s at the last</li>
+                <li>Ensure proper formatting of the data in each tab of the excel (Font Calibiri &ndash; Size 11)</li>
+                <li>Follow these steps for all the markets to prepare weekly reports</li>
+                
+            </ul>
+             
+          
+
+
+	</div>
+	<!-- <nav class="col-sm-3" id="myScrollspy">
+		<ul class="nav nav-pills nav-stacked">
+			<li class=""><a href="#create_ourcars">HOW TO CREATE OURCARS HUB PAGE</a></li>
+			<li class=""><a href="#configure_filter_section">HOW TO CONFIGURE FILTER SECTION IN THE OURCARS HUB PAGE</a></li>
+			<li class=""><a href="#configure_model_section">HOW TO CONFIGURE THE MODEL SECTION OF THE FILTER IN THE OURCARS HUB PAGE</a></li>
+			<li class=""><a href="#equip_page">HOW TO TAG THE EQUIPMENT PAGE</a></li>
+			<li class=""><a href="#configure_tagged_equip">HOW TO CONFIGURE THE TAGGED EQUIPMENT PAGE</a></li>
+		</ul>
+	</nav> -->
+</div>
+
+      <br>
+    
+
+	<script>$(document).ready(function(){
+			// Add smooth scrolling to all links
+			$("a").on('click', function(event) {
+		  
+			  // Make sure this.hash has a value before overriding default behavior
+			  if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+		  
+				// Store hash
+				var hash = this.hash;
+		  
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+				  scrollTop: $(hash).offset().top
+				}, 800, function(){
+			 
+				  // Add hash (#) to URL when done scrolling (default click behavior)
+				  window.location.hash = hash;
+				});
+			  } // End if
+			});
+		  });</script>

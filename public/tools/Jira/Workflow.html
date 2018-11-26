@@ -1,0 +1,88 @@
+
+
+<div class="container-fluid">
+  <div class="col-md-9">
+    <!-- breadcrumb start-->
+    <ul class="breadcrumb">
+      <li><a href="">Home</a></li>
+      <li><a href="">Brands</a></li>
+      <li>Jira </li>
+      <li>Workflow</li>
+    </ul>
+    <!-- breadcrumb end-->
+
+
+    <h4 class="primary-color" id="Expected_Stages_in_JIRA">Expected Stages in JIRA</h4>
+    <a data-fancybox="gallery" href="/img/tools/jira_workflow/stages.jpg"><img class="img-responsive" src="/img/tools/jira_workflow/stages.png"></a>
+
+    <h4 class="primary-color" id="Email_trigger_list">Email trigger list</h4>
+    <a data-fancybox="gallery" href="/img/tools/jira_workflow/email.jpg"><img img class="img-responsive" src="/img/tools/jira_workflow/email.png"></a>
+
+    <h4 class="primary-color" id="Ideal_request">Jira stage diagram – Ideal request</h4>
+    <a data-fancybox="gallery" href="/img/tools/jira_workflow/flow1.png"><img img class="img-responsive" src="/img/tools/jira_workflow/flow1.png"></a>
+
+    <h4 class="primary-color" id="external_dependency">Jira stage diagram – Request required external dependency</h4>
+    <a data-fancybox="gallery" href="/img/tools/jira_workflow/flow2.png"><img img class="img-responsive" src="/img/tools/jira_workflow/flow2.png"></a>
+
+    <h4 class="primary-color" id="analysis_phase">Jira stage diagram – Request requires clarification from LAL during analysis phase</h4>
+    <a data-fancybox="gallery" href="/img/tools/jira_workflow/flow3.png"><img img class="img-responsive" src="/img/tools/jira_workflow/flow3.png"></a>
+
+
+    <h4 class="primary-color" id="build_phase">Jira stage diagram – Request requires clarification from LAL during build phase</h4>
+    <a data-fancybox="gallery" href="/img/tools/jira_workflow/flow4.png"><img img class="img-responsive" src="/img/tools/jira_workflow/flow4.png"></a>
+
+    <h4 class="primary-color" id="Market_feedback">Jira stage diagram – Issue fixes as per LAL/Market feedback</h4>
+    <a data-fancybox="gallery" href="/img/tools/jira_workflow/flow5.png"><img img class="img-responsive" src="/img/tools/jira_workflow/flow5.png"></a>
+
+    <h4 class="primary-color" id="live_fixes">Jira stage diagram – Request reopened for post go-live fixes </h4>
+    <a data-fancybox="gallery" href="/img/tools/jira_workflow/flow6.png"><img img class="img-responsive" src="/img/tools/jira_workflow/flow6.png"></a>
+
+    <h4 class="primary-color" id="Overall">Jira stage diagram - Overall  </h4>
+    <a data-fancybox="gallery" href="/img/tools/jira_workflow/flow7.png"><img img class="img-responsive" src="/img/tools/jira_workflow/flow7.png"></a>
+
+
+
+  </div>
+  <nav class="col-sm-3" id="myScrollspy">
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active"><a href="#Expected_Stages_in_JIRA">Expected Stages in JIRA</a></li>
+      <li class=""><a href="#Email_trigger_list">Email trigger list</a></li>
+      <li class=""><a href="#Ideal_request">Jira stage diagram – Ideal request</a></li>
+      <li class=""><a href="#external_dependency">Jira stage diagram – Request required external dependency</a></li>
+      <li class=""><a href="#analysis_phase">Jira stage diagram – Request requires clarification from LAL during analysis phase</a></li>
+      <li class=""><a href="#build_phase">Jira stage diagram – Request requires clarification from LAL during build phase</a></li>
+      <li class=""><a href="#Market_feedback">Jira stage diagram – Issue fixes as per LAL/Market feedback</a></li>
+      <li class=""><a href="#live_fixes">Jira stage diagram – Request reopened for post go-live fixes </a></li>
+      <li class=""><a href="#Overall">Jira stage diagram - Overall</a></li>
+
+
+    </ul>
+  </nav>
+</div>
+
+<script>
+  $(document).ready(function() {
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function() {
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  });
+</script>

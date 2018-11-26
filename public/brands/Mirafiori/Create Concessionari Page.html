@@ -1,0 +1,104 @@
+
+    <div class="container-fluid">
+        <div class="col-sm-9">
+            <!-- breadcrumb start-->
+            <ul class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Brands</a></li>
+                <li>Mirafiori</li>
+                <li>Dati societari</li>
+            </ul>
+            <!-- breadcrumb end-->
+
+            <h4 class="primary-color" id="scope_datisocietari_page">1.	SCOPE</h4>
+            <ul style=" ">
+
+                <li>The goal of this document is to provide the basic tips in order to create the Dati societari page in the Mirafiori Outlet portal.</li>
+
+            </ul>
+
+            <hr class="breakline" />
+            <h4 class="primary-color" id="create_datisocietari_page">2.	HOW TO CREATE THE CONCESSIONARI PAGE</h4>
+
+            <p>In order to create the Dati societari Page, follow these steps:</p>
+            <ol>
+                <li>Select the language page (e.g. <em>mirafiorioutlet/mirafiorioutlet-it/it/</em>)</li>
+                <li>Click: <strong>Create</strong> &gt; <strong>Create Page</strong></li>
+                <li>Choose &ldquo;<strong>Mirafiori Outlet Editorial Template</strong>&rdquo; as page layout</li>
+                <li>Click <strong>Next</strong></li>
+                <li>Insert page data (a title can be &ldquo;<em>Dati societari</em>&rdquo;)</li>
+                <!-- <img src="img/dati.png" class="img-responsive img-rounded zoom shadow-box"> -->
+				<a data-fancybox="gallery" href="/img/mirafiori/etc/dati.png"><img src="/img/mirafiori/etc/dati.png"  class="img-responsive"></a>
+            </ol>
+            <ul>
+                <p>6. Click &ldquo;Create&rdquo;;
+                    <br />7. Click &ldquo;Done&rdquo; in the opened popup</p>
+                <!-- <img src="img/dati1.png" class="img-responsive img-rounded zoom shadow-box"> -->
+				<a data-fancybox="gallery" href="/img/mirafiori/etc/dati1.png"><img src="/img/mirafiori/etc/dati1.png"  class="img-responsive"></a>
+            </ul>
+
+            <hr class="breakline" />
+            <h4 class="primary-color" id="config_concessionari_page">3.HOW TO CONFIGURE CONCESSIONARI PAGE </h4>
+            <p>In order to configure the Concessionari page follow these steps:</p>
+            <ol>
+                <li>Select the &ldquo;it&rdquo; page (e.g. <em>mirafiorioutlet/mirafiorioutlet -it/it)</em></li>
+                <li>Click &ldquo;<strong>Properties</strong>&rdquo;</li>
+                <li>In the &ldquo;<strong>I18N</strong>&rdquo; tab configure these fields:</li>
+                <br>
+                <!-- <img src="img/concess2.png" class="img-responsive img-rounded zoom shadow-box"> -->
+				<a data-fancybox="gallery" href="/img/mirafiori/etc/concess2.png"><img src="/img/mirafiori/etc/concess2.png"  class="img-responsive"></a>
+            </ol>
+            <ul>
+                <li><strong>headline:</strong> the headline label of the section;</li>
+                <li><strong>cityInput: </strong>the city label of the section<strong>;</strong></li>
+                <li><strong>searchCTA: </strong>the search cta label of the section;</li>
+                <br>
+                <!-- <img src="img/concess3.png" class="img-responsive img-rounded zoom shadow-box"> -->
+				<a data-fancybox="gallery" href="/img/mirafiori/etc/concess3.png"><img src="/img/mirafiori/etc/concess3.png"  class="img-responsive"></a>
+				
+            </ul>
+
+            <h4 class="primary-color" id="component_concessionari_page">4.	HOW TO CONFIGURE THE DEALER LOCATOR COMPONENT</h4>
+            <p>In order to configure the &ldquo;Dealer locator&rdquo; component into Concessionari page, open the page in &ldquo;Edit Mode&rdquo; and see related document &ldquo;AEM &ndash; Mirafiori Outlet &ndash; Components Catalog&rdquo;.</p>
+
+        </div>
+        <nav class="col-sm-3" id="myScrollspy">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#scope_datisocietari_page">Scope</a></li>
+                <li><a href="#create_datisocietari_page">How to create the dati societari page</a></li>
+                <li><a href="#config_concessionari_page">How to configure Concessionari Page </a></li>
+                <li><a href="#component_concessionari_page">How to configure the dealer locator component </a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+    </div>
+    <br>
+
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>

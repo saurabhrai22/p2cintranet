@@ -1,0 +1,170 @@
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <!-- breadcrumb start-->
+            <ul class="breadcrumb">
+                <li><a href="">Home</a></li>
+                <li><a href="">Brands</a></li>
+                <li>Alfa Romeo</li>
+                <li>Model slider item Component</li>
+            </ul>
+            <!-- breadcrumb end-->
+            <h4 class="primary-color" id="model_fiat_page">Model slider item Component</h4>
+			<div>
+            <a data-fancybox="gallery" href="/img/alfa/alpha7.png"><img src="/img/alfa/alpha7.png" class="img-responsive"></a>
+			</div>
+            <table class="table table-bordered  shadow-box">
+                <thead>
+                    <tr class="bg-primary">
+                        <th class="text-center" colspan=2>
+                            Model slider item Component
+                       </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>Image breakpoints</p>
+                        </td>
+                        <td>
+                            <p>NA</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Max CTA No.</p>
+                        </td>
+                        <td>
+                            <p>0</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Video supported</p>
+                        </td>
+                        <td>
+                            <p>No</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Text position (Left/Right)</p>
+                        </td>
+                        <td>
+                            <p>No</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Sub tabs within the component</p>
+                        </td>
+                        <td>
+                            <p>Yes</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Is it mandatory to use all the sub tabs?</p>
+                        </td>
+                        <td>
+                            <p>NA</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Can we add the script?</p>
+                        </td>
+                        <td>
+                            <p>No</p>
+                        </td>
+                    </tr>
+                    <tr>
+						<td>
+							<p>Links can be added</p>
+						</td>
+						<td>
+							<p>Twitter, Facebook, Youtube,
+Flikr,Instagram,Pinterest
+Likedin,Netwall,Shop Online</p>
+						</td>
+					</tr>
+                    <tr>
+                        <td>
+                            <p>Template Availability</p>
+                        </td>
+                        <td>
+                            <p>Homepage,Productpage,Trimpoage</p>
+							
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+			<p style="text-align:center"><strong>Image Dimension</strong></p>
+			<table class="table table-bordered  shadow-box">
+                <thead>
+                    <tr class="bg-primary">
+                        <th class="text-center">
+                            Device
+                       </th>
+					   <th class="text-center">
+							Dimensions
+					   </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>Desktop</p>
+                        </td>
+                        <td>
+                            <p>1366 x 815</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Tablet</p>
+                        </td>
+                        <td>
+                            <p>1366 x 815</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Mobile</p>
+                        </td>
+                        <td>
+                            <p>760 x 500</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>

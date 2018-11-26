@@ -1,0 +1,313 @@
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+           <ul>
+            <li><strong>Below outlined are the retail account details on AdWords:</strong></li>
+           </ul>
+            <table class="table table-bordered  shadow-box">
+                                        <tbody>
+                                            <tr>
+                                                <th class="text-center">
+                                                    <p><strong>Brands</strong></p>
+                                                </th>
+                                                <th class="text-center">
+                                                    <p><strong>Account Name (Retail)</strong></p>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>FIAT</p>
+                                                </td>
+                                                <td>
+                                                    <p>DK FCA Fiat</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>JEEP</p>
+                                                </td>
+                                                <td>
+                                                    <p>DK FCA Jeep</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>ALFA ROMEO</p>
+                                                </td>
+                                                <td>
+                                                    <p>DK FCA Alfa Romeo</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>FIAT PROFESSIONAL</p>
+                                                </td>
+                                                <td>
+                                                    <p>DK FCA Fiat Professional</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+									<ul>
+                                        <li><strong>Reports to download for Automations (Raw Data from AdWords): Date range – (last week mon -sun)</strong></li>
+                                        <li><strong>Apply Filter: </strong><strong>dk –</strong>
+                                            <ol>
+                                                <li>DK - Kwds report - Main Report - All 4 Accounts</li>
+                                                <li>DK - Kwds report - Conversion Split - All 4 Accounts</li>
+                                            </ol>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>DK - Top Kwds report - 4 Accounts</li>
+                                    </ul>
+                                    <ol>
+                                        <li>DK - Remarketing - 4 Accounts - No Conv Split</li>
+                                        <li>DK - Remarketing - 4 Accounts - With Conv Split</li>
+                                    </ol>
+                                    <ul>
+                                        <li><strong>The points need to be noted while creating reports:</strong>
+                                            <ul>
+                                                <li>Copy-Paste previous week folder and rename it with present week date (ex. From <strong>Jan 01 – Jan 07</strong> to <strong>Jan 08 – Jan 14)</strong></li>
+                                                <li>Change the dates of the reporting spreadsheets and insights document to present reporting week dates</li>
+                                                <li>Automation sheets
+                                                    <ol>
+                                                        <li><strong>ETE_Automation All Brands (DK)_v3</strong></li>
+                                                    </ol>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>When using - <strong>“ETE_Automation All Brands (DK)_v3”: </strong>
+                                            <ol>
+                                                <li>Click on “Run - Weekly” button in the Raw Data sheet to create regular weekly spreadsheets, remarketing spreadsheets with Top keywords (provide the required file names that pop ups)</li>
+                                                <li><strong>Note</strong>: If there are new campaigns added to the market – the automation will be interrupted and “pop up as map the not founds”. Follow the step no.5 &gt; save the automation sheet &gt; close all the other excels other than automation and re-run it.</li>
+                                            </ol>
+                                        </li>
+                                        <li>About Mapping:
+                                            <ol>
+                                                <li>In mapping sheet of automations, you will notice 2 different tables:</li>
+                                            </ol>
+                                        </li>
+                                    </ul>
+
+                                    <ol>
+                                        <li>Account Name table: This is straightforward, account name is mapped to respective brand name.</li>
+                                        <li>Campaign Name table: In case automation give a popup of <strong>not found</strong> campaigns map them as per below steps:</li>
+                                    </ol>
+                                    <p>&nbsp;</p>
+                                    <table class="table table-bordered  shadow-box">
+                                        <tbody>
+                                            <tr>
+                                                <th class="text-center">
+                                                    <p><strong>Campaign Name</strong></p>
+                                                </th>
+                                                <th class="text-center">
+                                                    <p><strong>Brand Type</strong></p>
+                                                </th>
+                                                <th class="text-center">
+                                                    <p><strong>Model Type</strong></p>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>If campaign name contains “GNRC” or “Generic”</p>
+                                                </td>
+                                                <td>
+                                                    <p>(BrandName)NonBrand</p>
+                                                    <p>JeepNonBrand</p>
+                                                </td>
+                                                <td>
+                                                    <p>(BrandName)NonBrand</p>
+                                                    <p>JeepNonBrand</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Apply custom filter at the concate column -&gt; contains “ModelName”</p>
+                                                    <p>Ex. Contains “Renegade”</p>
+                                                </td>
+                                                <td>
+                                                    <p>JeepBrand</p>
+                                                </td>
+                                                <td>
+                                                    <p>Renegade</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Once finished mapping all models and still you find unmapped campaigns, map them to respective (brandGeneric)</p>
+                                                </td>
+                                                <td>
+                                                    <p>JeepBrand</p>
+                                                </td>
+                                                <td>
+                                                    <p>JeepBrand</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                        <li><strong>DK - Over-Under Spend Calculator_(Day wise) </strong></li>
+                                    </ul>
+                                    <p>Update the “Orange” cells to reflect spends for the present week:</p>
+                                    <ul>
+                                        <li>Change the No. of days</li>
+                                        <li>Total budgets to reflect account budgets from AdWords</li>
+                                        <li>Spends should reflect actual spends for the no. of days mentioned in step 1 (no. of days completed for the month)</li>
+                                    </ul>
+                                    <ul>
+                                        <li><strong>Creation of Reports</strong></li>
+                                    </ul>
+                                    <p>All the required formatting and data will be displayed in the reports except the following</p>
+                                    <ol>
+                                        <li>Weekly – Grouping of the week wise data (group to display last 10 weeks)</li>
+                                        <li>Channel – None</li>
+                                        <li>Brand Type – Impr. Share &amp; Lost IS (Budget) for Brand and Non-Brand</li>
+                                        <li>Model – Impr. Share &amp; Lost IS (Budget) for all models</li>
+                                        <li>Remarketing
+                                            <ol>
+                                                <li>Remarketing Clicks, Impressions and Spends – from <strong>DK - Remarketing - 4 Accounts - No Conv Split </strong>report &gt; Del the 1<sup>st</sup> five rows and the “<strong>totals” </strong>row &gt; create pivot table &gt; choose fields &gt; Account, Clicks, Impressions and Cost &gt; copy and paste values to the weekly report</li>
+                                                <li>Extract the totals of (Clicks, Impressions, Spends, Quotation Request, Test Drive and Contact Request) from any of the internal sheets.</li>
+                                                <li>Remarketing (Conversion) &gt; from <strong>DK - Remarketing - 4 Accounts - With Conv Split</strong> report &gt; Del the 1<sup>st</sup> five rows and the “<strong>totals” </strong>row &gt; create pivot table &gt; choose fields &gt; Account: Rows; Conversion Name: Columns; Conversion: Values &gt; copy and paste the respective values to the weekly report.</li>
+                                            </ol>
+                                        </li>
+                                        <li>Top Keywords – None</li>
+                                    </ol>
+
+                                    <p><strong>Note: </strong>While saving the file, curser will be in the Date Range: cell for all tabs and displaying the weekly tab.</p>
+                                    <ol>
+                                        <li>*Impression Share &amp; IS lost budget – for, Brand Type and Models Tab
+                                            <ol>
+                                                <li>Brand Tab: - Filters – (for all DK brands)
+                                                    <ol>
+                                                        <li>For Brand - Campaign Name – Does not Contain – GNRC + Campaign Name – Does not Contain - Generic + Campaign Type – Search Network Only</li>
+                                                        <li>Non-Brand – Campaign Name –Contains – GNRC + Campaign Name - Contains - Generic + Campaign Type – Search Network Only</li>
+                                                    </ol>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                    <ul>
+                                        <li>For both the above – collect data from Total - all filtered campaigns</li>
+                                    </ul>
+                                    <ol>
+                                        <li>Model:
+                                            <ol>
+                                                <li>Fiat: Ad group Level – Filters (Campaign Type – Search Network Only for all models) +:
+                                                    <ol>
+                                                        <li>124 – Ad group name Contains – 124</li>
+                                                        <li>500 – Ad group name Contains – 500</li>
+                                                    </ol>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                    <p>Ad group name – does not Contains – 500C</p>
+                                    <p>Ad group name – does not Contains – 500L</p>
+                                    <p>Ad group name – does not Contains – 500X</p>
+                                    <ol start="3">
+                                        <li>Tipo– Ad group name Contains - Tipo</li>
+                                        <li>500C– Ad group name Contains – 500C</li>
+                                        <li>Qubo– Ad group name Contains – Qubo</li>
+                                        <li>500x– Ad group name Contains – 500x</li>
+                                        <li>500L– Ad group name Contains – 500L</li>
+                                        <li>Panda– Ad group name Contains - Panda</li>
+                                        <li>Punto– Ad group name Contains – Punto</li>
+                                        <li>Fiat Brand – Campaign Name – Does not Contain – Gener</li>
+                                    </ol>
+                                    <p>Campaign Name – Does not Contain – Model</p>
+                                    <ol>
+                                        <li>Jeep: Campaign Level – Filters (Campaign Type – Search Network Only)
+                                            <ol>
+                                                <li>JeepBrand- Campaign Name – Does not Contain – Gener</li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                    <p>Campaign Name – Does not Contain – Model</p>
+                                    <ol start="2">
+                                        <li>Wrangler - Ad group name Contains – Wrangler</li>
+                                        <li>Compass - Ad group name Contains – Compass</li>
+                                        <li>Renegade- Ad group name Contains – Renegade</li>
+                                        <li>Cherokee- Ad group name Contains – Cherokee;&nbsp; Ad group name - Does not Contains – grand</li>
+                                        <li>Ad group name Contains – grand</li>
+                                    </ol>
+                                    <ul>
+                                        <li>Fiat Professional: Campaign Level – Filters (Campaign Type – Search Network Only)</li>
+                                    </ul>
+
+                                    <ol>
+                                        <li>Fullback - Campaign Name Contains – Fullback</li>
+                                        <li>Talento - Campaign Name Contains – Talento</li>
+                                        <li>Ducato - Campaign Name Contains – Ducato</li>
+                                        <li>Fiorino- Campaign Name Contains – Fiorino</li>
+                                        <li>Doblo- Campaign Name Contains – Doblo</li>
+                                        <li>Punto- Campaign Name Contains – Punto</li>
+                                        <li>FiatPro Brand- – Campaign Name – Does not Contain – Gener</li>
+                                    </ol>
+                                    <p>Campaign Name – Does not Contain – Model</p>
+                                    <ol>
+                                        <li>Alfa Romeo: Campaign Level – Filters (Campaign Type – Search Network Only)
+                                            <ol>
+                                                <li>Quadrifoglio - Ad group name Contains – Quadrifoglio</li>
+                                                <li>Giulia- Ad group name Contains – Giulia</li>
+                                                <li>Giulietta- Ad group name Contains – Giulietta</li>
+                                                <li>Stelvio- Ad group name Contains – Stelvio</li>
+                                                <li>4C - Ad group name Contains – 4C</li>
+                                                <li>AlfaBrand:</li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                    <p>Ad group name – Does not Contains – gene</p>
+                                    <p>Ad group name – Does not Contains - 4c</p>
+                                    <p>Ad group name – Does not Contains – Giulia</p>
+                                    <p>Ad group name – Does not Contains – Quadrifoglio</p>
+                                    <p>Ad group name – Does not Contains – Giulietta</p>
+                                    <p>Ad group name – Does not Contains – Stelvio</p>
+                                    <p>&nbsp;</p>
+                                    <p>Note: If the filters are applied on Ad group level then IS lost by budget =<strong> 100% - IS - IS Lost (Rank)</strong></p>
+                                    <ul>
+                                        <li><strong>Whom, How and What to send:</strong>
+                                            <ul>
+                                                <li>All the Reports to be zipped and attached to the mail while insights (as per DK – SOP – Weekly Insights) to be copy and pasted without any changes.</li>
+                                                <li>Mail To: Piotrowska, Marta&lt;marta.piotrowska@accenture.com&gt;; Jezak, Hubert <a href="mailto:hubert.jezak@accenture.com">jezak@accenture.com</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CC: Laskowska, Zuzanna &lt;zuzanna.laskowska@accenture.com&gt;; FIAT_P2C_Mumbai_SEM <a href="mailto:FIAT_P2C_Mumbai_SEM@accenture.com">FIAT_P2C_Mumbai_SEM@accenture.com</a></p>
+                                    <p>&nbsp;&nbsp; Subject: Denmark SEM Weekly Report | April 16 – April 22, 2018 <strong>(change month)</strong></p>
+
+                                </div>
+                            </div>
+                        </div>
+        </div>
+    </div>
+    <br>
+
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>

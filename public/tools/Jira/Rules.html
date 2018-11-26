@@ -1,0 +1,466 @@
+
+
+<div class="container-fluid">
+  <div class="col-md-9">
+    <!-- breadcrumb start-->
+    <ul class="breadcrumb">
+      <li><a href="">Home</a></li>
+      <li><a href="">Tools</a></li>
+      <li>Jira</li>
+      <li>Rules</li>
+    </ul>
+    <!-- breadcrumb end-->
+
+
+    <h4 class="primary-color" id="Issues">1.Types of Issues</h4>
+    <p> On the “FCA P2C – Content Adaption” project we have 3 categories of issues as follows –</p>
+    <ol>
+      <li>Task</li>
+      <li>Fast Track</li>
+      <li>Query</li>
+    </ol>
+
+    <h4>Task</h4>
+    <p>A requirement from HQ or LC where development efforts are needed would be raised as Task. Tickets raised under this category <b>will be included in the monthly ticket count</b>. </p>
+    <h4>Fast Track</h4>
+    <p>A pilot project has been initiated with few markets, any requirement from HQ or LC that falls under fast track category as per the “Fast Track Request” document can be raised under this category. Tickets raised under this category
+      <b> will be included in the monthly ticket count</b>.</p>
+    <h4>Query</h4>
+    <p> Any request to check the feasibility of the requirement or research for workable solution for the client would fall in this category. Tickets raised under this category <b> will not be included in the monthly ticket count</b>.
+      Any development activity required as a result of the output of Query ticket will not be done on the same ticket. A new ticket under task or fast track should be raised and the ticket rules should be followed.</p>
+
+    <hr class="breakline">
+    <h4 class="primary-color" id="JIRA_Workflow">2. JIRA Workflow</h4>
+
+    <p> The 3 categories of the tickets that can be raised on “FCA P2C – Content Adaptation” project have their respective workflow as show in each of the sections below.</p>
+    <h5>Definition of JIRA Stages</h5>
+    <ul>
+      <li><strong>Open :</strong> The request received by LC and/or HQ will be raised on JIRA by the LAL’s for IDC team to action upon</li>
+      <li><strong>In Progress : </strong> The tickets raised by LAL are checked for feasibility and moved to into IDC Queue for action. The stage of the ticket would be “In Progress”</li>
+      <li><strong>In QC : </strong> At this stage the request is being checked against the requirement provided by the LAL’s</li>
+      <li><strong>Approval Pending : </strong> The ticket is waiting for LAL quality check and approval</li>
+      <li><strong>Pending for Client : </strong> Ticket is waiting for approval from Client</li>
+      <li><strong>Ready to Publish : </strong> The ticket is approved by all stakeholder and can be published on the Live site </li>
+      <li><strong>External Technical : </strong> A ticket is moved to External Technical (ET) when IDC sees technical Limitations in completing the development activities (support from Fiat Support is needed)</li>
+      <li><strong>Waiting for LAL : </strong> When IDC needs clarification on the requirement mentioned in the ticket, the ticket is moved to Waiting for LAL</li>
+      <li><strong>External Business : </strong> When a ticket needs inputs from HQ/LC, the ticket is moved into External Business (EB) by the LAL’s</li>
+      <li><strong>On Hold : </strong> When LC/HQ decided to postpone the development of the request due to incomplete assets or delay by business, the request can be put “On Hold”</li>
+      <li><strong>Cancelled ACN : This is used when ACN did not work on the given requirement. These tickets will not be included in the monthly ticket count. </strong></li>
+      <li><strong>Cancelled LC : Cancelled LC – This is used when ACN has worked and LC/HQ decided to cancel it after the work has been done. These tickets will be included in the monthly ticket count.</strong></li>
+    </ul>
+    <h3>Task Overflow</h3>
+    <a data-fancybox="gallery" href="/img/tools/jira_rules/task-overflow.png"><img class="img-responsive" src="/img/tools/jira_rules/task-overflow.png"></a>
+    <h3>Fast Track Workflow</h3>
+    <a data-fancybox="gallery" href="/img/tools/jira_rules/fast-track-workflow.png"><img class="img-responsive" src="/img/tools/jira_rules/fast-track-workflow.png"></a>
+
+    <h3>Query Workflow</h3>
+    <a data-fancybox="gallery" href="/img/tools/jira_rules/query-workflow.png"><img class="img-responsive" src="/img/tools/jira_rules/query-workflow.png"></a>
+
+
+    <hr class="breakline">
+    <h4 class="primary-color" id="JTM">3. JIRA Tickets Management</h4>
+
+    <p>Based on the category of under which the ticket is raised some fields would be mandatory. All mandatory fields would be highlighted with <<*>> are Mandatory.</p>
+
+    <h5>JIRA Field Details</h5>
+    <ul>
+      <li><strong>REPORTER</strong> will always be the stakeholder creating the ticket</li>
+      <li><strong>ASSIGNEE</strong> is pre-set on «Automatic» </li>
+      <ul>
+        <li>If you need to assign the ticket to someone specific, simply key in the name and select it from the drop-down menu that will appear</li>
+        <li>If your ticket is related to a Bug Tracker issue, you should use the «Assign to me» option</li>
+      </ul>
+      <li><strong>MODE</strong> is pre-set on «None»: always be sure to PRODUCTION mode. TRAINING or REHEARSAL modes might apply in specific cases and will not count in the reporting.</li>
+      <li><strong>COUNTRY/LANGUAGE </strong></li>
+      <ul>
+        <li>For multilingual countries, such as Belgium and Switzerland markets always create 1 ticket for each language using CLONE option</li>
+      </ul>
+      <li><strong>BRAND</strong> is pre-set on «None»: always be sure to select the right Brand</li>
+      <li><strong>PLATFORM</strong> is pre-set on «None»: always be sure to select the right one</li>
+      <li><strong>CMS platform</strong> use DESKTOP & MOBILE option only for responsive websites (Abarth, Fiat, Alfa Romeo), otherwise always create 2 tickets (one for Desktop and one for Mobile platform)</li>
+      <li><strong>REQUEST START DATE</strong> is the date requested to start working the ticket</li>
+      <li><strong>EXPECTED DELIVERY DATE BY IDC</strong> is the date requested for IDC to complete development and Quality Check</li>
+      <li><strong>EXPECTED GO LIVE DATE</strong> is the date requested for the GO LIVE</li>
+      <li><strong>REQUEST PRIORITY</strong> is pre-set on «None»: always be sure to select the right one between LOW, MEDIUM or HIGH</li>
+      <li><strong>SUMMARY</strong> to describe in a few words the subject of the ticket</li>
+      <li><strong>DESCRIPTION</strong> to fully describe and add specification about the ticket</li>
+      <li><strong>ATTACHMENT</strong> browse to attach files to your ticket</li>
+      <li><strong>NOTES</strong> to add notes</li>
+      <li><strong>ANALYTICS TAG – to define if is tagging is required </strong> </li>
+      <li><strong>DELIVERY TEAM – to segregate the tickets done by IDC and fiat support. This is used to avoid double billing by IDC and Fiat support.</strong> </li>
+      <li><strong>TOTAL NUMBER OF REWORKED PRODUCTION TASK – to keep track of number of activities requested by the client from the start to the end of the cycle.  </strong> </li>
+    </ul>
+    <h3>Category Details</h3>
+    <strong>REQUEST TYPE</strong> is pre-set on «None»: always be sure to select the right one between the following
+    <ul>
+      <li><strong>Banner</strong> for format adaptions and adjustment (copy or image) on existing format</li>
+      <li><strong>CE Activities</strong> if JS or CSS adaptations are needed, for image and copy adaptation, for new pages within the CMS, for bug or adaptation not in our scope (i.e. car configurator)</li>
+      <li><strong>DEM</strong> for adaptation of non-Eloqua DEM, for adaptation on HQ DEM to accomplish Market needs</li>
+      <li><strong>LP</strong> for adaptation on existing Landing Pages, for adaptation on HQ Landing Pages to meet LC needs</li>
+      <li><strong>HQ Model Launches</strong> new models being launched. This category is reserved to specific launches agreed with HQ. Please do not use this category unless specific instructions are provided. </li>
+    </ul>
+    <h3>Sub Category Details</h3>
+    It could be one of the following options:
+    <ul>
+      <li><strong>None - </strong> if there are non-additional specification</li>
+      <li><strong>Banner-Adaptation from Master - </strong> Based on the master banners received from LAL, Graphics team adapt the remaining requested dimensions.</li>
+      <li><strong>Dynamic Banner - first set up of a campaign – </strong> When an existing promotion which is updated month on month such promotions can be setup as Dynamic banner</li>
+      <li><strong>Banner ad. Including Flash to HTML conversion – </strong> Flash banner needs to be converted to HTML5 banner</li>
+      <li><strong>Banners - Minor Changes/Modification – </strong> A static image which needs resizing, healing or simple textual changes </li>
+      <li><strong>Banners - Resizing/Reformatting –</strong> A static image which needs resizing, healing or simple textual changes</li>
+      <li><strong>Analytics Tags – </strong> Addition / Removal/ Changes of Adobe Tags, Sizmek Tags (banners), GWT Code (On HQ Approval)</li>
+      <li><strong>Analytics Tag Bugs – </strong> Addition/Removal/Changes of analytics tags because of the report generated by analytics team. This sub category is not to be used by the LAL’s.<strong> Tickets raised under this category will not be included in the monthly ticket count</strong>
+      </li>
+      <li><strong>Call to Action/Links</strong> Addition / Removal / Changes of CTAs & CTA url managed through coding (not embedded in image); clickable text and corresponding url for the text</li>
+      <li><strong>Broken Links – </strong> Changing URL on the CTA or removal of the CTA ensuring that the user is not directed to 404 page. This sub category will only be used for the tickets raised because of broken link report
+        sent by IDC.<strong> Tickets raised under this category will not be included in the monthly ticket count. </strong></li>
+      <li><strong>Image Modification – </strong> Addition / Removal / replacement of images on the site</li>
+      <li><strong>SEO Redirects – </strong> Setting up or removing 301 & 302 redirects on sites; URL Changes; Desktop Url Mapping; mdr=bypass tag for opening ticket in mobile</li>
+      <li><strong>SEO Tags – </strong> Addition / Removal / Changes of SEO Tags such as H1, H2, Meta tags, Meta titles, Meta Description, Alt Tags, GWT code, Media tags, Alt Text on Images, Canonical url</li>
+      <li><strong>Text Modifications – </strong> Addition/Removal/Changes of text on the live site</li>
+      <li><strong>Add/Remove Videos - </strong> Addition / Removal / Changes of Videos</li>
+      <li><strong>Bug/Technical Issue - </strong> Any functionality that is not working as it is supposed to work such as a CTA is not clickable; Image Gallery has no images or does not display per functional specs</li>
+      <li><strong>Forms Field Changes - </strong> Any addition /deletion/updates on the forms fields or functionality of form field validation. This is only for Non-Eloqua forms</li>
+      <li><strong>Forms Privacy Changes - </strong> Addition/update/deletion of check boxes, radio buttons or any content on form privacy changes. This is only for Non-Eloqua forms</li>
+      <li><strong>Header/Footer/Menu Changes - </strong> Any changes, addition, removal of Menu / Tabs from Header / Footer</li>
+      <li><strong>HTML Updates/Issues/Changes –</strong> Any HTML changes, additions, deletions in HTML coding of the pages wherever possible within IDC purview </li>
+      <li><strong>JavaScript/CSS Updates/Issues/Changes – </strong> Any JavaScript / CSS changes, additions, deletions of the pages wherever possible in IDC access /scope control</li>
+      <li><strong>Navigations/Menu Updates/Issues/Changes – </strong> This is the same category as Header/Footer/Menu changes and Call to Action Links. Please check if those categories can be utilized</li>
+      <li><strong>New Forms – </strong> Creating new forms for new models. This is non-Eloqua forms</li>
+      <li><strong>New Models Creation - </strong> New models / New page creations / Activities required for adding CPS on sites </li>
+      <li><strong>News Updates - </strong> Creation of News pages or removal / modification of existing news pages and corresponding content in the Hub pages and home pages’ wherever applicable</li>
+      <li><strong>Promotions Non-CPS - </strong> Any promotion addition / modification / deletion that are not on CPS platforms</li>
+      <li><strong>Promotions CPS - </strong> Any promotion addition / modification / deletion that are on the CPS platforms</li>
+      <li><strong>Services (Dealer Locator, Car Configurator, etc.) – Check if this can be removed from JIRA</strong> </li>
+      <li><strong>Email Adaptation from Master - </strong> Non - Eloqua DEMs that are developed basis of a Master provided</li>
+      <li><strong>Email Minor Changes/Modification - </strong> Non - Eloqua DEMs that require minor modifications like adding a tracking code, text changes, image changes. Doesn’t require any major coding modification</li>
+      <li><strong>Email New Creation without Master - </strong> Non - Eloqua DEMs developed from scratch based on image / pdf provided</li>
+      <li><strong>LP Adaptation from Master - </strong> Landing Pages that are developed basis of a Master provided</li>
+      <li><strong>LP Minor Changes/Modification - </strong> Landing Pages that require minor modifications like adding a tracking code, text changes, image changes. Doesn’t require any major coding modification</li>
+      <li><strong>LP New Creation without Master - </strong> Landing Pages developed from scratch based on image / pdf provided</li>
+
+    </ul>
+
+    <h5>Ticket Rules</h5>
+
+    <ul>
+      <li>1 ticket needs to be created for each Brand/Market/Language/Platform. The number of tickets for monolingual, bilingual and Trilingual countries would be as shown in the image below. </li>
+      <a data-fancybox="gallery" href="/img/tools/jira_rules/ticket-rules1.png"><img class="img-responsive" src="/img/tools/jira_rules/ticket-rules1.png"></a>
+      <li>For all responsive brands, such Fiat, Alfa Romeo and Abarth, there should be only 1 ticket for each Brand/market/Language/Platform and the platform should be “Desktop & Mobile”.</li>
+      <a data-fancybox="gallery" href="/img/jira_rules/ticket-rules2.png"><img class="img-responsive" src="/img/tools/jira_rules/ticket-rules2.png"></a><br>
+    </ul>
+      Ticket rules for each category/sub category of request are as follows –
+      <ul>
+        <li><strong>Banner Category - </strong>Each banner counts as 1 ticket. This ticket will include the creation of banner (flash/HTML) + fallback images (static). Additional sub task will not be created for fall back images. All
+          requests raised under banner category Local account leads would create 1 main task for Banner adaptation request for each Brand/market/Language/Platform. IDC team would be responsible for the calculation of banner format
+          required and for each banner format 1 sub task would be created.
+          <br>The sub categories that follow this rule are - Banners - Adaptation from Master, Dynamic Banner - first set up of a campaign, Banners - Minor Changes/Modification and Banners - Resizing/Reformatting
+          <br><strong>For Ex</strong> – If a request is raised for BE-FR to adapt banner having 3 formats mainly 300x600, 970x250 and 160x600, then LAL’s are required to raise 1 ticket and IDC would create 2 sub tasks to this sub
+          category.</li>
+        <li><strong>Analytics Sub category – </strong> LAL’s are requested to raise 1 ticket for each Brand/market/Platform for up to 50 URL’s. IDC would go ahead and create 1 sub task from 51st URL for the next 50 set of URL’s.</li>
+        <li><strong>Analytics Tags Bugs –</strong> This category would be only used by the analytics team to report the bugs generated during analytics testing. This sub category should not be used LAL. Tickets raised under this sub
+          category will be excluded from the monthly ticket count.</li>
+        <li><strong>Call to Action/Broken Links Sub category –</strong> All LAL’s are requested to raise 1 ticket for each Brand/market/language/Platform up to 10 URL’s. IDC would go ahead and create 1 sub task from 11th URL for the
+          next 50 set of tickets.</li>
+        <li><strong>Feature/Functionality –</strong> 1 ticket for the implementation of a new functionality which has not been implemented previously or not present on any other websites. </li>
+        <li><strong>Images –</strong> For this sub category, when the graphics team is involved 6 images would be accommodates per ticket LAL’s are requested to raise 1 ticket for up to 6 images. IDC would go ahead and create 1 sub
+          task from 6th image for the next 6 set of images. If the only activity is to upload the images given by HQ/LC on the CMS where graphics team is not involved 25 images would be accommodated in 1 ticket. <br>
+          <strong>For Ex –</strong> If there is request raised by LAL to work on images for sliders which require Graphics Producers to work and finalize the images, IDC would go ahead and create a sub task for Graphics team to work
+          on. Each of these sub task would accommodate 6 images, once the images are ready content team would go ahead and upload the image in CMS. On the other hand, there are times when HQ/LC has given the final images and content
+          team is required to upload the images in CMS. Under such circumstances, 25 images would be accommodated in 1 ticket</li>
+        <li><strong>Multiple Content –</strong> For requests under this sub category LAL are required to create 1 main ticket for each Brand/market/language/Platform and requirements should be attached as PPT. IDC would go ahead and
+          check the number of slides per PPT and accommodate up to 25 changes on each ticket. From the 26st change, IDC would go ahead and create a sub task for the next 25 set of changes.
+          <br><br><strong>NOTE: A change can be changing 1 whole paragraph or changing 1 line or changing 1 single word or changing 1 single character (e.g. removing a semi colon)
+    <br>For Ex – If a monolingual market attaches a PPT having 65 changes in a single ticket, IDC would go ahead and create 3 subtasks. First 25 changes would be marked to the main ticket. For the next 25 changes IDC, would create 1 subtask, following 15 changes would be worked on in the 2nd sub task. If within these slides, graphical changes are required and IDC needs to involve the graphics team, 1 sub task would be created for graphics activity. The slides requiring graphical changes would be excluded from the content count and included in graphics counts. For Graphical work, 1 ticket would accommodate 6 image changes.</strong>
+          <br><br>For Bilingual and trilingual markets, LAL’s should create a ticket for every language within the market. The number of slides on slides for a language would be calculate and the same logic would follow.
+          <br><br><strong>For Ex – If a trilingual market attaches a single PPT have 65 changes in a single ticket. IDC checks the number of slider corresponding to the 3 languages of the market.  Language 1 has 20 changes, language 2 has 20 changes and language 3 had 25 changes, then the ticket below to the 3rd language would have 1 subtask. The tickets for language 1 and language 2 would not have any subtasks. If within these slides, graphical changes are required and IDC needs to involve the graphics team, 1 sub task would be created for graphics activity. The slides requiring graphical changes would be excluded from the count and included in graphics counts. For Graphical work, 1 ticket would accommodate 6 image changes.</strong></li>
+        <li><strong>SEO Redirects –</strong> This sub category is in IDC control only for JEEP Desktop and partially for Mobile. LAL’s would need to create a ticket for each Brand/market/Platform. First 50 URL’s would be accommodated
+          on the main task. For the 51st URL, IDC would go ahead and create 1 sub task for the next 50 set of URL’s.</li>
+        <li><strong>SEO Tags -</strong> LAL would need to create a ticket for each Brand/market/Platform. First 50 URL’s would be accommodated on the main task. For the 51st URL, IDC would go ahead and create 1 sub task for the next
+          50 set of URL’s.</li>
+        <li>Text Modification –</strong> Check if this can be removed from JIRA</strong> </li>
+    <li><strong>Adding Video -</strong> LAL would need to create a ticket for each Brand/market/Language/Platform. First 10 videos would be added, updated or removed on the main task. For the 11th video, IDC would go ahead and
+      create 1 sub task for the next set of 10 videos.</li>
+    <li><strong>Bug/Technical Issues –</strong>LAL would need to create one for ticket for each page. If 3 bugs are spotted on a page those 3 bugs can form 1 ticket.<strong> Please note, that the tickets created under this sub category are excluded from the monthly ticket count.</strong></li>
+    <li><strong>Form Field Changes –</strong> LAL would need to create 1 ticket for each form. This category would only comprise for changes (not bugs) of Non-Eloqua forms. </li>
+    <li><strong>Form Privacy Changes -</strong> LAL would need to create 1 ticket for each form. This category would only comprise for changes (not bugs) of Non-Eloqua forms. </li>
+    <li><strong>Header/Footer/Menu Changes –</strong> For requests under this sub category LAL are required to create 1 main ticket for each Brand/market/language/Platform and requirements should be attached as PPT. IDC would go
+      ahead and check the number of slides per PPT and accommodate up to 25 slides on each ticket. From the 26st slide, IDC would go ahead and create a sub task for the next 20 set of slides. Please also note, that each slide of
+      a PPT document can have only 1-2 low complexity change. </li>
+    <li><strong>HTML Updates/Issues/Changes –</strong> For requests under this sub category LAL are required to create 1 main ticket for each Brand/market/language/Platform and requirements should be attached as PPT. IDC would go
+      ahead and check the number of slides per PPT. IDC would go ahead and check the number of slides per PPT and accommodate up to 2 slides on each ticket. </li>
+    <li><strong>JavaScript/CSS Updates/Issues/Changes –</strong> For requests under this sub category LAL are required to create 1 main ticket for each Brand/market/language/Platform and requirements should be attached as PPT.
+      IDC would go ahead and check the number of slides per PPT. IDC would go ahead and check the number of slides per PPT and accommodate up to 2 slides on each ticket.</li>
+    <li><strong>Navigations/Menu Updates/Issues/Changes –</strong> For requests under this sub category LAL are required to create 1 main ticket for each Brand/market/language/Platform and requirements should be attached as PPT.
+      IDC would go ahead and check the number of slides per PPT and accommodate up to 25 slides on each ticket. From the 26st slide, IDC would go ahead and create a sub task for the next 20 set of slides. Please also note, that
+      each slide of a PPT document can have only 1-2 low complexity change.</li>
+    <li><strong>New Forms Updates/Issues/Changes –</strong> LAL would need to create 1 ticket for each form. This category would only comprise of Non-Eloqua forms.</li>
+    <li><strong>New Models Creation –</strong> LAL would need to create 1 ticket for every model</li>
+    <li><strong>News Updates –</strong> LAL would need to create 1 ticket for per news. If more than 1 news are included in the PPT, 1 subtask would be created for subsequent news articles. </li>
+    <li><strong>Pricelist and Brochures –</strong> LAL’s would need to create a ticket for each Brand/market/Platform. First 10 pricelists/brochures would be added, updated or removed on the main task. For the 11th
+      pricelist/brochure, IDC would go ahead and create 1 sub task for the next set of 10 pricelists/brochures.</li>
+    <li><strong>Promotions CPS - </strong>For markets where CPS has been implemented, LAL would need to create 1 ticket comprising of all models for each Brand/Market/Language. </li>
+    <li><strong>Promotions Non-CPS -</strong> For requests under this sub category LAL are required to create 1 main ticket for each Brand/market/language/Platform and requirements should be attached as PPT. IDC would go ahead
+      and check the number of slides per PPT and accommodate up to 5 slides on each ticket. From the 6st slide, IDC would go ahead and create a sub task for the next 20 set of slides. Please also note, that each slide of a PPT
+      document can have only 1-2 low complexity change.</li>
+    <li><strong>Email and Landing Page category – </strong> LAL would need to create 1 ticket per email/landing page for each market/brand/language<strong><br>NOTE: Any category/sub category where there is a need to involve graphics team, a sub task would be raised for the activity. </strong></li>
+
+    </ul>
+
+    <h5>BANNER CATEGORY </h5>
+
+    <div class="">
+      <table class="    table table-bordered shadow-box">
+        <thead>
+          <tr class="bg-primary">
+            <th class="text-center">Sub Category</th>
+            <th class="text-center">Each Market/Brand/Language/Platform</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Banners - Adaptation from Master</td>
+            <td>1 ticket per banner format</td>
+          </tr>
+          <tr>
+            <td>Dynamic Banner - first set up of a campaign</td>
+            <td>1 ticket per banner format</td>
+          </tr>
+          <tr>
+            <td>Banners - Minor Changes/Modification</td>
+            <td>1 ticket per banner format</td>
+          </tr>
+          <tr>
+            <td>Banners - Resizing/Reformatting</td>
+            <td>1 ticket per banner format</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h5>CONTENT EDITORIAL CATEGORY</h5>
+    <div class="">
+      <table class=" table table-bordered shadow-box">
+        <thead>
+          <tr class="bg-primary">
+            <th class="text-center">Sub Category</th>
+            <th class="text-center">Each Market/Brand/Language/Platform</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Analytics Tags</td>
+            <td>1 ticket up to 50 URL</td>
+          </tr>
+          <tr>
+            <td>Call to Action/Links/Broken Links</td>
+            <td>1 ticket up to 10 URL</td>
+          </tr>
+          <tr>
+            <td>Functionality Modification</td>
+            <td>Functionality Modification 1 ticket for 1 new functionality</td>
+          </tr>
+          <tr>
+            <td>Add/Change/Remove Images</td>
+            <td>1 ticket up to 6 images when graphics team is involved
+              1 ticket of up to 25 images when only content team is involved
+            </td>
+          </tr>
+          <tr>
+            <td>Multiple Content </td>
+            <td>1 ticket comprises up to 25 changes</td>
+          </tr>
+          <tr>
+            <td>SEO Redirects</td>
+            <td>This is only for JEEP and mobile - 1 ticket up to 50 URLS</td>
+          </tr>
+          <tr>
+            <td>SEO Tags</td>
+            <td>1 ticket up to 50 URL</td>
+          </tr>
+          <tr>
+            <td>Text Modification</td>
+            <td>Check if this can be removed from JIRA</td>
+          </tr>
+          <tr>
+            <td>Add/Change/Remove Video</td>
+            <td>1 ticket up to 10 video replacement (video content will not be changed)</td>
+          </tr>
+          <tr>
+            <td>Bug/Technical Issue</td>
+            <td>1 ticket per page - Excluded from Ticket count</td>
+          </tr>
+          <tr>
+            <td>Forms Field Changes</td>
+            <td>1 ticket per form - Non-Eloqua</td>
+          </tr>
+          <tr>
+            <td>Forms Privacy Changes</td>
+            <td>1 ticket per form - Non-Eloqua</td>
+          </tr>
+          <tr>
+            <td>Header/Footer Menu Changes</td>
+            <td>1 ticket comprises 25 slides of a PPT</td>
+          </tr>
+          <tr>
+            <td>HTML Updates/Issues/Changes</td>
+            <td>1 ticket comprises 2 slides of a PPT</td>
+          </tr>
+          <tr>
+            <td>JavaScript/CSS Updates/Issues/Changes</td>
+            <td>1 ticket comprises of 2 slides of a PPT</td>
+          </tr>
+          <tr>
+            <td>Navigations/Menu Updates/Issues/Changes</td>
+            <td>Check if Header/Footer Menu changes or Call to Action sub category can be used instead of this category
+              1 ticket comprises of 25 slides of a PPT
+            </td>
+          </tr>
+          <tr>
+            <td>New Forms Updates/Issues/Changes</td>
+            <td>1 ticket per form - Non-Eloqua</td>
+          </tr>
+          <tr>
+            <td>New Models Creation</td>
+            <td>1 model per ticket</td>
+          </tr>
+          <tr>
+            <td>News</td>
+            <td>1 ticket per News </td>
+          </tr>
+          <tr>
+            <td>Pricelist and brochures Changes </td>
+            <td>1 ticket up to 10 pricelist or brochures</td>
+          </tr>
+          <tr>
+            <td>Promotions – NON CPS Platform</td>
+            <td>1 ticket comprises up to 5 slides of PPT</td>
+          </tr>
+          <tr>
+            <td>Promotions - CPS platform</td>
+            <td>1 ticket per brand for all the models per language</td>
+          </tr>
+          <tr>
+            <td>CE - Services (Dealer Locator, Car Configurator, etc.)</td>
+            <td>Will be removed from JIRA</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h5>EMAIL CATEGORY</h5>
+    <div class="">
+      <table class="    table table-bordered shadow-box">
+        <thead>
+          <tr class="bg-primary">
+            <th class="text-center">Sub Category</th>
+            <th class="text-center">Each Market/Brand/Language/Platform</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Emails - Adaptation from Master</td>
+            <td>1 ticket per DEM</td>
+          </tr>
+          <tr>
+            <td>Emails - Minor Changes/Modification</td>
+            <td>1 ticket per DEM</td>
+          </tr>
+          <tr>
+            <td>Emails - New Creation without Master</td>
+            <td>1 ticket per Emails</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <h5>LANDING PAGE CATEGORY</h5>
+    <div class="">
+      <table class="table table-bordered shadow-box">
+        <thead>
+          <tr class="bg-primary">
+            <th class="text-center">Sub Category</th>
+            <th class="text-center">Each Market/Brand/Language/Platform</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>LP - Adaptation from Master</td>
+            <td>1 ticket per LP</td>
+          </tr>
+          <tr>
+            <td>LP - Minor Changes/Modification</td>
+            <td>1 ticket per LP</td>
+          </tr>
+          <tr>
+            <td>LP - New Creation without Master</td>
+            <td>1 ticket per LP</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <hr class="breakline">
+      <h4 class="primary-color" id="Change_Management">4. Change Management</h4>
+      <p> An editorial change request in the Jira ticketing system happens when the customer requests variations to the initial brief attached to the Jira ticket when opened. JIRA Ticket rule for Change management would be the same for all
+        stages of the ticket.</p>
+      <h4>Banner Category</h4>
+      <p>For all sub categories under this category, ticketing rules would remain the same for change request. When a market requests for alteration or changes within the scope of requests, LAL is expected to attach an updated PPT on the
+        JIRA ticket. IDC will consider the total development activity required within the life span of the ticket and 1 sub task for 12 banner formats
+        <br><strong>For Ex –</strong> If a market creates a ticket having 20 banner formats. IDC team would analyze the request and create 19 sub tasks + 1 main ticket = 20 ticket for the 20 banner formats requested in the ticket. Now, while
+        the ticket is still in progress if LC decides to change the price/legal text to be displayed on the banners. IDC would now have to change the price/legal text on all the 20 banner formats. In such circumstances, IDC would go ahead
+        and create 2 sub task for this change request. 1st sub task would accommodate 12 banners and the 2nd sub task would accommodate 8 banners Every time a new change is requested by the market, a new sub task would be created. </p>
+      <h4>Content Editorial Category</h4>
+      <p>For all sub categories under Content Editorial categories, the ticket rule would remain same for change request. When a market requests for alteration or changes within the scope of requests, LAL is expected to attach an updated PPT
+        on the JIRA ticket. IDC will consider the overall development activity required within the ticket at various stages and based on the sub category create appropriate number of sub tasks.
+        <br><strong>For Ex –</strong> If market has raised a request under “multiple changes” sub category for content editorial activity with 65 changes in a PPT, IDC would create 3 subtasks. Main ticket would consider 25 changes, 1st sub
+        task would account slides 26-50, 2nd sub task would account for slides 51-65. While the ticket is in QC, if market adds on an updated PPT of 15 changes, IDC would accommodate the first 10 changes in the 2rd sub task (since the
+        bandwidth for multiple content changes is 25 changes) and create a 3rd sub task for the remaining 5 changes. While waiting for approval on these 80 (65 first request + 15 change request) changes, if client request for some changes,
+        LAL is expected to add the new PPT on the ticket. IDC will consider the number of changes on the new PPT and create 1 new sub task if the number of changes is within 25 changes.<strong> If within these slides, graphical changes are required and IDC needs to involve the graphics team, 1 sub task would be created for graphics activity. The slides requiring graphical changes would be excluded from the count and included in graphics counts. For Graphical work, 1 ticket would accommodate 6 image changes as mentioned in the Change Management rule for Banner Category.
+                    </strong>
+      </p>
+    </div>
+
+
+
+  </div>
+  <nav class="col-sm-3" id="myScrollspy">
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active"><a href="#Issues">Types of Issues</a></li>
+      <li class=""><a href="#JIRA_Workflow">JIRA Workflow</a></li>
+      <li class=""><a href="#JTM">JIRA Tickets Management</a></li>
+      <li class=""><a href="#Change_Management">Change Management</a></li>
+
+    </ul>
+  </nav>
+</div>
+
+<br>
+
+
+<script>
+  $(document).ready(function() {
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function() {
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  });
+</script>

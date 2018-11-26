@@ -1,0 +1,334 @@
+<div class="navbar-default sidebar " role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+        <div class="dashboard-title" for="c0"> <a href="/">Home</a> </div>
+        <ul class="nav tree" id="side-menu">
+
+            <li>
+                <input type="checkbox" id="c1" />
+                <label class="tree_label tree_custom" for="c1">Brands Guidelines</label>
+                <ul>
+                    <% for (var i = 0; i < brands_folder.length; i++) { %>
+                    <li>
+                        <input type="checkbox" id="<%= brands_folder[i].name.toLowerCase() %>" />
+                        <label for="<%= brands_folder[i].name.toLowerCase() %>" class="tree_parent">
+                            <%= brands_folder[i].name %></label>
+                        <ul class="file">
+                            <% for (var j = 0; j < brands_folder[i].list.length; j++) { %>
+                            <li><span class="tree_sublabel"><a class="viewload" href="/brands/<%= brands_folder[i].name %>/<%= brands_folder[i].list[j] %>">
+                                        <%= brands_folder[i].list[j].split('.').slice(0, -1).join('.') %></a>
+                                </span></li>
+                            <% } %>
+                        </ul>
+                    </li>
+                    <% } %>
+
+
+                    <!--  <li>
+                            <input type="checkbox" id="c2" />
+                            <label for="c2" class=" tree_parent">Fiat</label>
+
+                            <ul>
+                                <li><span class="tree_label">Key visual carousel</span></li>
+                                <li><span class="tree_label">Model Selection tool</span></li>
+                                <li><span class="tree_label">Promo Overview</span></li>
+                                <li><span class="tree_label">Editorial content preview</span></li>
+                                <li><span class="tree_label">Newsletter</span></li>
+                                <li><span class="tree_label">Real Life configurator</span></li>
+                                <li><span class="tree_label">Gallery</span></li>
+                                <li><span class="tree_label">Gallery Item </span></li>
+                                <li><span class="tree_label">Slider configuration </span></li>
+                                <li><span class="tree_label">Eloqua Form Renderer </span></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="c3" />
+                            <label for="c3" class="tree_parent">Fiat Pro</label>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="c4" />
+                                    <label for="c4" class="tree_label"><span class="tree_label">Specified tree item
+                                            view</span></label>
+                                    <ul>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="c5" />
+                            <label for="c5" class="tree_parent">Alfa Romeo</label>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="c6" />
+                                    <label for="c6" class="tree_label"><span class="tree_label">Specified tree item
+                                            view</span></label>
+                                    <ul>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="c7" />
+                            <label for="c7" class="tree_parent">Abarth</label>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="c8" />
+                                    <label for="c8" class="tree_label"><span class="tree_label">Specified tree item
+                                            view</span></label>
+                                    <ul>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="c9" />
+                            <label for="c9" class="tree_parent">Jeep</label>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="c10" />
+                                    <label for="c10" class="tree_label"><span class="tree_label">Specified tree item
+                                            view</span></label>
+                                    <ul>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="c11" />
+                            <label for="c11" class="tree_parent">Mirafiori</label>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="c12" />
+                                    <label for="c12" class="tree_label"><span class="tree_label">Specified tree item
+                                            view</span></label>
+                                    <ul>
+                                        <li><span class="tree_label">Level 3</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li> -->
+                </ul>
+            </li>
+
+
+            <li>
+                <input type="checkbox" id="c13" />
+                <label class="tree_label tree_custom" for="c13">Safe Zone Guidelines </label>
+                <ul style="text-align: left;">
+                    <!-- <% for (var i = 0; i < safezone_folder.length; i++) { %>
+                        <li>
+                            <input type="checkbox" id="safe<%= i %>" />
+                            <label for="safe<%= i %>" class="tree_parent">
+                                <%= safezone_folder[i].name %></label>
+                            <ul class="file"> -->
+                    <% for (var j = 0; j < safezone_folder[0].list.length; j++) { %>
+                    <li><label class="tree_parent_node"><a class="pdfload" id="<%= safezone_folder[i].list[j].split('.').slice(0, -1).join('.').split(' ').slice(0, 1).join('').toLowerCase() %>safe" href="/dashboard/view_file/<%= safezone_folder[i].name %>/<%= safezone_folder[i].list[j] %>">
+                                <%= safezone_folder[i].list[j].split('.').slice(0, -1).join('.') %></a>
+                        </label></li>
+                    <% } %>
+                    <!--  </ul>
+                        </li>
+                        <% } %> -->
+                    <!-- <li>
+<input type="checkbox" id="c15" />
+<label for="c15" class="tree_parent">Alfa Romeo</label>
+<ul>
+  <li><span class="tree_label">Level 2</span></li>
+  <li>
+    <input type="checkbox" id="c16" />
+    <label for="c16" class="tree_label">Level 2</label>
+     <ul>
+      <li><span class="tree_label">Level 3</span></li>
+    </ul> 
+  </li>
+  
+</ul>
+<li>
+    <input type="checkbox" id="Abarth" />
+    <label for="Abarth" class="tree_parent">Abarth</label>
+  </li>
+  <li>
+    <input type="checkbox" id="Jeep" />
+    <label for="Jeep" class="tree_parent">Jeep</label>
+  </li>
+ 
+</li> -->
+                </ul>
+            </li>
+
+            <li>
+
+                <label class="tree_label tree_custom" id="inout">In & Out Of Scope</label>
+                <!-- <ul>
+                        <li>
+                            <input type="checkbox" id="ios_fiat" />
+                            <label for="ios_fiat" class="tree_parent">Fiat</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="ios_alfa" />
+                            <label for="ios_alfa" class="tree_parent">Alfa Romeo</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="ios_abarth" />
+                            <label for="ios_abarth" class="tree_parent">Abarth</label>
+                        </li>
+                    </ul> -->
+            </li>
+            <li>
+                <input type="checkbox" id="c18" />
+                <label class="tree_label tree_custom" for="c18">Tools</label>
+
+                <ul>
+                    <% for (var i = 0; i < tools_folder.length; i++) { %>
+
+                    <% if(tools_folder[i].name=="tools") {%>
+                    <% for (var j = 0; j < tools_folder[i].list.length; j++) { %>
+                    <li><label class="tree_parent_node"><a class="viewload node" href="/<%= tools_folder[i].name %>/<%= tools_folder[i].list[j] %>">
+                                <%= tools_folder[i].list[j].split('.').slice(0, -1).join('.') %></a>
+                        </label></li>
+
+                    <% } %>
+                    <%  } else {%>
+
+
+                    <li>
+                        <input type="checkbox" id="<%= tools_folder[i].name.toLowerCase() %>" />
+                        <label for="<%=  tools_folder[i].name.toLowerCase() %>" class="tree_parent">
+                            <%= tools_folder[i].name %></label>
+                        <ul class="file">
+                            <% for (var j = 0; j < tools_folder[i].list.length; j++) { %>
+                            <li><span class="tree_sublabel"><a class="viewload" href="/tools/<%= tools_folder[i].name %>/<%= tools_folder[i].list[j] %>">
+                                        <%= tools_folder[i].list[j].split('.').slice(0, -1).join('.') %></a>
+                                </span></li>
+
+                            <% } %>
+                        </ul>
+                    </li>
+                    <% } %>
+
+                    <% } %>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="c19" />
+                <label class="tree_label tree_custom" for="c19">Other Guidelines</label>
+                <ul>
+
+                    <% for (var i = 0; i < other.length; i++) { %>
+                    <li>
+                        <input type="checkbox" id="other<%= i %>" />
+                        <label for="other<%= i %>" class="tree_parent">
+                            <%= other[i].name %></label>
+                        <ul class="file">
+                            <% for (var j = 0; j < other[i].list.length; j++) { %>
+                                <% if (other[i].list[j].split('.').slice(1, 2).join('.') == 'html') { %>
+                            <li><span class="tree_sublabel"><a class="viewload" href="/other/<%= other[i].name %>/<%= other[i].list[j] %>">
+                                        <%= other[i].list[j].split('.').slice(0, -1).join('.') %></a>
+                                </span></li>
+                                <% } else { %>
+                                
+                                    <li><label class="tree_sublabel"><a class="pdfload" href="/dashboard/view_file/<%= other[i].name %>/<%= other[i].list[j] %>">
+                                        <%= other[i].list[j].split('.').slice(0, -1).join('.') %></a>
+                                </label></li>
+                                    <% } %>
+                            <% } %>
+                            
+                        </ul>
+                    </li>
+                    <% } %>
+
+
+
+
+                </ul>
+            </li>
+
+
+            <li>
+                <input type="checkbox" id="c50" />
+                <label class="tree_label tree_custom" for="c50">P2C Begginner Guidelines </label>
+                <ul style="text-align: left;">
+                     <% for (var i = 0; i < courses_folder.length; i++) { %>
+                       <!-- <li>
+                            <input type="checkbox" id="safe<%= i %>" />
+                            <label for="safe<%= i %>" class="tree_parent">
+                                <%= safezone_folder[i].name %></label>
+                            <ul class="file"> -->
+                    <% for (var j = 0; j < courses_folder[i].list.length; j++) { %>
+                    <li><label class="tree_parent_node"><a class="pdfload"  href="/dashboard/view_file/<%= courses_folder[i].name %>/<%= courses_folder[i].list[j] %>">
+                                <%= courses_folder[i].list[j].split('.').slice(0, -1).join('.') %></a>
+                        </label></li>
+                    <% } %>
+                    <% } %>
+                </ul>
+            </li>
+
+        </ul>
+
+
+
+
+    </div>
+    <!-- /.sidebar-collapse -->
+</div>
+<!-- /.navbar-static-side -->
+<%if(typeof which!= "undefined" ){%>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        /* <%= which %> */
+        document.getElementById("c1").checked = true;
+        document.getElementById("<%= which %>").checked = true;
+        console.log(document.getElementById("<%= which %>").parentNode.input);
+        var c = document.getElementById("<%= which %>").parentNode;
+  
+    
+        var txt =  document.getElementById("<%= which %>").nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.firstElementChild.getAttribute('href');
+        console.log(txt)
+        $.ajax({
+            url: txt,
+            success: function(result) {
+                $("#page-wrapper").html(result);
+            }
+        });
+
+    
+        
+</script>
+    <% } %>
+
+    <%if(typeof safe!= "undefined" ){%>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>
+     console.log("<%= safe %>");
+     
+            document.getElementById("c13").checked = true;
+            
+            
+      
+        
+            var txt =  document.getElementById("<%= safe %>").getAttribute('href');
+            console.log(txt)
+            $.ajax({
+                url: txt,
+                success: function(result) {
+                    $("#page-wrapper").html(result);
+                }
+            });
+    
+        
+            
+    </script>
+        <% } %>
+
+
+        <%if(typeof inout!= "undefined" ){%>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script>
+            $.ajax({
+            url: "/inout/inout.html",
+            success: function(result) {
+                $("#page-wrapper").html(result);
+            }
+                });
+                </script>
+            <% } %>

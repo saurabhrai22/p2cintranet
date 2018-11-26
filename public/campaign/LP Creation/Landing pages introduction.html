@@ -1,0 +1,79 @@
+
+<div class="container-fluid">
+	<div class="col-md-12">
+
+		<!-- breadcrumb end-->
+
+		<h4 class="primary-color" id="chi_siamo_page">Landing Pages Introduction</h4>
+
+		<p>Landing Pages are microsites which are used to gather information of users. Conventionally we had 2 types of
+			landing pages i.e. Desktop &amp; mobile however now for major markets we have a single page which is device response
+			however there are still some pages which have a separate desktop and mobile page. </p>
+		<p>Each Landing page has a form which has fields to gather basic information of the user like First Name, Last Name,
+			Email, Address, Phone, Postal code….etc. There are other set of information gathered for e.g. if the user already
+			has a car &amp; would like to exchange it. There are 3 pages associated to the Landing page process. </p>
+		<ol>
+			<li>Landing page with form to gather the information</li><br>
+			<div>
+				<!-- <img src="../img/image1.png class="img-responsive img-rounded zoom shadow-box">-->
+				<a data-fancybox="gallery" href="/img/campaign/lp1.png"><img src="/img/campaign/lp1.png" class="img-responsive img-rounded"></a>
+			</div><br>
+
+			<li>Dealer Page to select the dealer nearest to user
+				Note: Few markets choose to have a dealer selection in the landing page form , hence the dealer page is not present
+				in such cases and user is sent directly to thank you page.
+			</li><br>
+			<div>
+				<!-- <img src="/img/campaign/image1.png class="img-responsive img-rounded zoom shadow-box">-->
+				<a data-fancybox="gallery" href="/img/campaign/lp2.png"><img src="/img/campaign/lp2.png" class="img-responsive img-rounded"></a>
+			</div><br>
+
+			<li>Thank you page </li><br>
+			<div>
+				<!-- <img src="/img/campaign/image1.png class="img-responsive img-rounded zoom shadow-box">-->
+				<a data-fancybox="gallery" href="/img/campaign/lp3.png"><img src="/img/campaign/lp3.png" class="img-responsive img-rounded"></a>
+			</div>
+
+			<strong>Note:</strong> Since each brand has multiple models the landing page would be created individually for each
+			model (1 for desktop &amp; 1 for mobile or a single responsive page ). However the dealer page &amp; the thank you
+			page would be created 1 per brand which means that there will be 1 page per brand &amp; not per model as the case
+			for landing page. Also please note that he dealer selection option is embedded in the landing page for mobile hence
+			once the details are filled in mobile landing page you can select the dealer in the same page &amp; will get the
+			thank page directly.
+
+
+		</ol>
+
+
+
+	</div>
+
+</div>
+
+<br>
+
+
+<script>$(document).ready(function () {
+		// Add smooth scrolling to all links
+		$("a").on('click', function (event) {
+
+			// Make sure this.hash has a value before overriding default behavior
+			if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+
+				// Store hash
+				var hash = this.hash;
+
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 800, function () {
+
+					// Add hash (#) to URL when done scrolling (default click behavior)
+					window.location.hash = hash;
+				});
+			} // End if
+		});
+	});</script>

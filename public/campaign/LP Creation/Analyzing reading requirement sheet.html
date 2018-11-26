@@ -1,0 +1,349 @@
+
+<div class="container-fluid">
+	<div class="col-md-12">
+
+		<!-- breadcrumb end-->
+
+		<h4 class="primary-color" id="chi_siamo_page">Analyzing (Reading) Requirement Sheet</h4>
+		<p>Requirement sheet is very important as it determines the implementations and development details for Landing
+			Page. It covers almost all details pertaining to the Landing Page development. So it is more important that
+			the requirements are properly mentioned and understood in requirement sheet.</p><br>
+		<center>
+			<p>Following is a sample link to a Requirement Sheet.</p>
+		</center>
+
+
+		<table class="table table-bordered" style="box-shadow: 1px 4px 15px 6px rgba(0, 0, 0, 0.2)" ;>
+			<thead>
+				<tr class="bg-primary">
+					<th class="text-center">
+						Sr No
+					</th>
+					<th class="text-center">
+						Parameter
+					</th>
+					<th class="text-center">
+						Description
+					</th>
+					<th class="text-center">
+						Possible Value
+					</th>
+					<th class="text-center">
+						Implementation
+					</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td><strong>Type of landing page</strong></td>
+					<td><strong>Determines the template to be used for developing New LP. This template is chosen based on some
+							parameters such as country, brand, Creativity and state of LP(Production or Certification) so that minimum
+							changes are to be made.</strong></td>
+					<td>Link of previously developed LP</td>
+					<td>LP is copied and cloned for developing new LP</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td><strong>Campaign Name</strong></td>
+					<td><strong>Determines the type of campaign</strong></td>
+					<td>Promo or Blank(no promo)</td>
+					<td>&lt;meta name="CAMPAIGN" content="5522"&gt;</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Brand</td>
+					<td><strong>Determines Brand for which LP is created.</strong></td>
+					<td>Fiat, Abarth, Jeep, AlfaRomeo, Lancia.</td>
+					<td>&lt;meta name="Brand" content="FIAT"&gt;</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Brand Code</td>
+					<td>Determines the Brand Code for respective Brand. These values remain same for a specific brand</td>
+					<td>Fiat – 00
+						Abarth – 066Jeep</td>
+					<td>&lt;meta name="BRANDCODE" content="00"&gt;</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Car Model</td>
+					<td>Determines the Model for the Brand. A brand has many models. New models keep on adding .There is no specific
+						set of models defined as such. </td>
+					<td>500
+						Qubo
+						Panda
+					</td>
+					<td>&lt;meta name="MODELDESCRIPTION" content="500"&gt;<br></td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td><strong>Car Model Commercial Code</strong></td>
+					<td>Determines the commercial code for the model. It is used for identifying the model with these unique ID which
+						is defined by FCA (Fiat Chrysler Automobiles).</td>
+					<td>e.g.:
+						500X – 334
+						Mito – 145
+					</td>
+					<td>&lt;meta name="MODELCOMMERCIALCODE" content="334"&gt;</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td><strong>Car Model Description</strong></td>
+					<td>Determines the Model for the Brand. It can be name given to a model for a specific promotion or collection.</td>
+					<td>e.g.:<br>500Cabrio<br>500 Vintage<br></td>
+					<td>&lt;meta name="MODELDESCRIPTION" content="500C"&gt;</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>Market</td>
+					<td>Determines the Market (Country) for which LP is developed.</td>
+					<td>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td><strong>Code Market</strong></td>
+					<td>Determines the Market Codes (Country) for which the Landing Page is developed. Different LP are created for
+						different market as language and dealers are different for each Country. Instead of country names, country codes
+						are used which are listed in an attached .ppt file.</td>
+					<td>France – 3109<br>Germany – 3110<br>And so on<br></td>
+					<td>&lt;meta name="MARKET" content="3109"&gt;&gt;</td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>Disclaimer ID</td>
+					<td>Disclaimer ID determines the unique ID of the Disclaimer Text which is defined by the FCA. This text is a set
+						of legal disclaimers, which changes with country and brand.</td>
+					<td>e.g.:<br>309<br>310</td>
+					<td>&lt;meta name="DISCLAIMER" content="309"&gt;</td>
+				</tr>
+				<tr>
+					<td>11</td>
+					<td>Disclaimer URL</td>
+					<td>Determines the text which has to be used in disclaimers part of the LP. Disclaimers are implemented on form.
+						When link are clicked the entire disclaimer text appears in a popup.</td>
+					<td>Sharepoint links are given where the text files are uploaded</td>
+					<td>https://ts.accenture.com/sites/FGA_P2C_Proposal/<br>Documentu20Library/Forms/AllItems.aspx?<br>RootFolder=%2Fsites%2FFGA_P2C_Proposal<br>%2FDocumentu20Library%2FMaterials%2F<br>France%2F2015%2FMarch%2FJeep%2FDisclaimer<br>&amp;FolderCTID=0x0120000E1AA55AB6F93746A<br>A02FA56A7C314BA&amp;View=%7B18C8412F<br>-8F80-485A-96CE-D09D54557E0C%7D</td>
+				</tr>
+				<tr>
+					<td>12</td>
+					<td>Number of Tabs</td>
+					<td>Determines what is the type of the Tab. These are defined by the FCA depending upon what information and
+						interest of prospect has to be captured in LP.</td>
+					<td>e.g.:TestDrive- Prospect is interested for Test Drive.<br>QuoteRequest- Prospect needs Quite for the car<br>Appointment,
+						ContactRequest and so on, as the conventions do change but are precisely defined.</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>13</td>
+					<td>Type of tabs / CTA</td>
+					<td>Determines what is the type of the Tab. These are defined by the FCA depending upon what information and
+						interest of prospect has to be captured in LP.</td>
+					<td>e.g.:
+						TestDrive- Prospect is interested for Test Drive.
+
+						QuoteRequest- Prospect needs Quite for the car
+
+						Appointment, ContactRequest and so on, as the conventions do change but are precisely defined
+					</td>
+					<td>Data Layer:<br>
+
+						digitalData.page.component.form.leadtype="test-drive-request";<br>
+
+						digitalData.page.component.form.nameType="lead:test-drive-request";<br>
+
+
+						leadtype and nameType attributes of the adobedtm digitalData Object are set to CTA value as above. These Values
+						are changed based on the tab clicked.
+						On Page load default tab’s value is set. On clicking the other tab its respective CTA value is reset.<br>
+
+						DataLayer implmenetation is later explained in these DOC.
+
+					</td>
+				</tr>
+				<tr>
+					<td>14</td>
+					<td>Masterkey Url</td>
+					<td>Determines the Sharepoint URL where the master key PDF’s are uploaded</td>
+					<td>Contains link for the sharepoint location</td>
+					<td>https://ts.accenture.com/sites/FGA_P2C_Proposal/<br>Documentu20Library/Materials/France/2015/<br>April/Fiat/500X/MK/ID%20CARD.FIAT%20500<br>X%20-%20Predyctis.DIRECT%20EMAILING.pdf;</td>
+				</tr>
+				<tr>
+					<td>15</td>
+					<td><strong>Color text</strong></td>
+					<td>Determines Color of Text on LP. </td>
+					<td>Hexadecimal Color code/color name</td>
+					<td>e.g.:<br>#ffffff<br>#464646</td>
+				</tr>
+				<tr>
+					<td>16</td>
+					<td>Color background LP</td>
+					<td>Determines background color for LP.</td>
+					<td>Hexadecimal Color code/color name</td>
+					<td>e.g.:<br>#ffffff<br>#464646</td>
+				</tr>
+				<tr>
+					<td>17</td>
+					<td>Color background Form</td>
+					<td>Determines background color for Form. </td>
+					<td>Hexadecimal Color code/color name</td>
+					<td>e.g.:<br>#ffffff<br>#464646</td>
+				</tr>
+				<tr>
+					<td>18</td>
+					<td>Color backgound Form's Field</td>
+					<td>Determines background color for Form Fields.</td>
+					<td>Hexadecimal Color code/color name</td>
+					<td>e.g.:<br>#ffffff<br>#464646</td>
+				</tr>
+				<tr>
+					<td>19</td>
+					<td>Color privacy disclaimer part</td>
+					<td>Determines Text color for disclaimer Part </td>
+					<td>Hexadecimal Color code/color name</td>
+					<td>e.g.:<br>#ffffff<br>#464646</td>
+				</tr>
+				<tr>
+					<td>20</td>
+					<td>Color title + button "Invia"</td>
+					<td>Determines Text color for Submit Button</td>
+					<td>Hexadecimal Color code/color name</td>
+					<td>e.g.:<br>#ffffff<br>#464646</td>
+				</tr>
+				<tr>
+					<td>21</td>
+					<td>Color Text box below image</td>
+					<td>Determines color for Offer and other text like footer which is below the main image.</td>
+					<td>Hexadecimal Color code/color name</td>
+					<td>e.g.:<br>#ffffff<br>#464646</td>
+				</tr>
+				<tr>
+					<td>22</td>
+					<td>Text url</td>
+					<td>Determines Sharepoint location where the Text file containing all offer and other text for the LP is uploaded</td>
+					<td>Link of SharePoint</td>
+					<td>https://ts.accenture.com/sites/FGA_P2C_Proposal/<br>Documentu20Library/Forms/AllItems.aspx?<br>RootFolder=%2Fsites%2FFGA_P2C_Proposal%2FDocument<br>u20Library%2FMaterials%2FFrance%2F201<br>5%2FApril%2FFiat%2F500X%2FText%2FDesktop&amp;Folde<br>rCTID=0x0120000E1AA55AB6F93746AA02FA56A7<br>C314BA&amp;View=%7B18C8412F-8F80-485A-96CE-D<br>09D54557E0C%7D</td>
+				</tr>
+				<tr>
+					<td>23</td>
+					<td>CSS</td>
+					<td>Styling info for the text can be made available in either of the way :<br>
+						1) To be extracted from PSD file<br>
+
+						2) JPG file having details marked<br>
+						(e.g. https://ts.accenture.com<br>/sites/FGA_P2C_Proposal<br>/Documentu20Library/Materials/France/2015<br>/April/Fiat/500X/Text/preview-<br>fiat-desktop-500X.jpg)<br>
+
+						3) In a text file with css styling description.<br>
+					</td>
+					<td>Text file, </td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Image url</td>
+					<td>Determines the SharePoint Location where creativity images are uploaded</td>
+					<td>Link of Sharepoint</td>
+					<td>https://ts.accenture.com/sites/FGA_P2C_Proposal/<br>Documentu20Library/Materials/France/<br>2015/April/Fiat/500X/Creativity/<br>Desktop/fiat-desktop-500X-bg.jpg</td>
+				</tr>
+				<tr>
+					<td>25</td>
+					<td>HTML url</td>
+					<td>Determines the SharePoint Location where creativity images are uploaded</td>
+					<td>Link of Sharepoint</td>
+					<td>https://ts.accenture.com/sites/FGA_P2C_Proposal/<br>Documentu20Library/Forms/AllItems.aspx?<br>RootFolder=%2Fsites%2FFGA_P2C<br>_Proposal%2FDocumentu20Library%2<br>FMaterials%2FFrance%2F2015%2FApril%2FFiat%2<br>F500X%2FCreativity%2FDesktop%2FPSD&amp;Fol<br>derCTID=0x0120000E1AA55AB6F93746AA02FA56A7C31<br>4BA&amp;View=%7B18C8412F-8F80-485A<br>-96CE-D09D54557E0C%7D</td>
+				</tr>
+				<tr>
+					<td>26</td>
+					<td>Font</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>27</td>
+					<td>Facebook text</td>
+					<td>Determines the Facebook Text. It is implemented in META tag with tag name as Description</td>
+					<td>Text to be added to meta tag</td>
+					<td>&lt;meta name="DESCRIPTION" content="given text"&gt;</td>
+				</tr>
+				<tr>
+					<td>28</td>
+					<td>Footer</td>
+					<td>Type of footer</td>
+					<td>Link of uploaded image’s sharepoint location</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>29</td>
+					<td>Date of Go live Landing page</td>
+					<td>Date set for the LP to be set live. These isn’t the date of LP development completion. These has to be asked
+						from respective assigner.</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>30</td>
+					<td>Specific Request</td>
+					<td>However apart from above mentioned parameters there can be some additional special requirements defined which
+						are needed to be implemented </td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>31</td>
+					<td>ID Card and URL source parameter association (only in case you have 2id cards with same campaign id, offer id
+						and same level 2 BUT DIFFERENT LEVEL 1 (ex DB Marketing &amp; Permission and Web Campaign which both have level 2
+						as "Direct Emailing")</td>
+					<td>Determines the master keys to be implemented in a tabular format </td>
+					<td>Leevl1,2,3,4 and source parameters are defined in tabular format.</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>32</td>
+					<td>Date of Go live Landing page</td>
+					<td>Date set for the LP to be set live. These isn’t the date of LP development completion. These has to be asked
+						from respective assigner.</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<hr class="breakline">
+
+
+
+
+	</div>
+
+</div>
+
+<br>
+
+<script>$(document).ready(function () {
+		// Add smooth scrolling to all links
+		$("a").on('click', function (event) {
+
+			// Make sure this.hash has a value before overriding default behavior
+			if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+
+				// Store hash
+				var hash = this.hash;
+
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 800, function () {
+
+					// Add hash (#) to URL when done scrolling (default click behavior)
+					window.location.hash = hash;
+				});
+			} // End if
+		});
+	});</script>

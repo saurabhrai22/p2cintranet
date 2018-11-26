@@ -1,0 +1,306 @@
+
+
+        <div class="container-fluid">
+		<div class="col-md-9">
+			<!-- breadcrumb start-->
+			<ul class="breadcrumb">
+				<li><a href="">Home</a></li>
+				<li><a href="">Brands</a></li>
+				<li>Eloqua</li>
+				<li>Jeep</li>
+			</ul>
+			<!-- breadcrumb end-->
+
+
+			<h4 class="primary-color" id="scope">1.Scope</h4>
+
+
+			<p>The goal of this document is to provide the basic tips in order to create Form Eloqua in the Jeep portal.</p>
+
+
+
+			<hr class="breakline">
+			<h4 class="primary-color" id="chi_siamo_page">2. HOW TO CREATE FORM ELOQUA</h4>
+
+			
+<ol><p>Follow the steps below:</p>
+ 
+<li>Go to the properties of the language node (ex. jeep/jeep-uk/en);</li>
+<li>Select tab &ldquo;sites configuration&rdquo;</li>
+<li>Under the field &ldquo;Eloqua Form Configuration&rdquo; insert the Landing Page ID
+  
+ <div>
+<a data-fancybox="gallery" href="/img/Eloqua_jeep/eloqua-form-config.png"><img src="/img/Eloqua_jeep/eloqua-form-config.png" class="img-responsive"></a>
+</div>
+ </li>
+ 
+<li>Launch this servlet in order to import the Eloqua form:</li>
+<ol type="a">
+<li><a href="http://author-fca-italy-testing.adobecqms.net/content/jeep/jeep-uk/en/_jcr_content.eloquasync.json">http://author-fca-italy-testing.adobecqms.net/content/jeep/jeep-uk/en/_jcr_content.eloquasync.json&nbsp;</a><br /><strong>Note:</strong>&nbsp;Change market (ex.jeep-uk) and language (ex. en) in the url for each market and language</li>
+</ol>
+<li>Under the properties of the language node, select the tab &ldquo;Form Standard Reference&rdquo;</li>
+<ol type="a">
+<li>For each form insert the path to the model page that can be selected in the form page</li>
+<li>Insert the path to the form page
+
+<div>
+<a data-fancybox="gallery" href="/img/Eloqua_jeep/insert-path.png"><img src="/img/Eloqua_jeep/insert-path.png" class="img-responsive"></a>
+</div>
+</li>
+</ol>
+  
+<li>Choose &ldquo;Jeep Form Eloqua MARKET template&rdquo; as page layout (choose the template for the relative market)
+ 
+<div>
+<a data-fancybox="gallery" href="/img/Eloqua_jeep/jeep.png"><img src="/img/Eloqua_jeep/jeep.png" class="img-responsive"></a>
+</div>
+</li>
+<li>Click&nbsp;<strong>Next</strong></li>
+<li>Insert page data (a title can be &ldquo;Test drive&rdquo;)
+  
+<div>
+<a data-fancybox="gallery" href="/img/Eloqua_jeep/insertdata-jeep.png"><img src="/img/Eloqua_jeep/insertdata-jeep.png" class="img-responsive"></a>
+</div>
+</li>
+ 
+<li>Click&nbsp;<strong>Create</strong></li>
+<li>Click&nbsp;<strong>Done</strong>at the opened popup;</li>
+<li>Insert the &ldquo;From Eloqua&rdquo; (standard or business)</li>
+<li>Select the type of the form in the drop down menu in the dialog of the component</li>
+</ol>
+
+			<hr class="breakline">
+			<h4 class="primary-color" id="chi_showcases_component">3. HOW TO CONFIGURE THE OUR SHOWCASES COMPONENT</h4>
+<p>Follow the steps below in order to create the &ldquo;model lookup page&rdquo;:</p>
+<ol>
+<ol>
+<li>Go to the language node of the CMS editor ( jeep/jeep-uk/en);</li>
+<li>Click:&nbsp;<strong>Create &gt; Create Page</strong></li>
+<li>Choose&nbsp;<strong>&ldquo;Jeep Redirect Template&rdquo;</strong>&nbsp;as page layout</li>
+<li>Click&nbsp;<strong>Next</strong></li>
+<li>Insert page data (a title can be &ldquo;model lookup page&rdquo;)
+
+  
+<div>
+<a data-fancybox="gallery" href="/img/Eloqua_jeep/insert-model-lookup-page.png"><img src="/img/Eloqua_jeep/insert-model-lookup-page.png" class="img-responsive"></a>
+</div>
+</li>
+<li>Click&nbsp;<strong>&ldquo;Create&rdquo;;</strong></li>
+<li>Click&nbsp;<strong>&ldquo;Done&rdquo;</strong>&nbsp;in the opened popup
+  
+<div>
+<a data-fancybox="gallery" href="/img/Eloqua_jeep/pagecreate-lookup.png"><img src="/img/Eloqua_jeep/pagecreate-lookup.png" class="img-responsive"></a>
+</div></li>
+<li>Click&nbsp;<strong>&ldquo;Edit&rdquo;;</strong></li>
+<li>In the&nbsp;<strong>&ldquo;Basic&rdquo;;</strong>&rdquo; tab check the&nbsp;<strong>&ldquo;Hide in Navigation&rdquo;;</strong>&nbsp;checkbox.
+ 
+ <div>
+<a data-fancybox="gallery" href="/img/Eloqua_jeep/hide-nav.png"><img src="/img/Eloqua_jeep/hide-nav.png" class="img-responsive"></a>
+</div >
+ </li>
+<li>Click&nbsp;<strong>&ldquo;Done&rdquo;</strong>
+ <div>
+<a data-fancybox="gallery" href="/img/Eloqua_jeep/done.png"><img src="/img/Eloqua_jeep/done.png" class="img-responsive"></a>
+</div>
+ </li>
+ </ol>
+ 
+<ol><p>To create the &ldquo;model page&rdquo;, follow the steps below:</p>
+<li>Go to the model lookup page of the CMS editor ( jeep/jeep-uk/en/ model-lookup-page);</li>
+<li>Click:&nbsp;<strong>Create &gt; Create Page</strong></li>
+<li>Choose&nbsp;<strong>&ldquo;Jeep Website Model Lookup Template&rdquo;</strong>&nbsp;as page layout</li>
+<li>Click&nbsp;<strong>Next</strong></li>
+<li>Insert page data (a title can be &ldquo;Renegade&rdquo;)
+<div>
+<a data-fancybox="gallery" href="/img/Eloqua_jeep/insertdata-Renegade.png"><img src="/img/Eloqua_jeep/insertdata-Renegade.png" class="img-responsive"></a>
+</div></li>
+<li>Click&nbsp;<strong>&ldquo;Create&rdquo;;</strong></li>
+<li>Click&nbsp;<strong>&ldquo;Done&rdquo;</strong>&nbsp;in the opened popup
+
+<div>
+<a data-fancybox="gallery" href="/img/Eloqua_jeep/pagecreate-Renegade.png"><img src="/img/Eloqua_jeep/pagecreate-Renegade.png" class="img-responsive"></a> 
+</div> 
+</li>
+ 
+<li>Select the page created before, Click&nbsp;<strong>&ldquo;View Properties&rdquo;;</strong></li>
+<li>Click&nbsp;<strong>&ldquo;Edit&rdquo;;</strong>button</li>
+<li>Under the tab&nbsp;<strong>&ldquo;Analytics&rdquo;</strong>, insert the Model description Adobe and the Version description Adobe
+<div>
+<a data-fancybox="gallery" href="/img/Eloqua_jeep/analytics.png"><img src="/img/Eloqua_jeep/analytics.png" class="img-responsive"></a> 
+</div></li>
+
+<li>Under the tab&nbsp;<strong>&ldquo;Model Info&rdquo;</strong>, select the model and the version from the drop down menu; the other fields will be autocompleted.
+<div>
+<a data-fancybox="gallery" href="/img/Eloqua_jeep/model-info.png"><img src="/img/Eloqua_jeep/model-info.png" class="img-responsive"></a> 
+</div>
+</li>
+ 
+ 
+<li>Under the tab&nbsp;<strong>&ldquo;Model Data&rdquo;</strong>, insert the description title, the images and the link to the thank you page CTA (field &ldquo;thank you model CTA&rdquo;)
+<div>
+<a data-fancybox="gallery" href="/img/Eloqua_jeep/model-data.png"><img src="/img/Eloqua_jeep/model-data.png" class="img-responsive"></a> 
+</div>
+
+</li>
+ </ol>
+<dl>
+<dd><strong>- Display title;</strong></dd>
+<dd><strong>- Brochure;</strong></dd>
+<dd><strong>- Thank you model page CTA:</strong>&nbsp;here you have to choose the model page under the Jeep Vehicles node as in the picture below;</dd>
+</dl>
+<div>
+<a data-fancybox="gallery" href="/img/Eloqua_jeep/thank-page.png"><img src="/img/Eloqua_jeep/thank-page.png" class="img-responsive"></a> 
+</div>
+<p>Note: The field &ldquo;Image Min 1600&rdquo; is for the image inside the &ldquo;Thank you page&rdquo;</p>
+
+
+<hr class="breakline">
+			<h4 class="primary-color" id="FORM_LABELS">4. HOW TO INSERT FORM LABELS</h4>
+			
+		
+
+<ol>	<p>In order to modify the Eloqua form&rsquo;s label follow the steps below:</p>
+<li>Go to the language node (eg. content\jeep\jeep-uk\en)</li>
+<li>Select&nbsp;<strong>View properties</strong></li>
+<li>Select the tab&nbsp;<strong>&ldquo;JEloqua form label&rdquo;</strong>&nbsp;as page layout</li>
+<li>Under<strong>"Eloqua form label&rdquo; tab&nbsp;</strong>there are 4 boxes: Message, Dealer, Form, Thankyou</li>
+<li>In order to modified or added the labes click&nbsp;<strong>&ldquo;Edit&rdquo;</strong></li>
+</ol>
+ 
+<div class="row">
+<div class="col-xs-6 col-sm-6 ">
+<p class="pull-right">In the first box &ldquo;Message&rdquo; insert:&nbsp;<br />- var message</p>
+</div>
+<div class="col-xs-6"><a data-fancybox="gallery" href="/img/Eloqua_jeep/var-msg.png"><img src="/img/Eloqua_jeep/var-msg.png" class="img-responsive pull-left"></a> 
+ </div>
+</div>
+ 
+<div class="row">
+<div class="col-xs-6 ">
+<p class="pull-right">In the second box &ldquo;Dealer&rdquo; insert:&nbsp;<br />- var formLabel&nbsp;<br />- var select&nbsp;<br />- var tabName</p>
+</div>
+<div class="col-xs-6"><a data-fancybox="gallery" href="/img/Eloqua_jeep/dealer.png"><img src="/img/Eloqua_jeep/dealer.png" class="img-responsive pull-left"></a> 
+ </div>
+</div>
+ 
+<div class="row">
+<div class="col-xs-6 ">
+<p class="pull-right">In the third box &ldquo;Form&rdquo; insert:&nbsp;<br />- var dealerMessage</p>
+</div>
+<div class="col-xs-6"><a data-fancybox="gallery" href="/img/Eloqua_jeep/form.png"><img src="/img/Eloqua_jeep/form.png" class="img-responsive pull-left"></a> 
+</div>
+</div>
+ 
+<div class="row">
+<div class="col-xs-6 ">
+<p class="pull-right">In the fourth box &ldquo;Form&rdquo; insert:<br />- var typ_message</p>
+</div>
+<div class="col-xs-6"><a data-fancybox="gallery" href="/img/Eloqua_jeep/form1.png"><img src="/img/Eloqua_jeep/form1.png" class="img-responsive pull-left"></a> 
+</div>
+</div>
+<ol start="6">
+ All the details about the labels are described in the ppt below:
+<li>Click&nbsp;<strong>&ldquo;Done&rdquo;;</strong>button
+ <div>
+ <a data-fancybox="gallery" href="/img/Eloqua_jeep/done-insert.png"><img src="/img/Eloqua_jeep/done-insert.png" class="img-responsive "></a> 
+</div></li></ol>
+	
+
+
+
+
+<hr class="breakline">
+			<h4 class="primary-color" id="ANALYTICS_PARAMETERS">5. HOW TO INSERT ANALYTICS PARAMETERS</h4>
+			
+		
+<ol><p>Follow the steps below in order to change the analytics parameters for the STANDARD forms:</p>
+ 
+<li>Go to the language node of the CMS editor ( jeep/jeep-it/it);</li>
+<li>Click&nbsp;<strong>View properties</strong></li>
+<li>Select the tab&nbsp;<strong>&ldquo;analytics&rdquo;</strong></li>
+<li>In order to modified the parameters click&nbsp;<strong>"Edit&rdquo;</strong></li>
+<li>In the bottom of the page, in the last three fields insert:</li>
+ 
+</ol>
+<dl>
+<dd>- business Area :<strong>"Sales"</strong></dd>
+<dd>- Campaign ID : specific for each market</dd>
+<dd>- Offer ID: specific for each market</dd>
+</dl>
+<ol start="6">
+<li>Click&nbsp;<strong>&ldquo;Done&rdquo;;</strong>button</li>
+
+</ol>	
+		<div>
+ <a data-fancybox="gallery" href="/img/Eloqua_jeep/done-insert.png"><img src="/img/Eloqua_jeep/done-insert.png" class="img-responsive  "></a> 
+		</div>		
+	<div>
+ <a data-fancybox="gallery" href="/img/Eloqua_jeep/done-analytics.png"><img src="/img/Eloqua_jeep/done-analytics.png" class="img-responsive  "></a> 
+		</div>
+
+	
+
+ 
+<ol><p>Follow the steps below in order to change the analytics parameters for the BUSINESS forms:</p>
+<li>Go to the business node of the CMS editor ( jeep/jeep-it/it/business);</li>
+<li>Click&nbsp;<strong>View properties</strong></li>
+<li>Select the tab&nbsp;<strong>&ldquo;analytics&rdquo;</strong></li>
+<li>In order to modified the parameters click&nbsp;<strong>"Edit&rdquo;</strong></li>
+<li>In the bottom of the page, in the last three fields insert:</li>
+ 
+</ol>
+<dl>
+<dd>- business Area :<strong>"Sales"</strong></dd>
+<dd>- Campaign ID : specific for each market</dd>
+<dd>- Offer ID: specific for each market</dd>
+</dl>
+ 
+<ol start="6">
+<li>Click&nbsp;<strong>&ldquo;Done&rdquo;;</strong>button</li>
+</ol>
+ <div>
+ <a data-fancybox="gallery" href="/img/Eloqua_jeep/done-insert.png"><img src="/img/Eloqua_jeep/done-insert.png" class="img-responsive "></a> 
+		</div>		
+	<div>
+ <a data-fancybox="gallery" href="/img/Eloqua_jeep/done-business.png"><img src="/img/Eloqua_jeep/done-business.png" class="img-responsive  "></a> 
+		</div>
+
+	
+	</div>
+		<nav class="col-sm-3" id="myScrollspy">
+			<ul class="nav nav-pills nav-stacked">
+				<li class="active"><a href="#scope">SCOPE</a></li>
+				<li class=""><a href="#chi_siamo_page">HOW TO CREATE FORM ELOQUA</a></li>
+				<li class=""><a href="#chi_showcases_component">HOW TO CREATE THE MODEL LOOKUP PAGE & MODEL PAGE</a></li>
+				<li class=""><a href="#FORM_LABELS">HOW TO INSERT FORM LABELS</a></li>
+				<li class=""><a href="#ANALYTICS_PARAMETERS">HOW TO INSERT ANALYTICS PARAMETERS</a></li>
+
+			</ul>
+		</nav>
+	</div>
+     
+      <br>
+	<script>$(document).ready(function(){
+			// Add smooth scrolling to all links
+			$("a").on('click', function(event) {
+		  
+			  // Make sure this.hash has a value before overriding default behavior
+			  if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+		  
+				// Store hash
+				var hash = this.hash;
+		  
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+				  scrollTop: $(hash).offset().top
+				}, 800, function(){
+			 
+				  // Add hash (#) to URL when done scrolling (default click behavior)
+				  window.location.hash = hash;
+				});
+			  } // End if
+			});
+		  });</script>

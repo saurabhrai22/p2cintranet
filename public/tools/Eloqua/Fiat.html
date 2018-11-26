@@ -1,0 +1,511 @@
+
+
+        <div class="container-fluid">
+		<div class="col-md-9">
+			<!-- breadcrumb start-->
+			<ul class="breadcrumb">
+				<li><a href="">Home</a></li>
+				<li><a href="">Tools</a></li>
+				<li>Eloqua</li>
+				<li>Fiat</li>
+			</ul>
+			<!-- breadcrumb end-->
+
+
+			<h4 class="primary-color" id="eloqua_Introduction">1. Introduction</h4>
+
+
+			<p>The document has the purpose to illustrate the procedure in order to modify Fiat forms. </p>
+			<h5><b>1.1 Assumption</b></h5>
+			<ol>
+					<li> LPID is the unique ID of the Landing Page</li>
+					<li> Each LP contains the form for a specific couple brand/market </b>
+					<ul>
+					<li>For different layouts, there will be different landing pages (e.g. Standard, Promo and Fleet/Business forms)</li>
+					</ul></li>
+					<li> One LP is multiCTA/forms</li>
+					<li> FIAT Prod Landing Pages use the Eloqua form <em>&ldquo;Portal_FIAT_Prod&rdquo;</em> associated with the <em>&ldquo;LeadEvent&rdquo;</em> Custom Object (except for IT <em>&ldquo;Portal_Italy_FIAT_Prod&rdquo;</em>)</li>
+					<li> FIAT Test Landing Pages use the Eloqua form <em>&ldquo;TestFormAbarthAEM&rdquo;</em> associated with the <em>&ldquo;TestLeadEvent&rdquo;</em> Custom Object</li>
+					</ol><br>
+					<h5><b>1.2 Fiat Eloqua folder structure</b></h5>
+					<p>Fiat Landing Pages are under All > FIAT path. </p>
+					<p>The main folder contains other three subfolders with the corresponding pages: </p>
+			<ol >
+					<li> TEST (Test LPID)</li>
+					<li> TEST FORM (Certification LPID) </b>
+					<li> LP FORM (Production LPID)</li><br>
+					<p style="text-align:center">Under these three folders there is a folder for each market that contains the related LPs:</p>
+					<div>
+						<a data-fancybox="gallery" href="/img/tools/eloqua/fiat/intro_1.png"><img src="/img/tools/eloqua/fiat/intro_1.png"  class="img-responsive"></a>
+
+					</div>
+					<p>If not present, <u>duplicate the Production LP</u> into the <strong>TEST</strong> folder at the corresponding path in order to apply the changes needed. If already present, copy always the content of the production LP into the test one to start to work from the most updated version available in production.</p>
+<p>When you create a new Landing Page you have to set the <strong>Microsite</strong>.</p>
+<p>For Abarth it must be <em>Fiat &ndash; Desktop</em><strong>.</strong></p>
+					<div>
+						<a data-fancybox="gallery" href="/img/tools/eloqua/fiat/intro_2.png"><img src="/img/tools/eloqua/fiat/intro_2.png"  class="img-responsive"></a>
+
+					</div>
+<p>When done, report them in the corresponding PROD Landing Page.</p>
+<p>Remember that after modifying a Landing Page is always necessary a Fiat AEM portal refresh.</p>
+<p>In some cases, when the changes affect:</p>
+<li>Orchestrator values</li>
+<li>CCDB values</li>
+<li>adding and removing fields operation</li></ol>
+<p>they must be validated by the ICT team through the internal process on the AEM Test environment, before to be reported in AEM Prod.</p>
+<p style="background-color: yellow; display: inline;">This kind of changes must pass the ICT test before to be published in Production.</p>
+				<br>
+					<h5><b>1.3 Landing Page Permissions</b></h5>
+						<p>In order to integrate the Fiat Landing page into AEM Portal it is necessary to give it the correct permissions. Follow this steps:</p>
+						<ol>
+					<li> Open Landing page from Eloqua platform</li>
+					<li> In the right corner click on Actions button </b>
+					<li> Click on Permissions</li>
+					<li> Add group CloudConnector and give it View permission;</li>
+					<li> Save and save Landing page;</li>
+						<div>
+						<a data-fancybox="gallery" href="/img/tools/eloqua/fiat/intro_3.png"><img src="/img/tools/eloqua/fiat/intro_3.png"  class="img-responsive"></a>
+
+					</div>
+						<div>
+						<a data-fancybox="gallery" href="/img/tools/eloqua/fiat/intro_4.png"><img src="/img/tools/eloqua/fiat/intro_4.png"  class="img-responsive"></a>
+
+					</div>
+						<div>
+						<a data-fancybox="gallery" href="/img/tools/eloqua/fiat/intro_5.png"><img src="/img/tools/eloqua/fiat/intro_5.png"  class="img-responsive"></a>
+
+					</div>
+					</ol><br>
+
+			<hr class="breakline">
+			<h4 class="primary-color" id="eloqua_lpid">2. LPID Identification</h4>
+			<p>The LPID is the unique ID of the Landing Page.</p>
+			<p>This chapter allows you to identify and locate the correct LPID of the form.</p>
+			<h5><b>2.1 LPID browser research</b></h5>
+			
+			<p>To found quickly the LPID of the form to analyze, open the source code of the form in a browser (use a common developing tool).</p>
+<p>The LPID, in the HTML code, is identified with a specific (allows you to locate it faster):</p>
+
+			<ol >
+				
+					<li> tag: <input></li>
+					<li> name: name="LPID"</li>
+					<p>&lt;input type="hidden" id="field62" name="LPID" value="10944"&gt; (e.g. Fiat UK TD)</p>
+					<div>
+					<a data-fancybox="gallery" href="/img/tools/eloqua/fiat/lpid_1.png"><img src="/img/tools/eloqua/fiat/lpid_1.png"  class="img-responsive"></a>
+					</div>
+					<h5><b>2.2 LPID Eloqua research</b></h5>
+					<p>To found the corresponding Landing Page in Eloqua, having the LPID, go to any LP and change the &ldquo;id&rdquo; parameter directly in query string:</p>
+					<p>https://secure.p06.Eloqua.com/Main.aspx#landing_pages&amp;id={LPID}</p>
+					<p>(e.g. for Fiat UK TD: https://secure.p06.Eloqua.com/Main.aspx#landing_pages&amp;id=10944)</p>
+					<div>
+						<!-- <img src="/img/auto_expert_page2.png" class="img-responsive img-rounded zoom shadow-box"> -->
+						<a data-fancybox="gallery" href="/img/tools/eloqua/fiat/lpid_2.png"><img src="/img/tools/eloqua/fiat/lpid_2.png"  class="img-responsive"></a>
+
+
+					</div>
+
+			</ol>
+
+			<hr class="breakline">
+			<h4 class="primary-color" id="eloqua_git">3. GIT Versioning</h4>
+			<p>The FIAT code is versioned under the following GIT repository: <a href="https://ci.fiatauto.com/scm/git/B2C_MKT_EloquaAssets">https://ci.fiatauto.com/scm/git/B2C_MKT_EloquaAssets</a></p>
+<p>In order to access to the repo is possible to use <strong>FIATAUTO</strong> credentials.</p>
+<p>You can access to the repository through <a href="https://tortoisegit.org/download/">Tortoise GIT</a> free client or through another GIT client.</p>
+<p>The first operation to do is to <em>clone </em>the repository in local in order to modify it.</p>
+<p>The repository has the following folder structure:</p>
+<ul>
+<li>BackEnd</li>
+<li>FrontEnd
+<ul>
+<li><strong>Eloqua.Form</strong>
+<ul>
+<li>Eloqua.Form
+<ul>
+<li>JS</li>
+<li>PAGES</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Fiat Forms UniqueFile Generator</strong></li>
+</ul>
+</li>
+</ul>
+<div>
+						<!-- <img src="/img/auto_expert_page2.png" class="img-responsive img-rounded zoom shadow-box"> -->
+						<a data-fancybox="gallery" href="/img/tools/eloqua/fiat/git_1.png"><img src="/img/tools/eloqua/fiat/git_1.png"  class="img-responsive"></a>
+
+
+					</div>
+			
+			<hr class="breakline">
+			<h4 class="primary-color" id="eloqua_js">4. JS Management</h4>
+			<p>This chapter allows you to modify the correct JavaScript files included in the Landing Page that you are analyzing.</p>
+			<h5><b>4.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Core JS structure</b></h5>
+<p>&nbsp;</p>
+<p>The files <strong>lq_standard_forms.js</strong> and <strong>lq_promotion_forms.js</strong> contain the core functionalities and are linked in the corresponding landing pages.</p>
+<p>These files are a union of other JavaScript files and built through <strong>Fiat.Forms.UniqueFile.Generator.exe</strong> script.</p>
+<p>This solution was adopted in order to separate basic functionalities and use them cross sites.</p>
+<p>On the other hand, in the page the number of JS files included was reduced to improve performances and SEO ranking.</p>
+<p>This files are stored on the Akamai server under <em>https://staticpromo.fiat.com</em> domain.</p>
+<h5><b>4.1.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lq_standard_forms.js</b></h5>
+<p>&nbsp;</p>
+<p>The <strong>lq_standard_forms.js </strong>file is included in both Standard and Fleet/Business Landing Pages.</p>
+<p>The lq_standard_forms.js, in the HTML code, is identified with by a specific (allows you to locate it faster):</p>
+<p>&lt;script type="text/javascript" src="https://staticpromo.fiat.com/FIAT/Portal/Core/lq_standard_forms.js"&gt;&lt;/script&gt;</p>
+<p>This is composed by the following JS files:</p>
+<ul>
+<li>lq_init_form.js</li>
+<li>digitalDataTracking.js</li>
+<li>lq_privacy.js</li>
+<li>lq_utility_function.js</li>
+<li>lq_configuration.js</li>
+<li>lq_submit.js</li>
+<li>lq_dealerLocator.js</li>
+<li>lq_thankyou_page.js</li>
+<li>lq_preload_standard.js</li>
+</ul>
+<h5><b>4.1.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lq_promotion_forms.js</b></h5>
+<p>&nbsp;</p>
+<p>The <strong>lq_promotion_forms.js </strong>file is included in Promotion Landing Pages.</p>
+<p>The lq_promotion_forms.js, in the HTML code, is identified with by a specific (allows you to locate it faster):</p>
+<p>&lt;script type="text/javascript" src="https://staticpromo.fiat.com/FIAT/Portal/Core/lq_promotion_forms.js"&gt;&lt;/script&gt;</p>
+<p>This is composed by the following JS files:</p>
+<ul>
+<li>lq_init_form.js</li>
+<li>digitalDataTracking.js</li>
+<li>lq_privacy.js</li>
+<li>lq_utility_function.js</li>
+<li>lq_configuration.js</li>
+<li>lq_submit.js</li>
+<li>lq_dealerLocator.js</li>
+<li>lq_thankyou_page.js</li>
+<li>lq_promotions.js</li>
+<li>lq_preload_promotion.js</li>
+</ul>
+<h5><b>4.1.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lq_fleet_forms_IT.js</b></h5>
+<p>&nbsp;</p>
+<p>Only for IT market, the core file used by Fleet/Business LP is <strong>lq_fleet_forms_IT.js</strong>.</p>
+<p>This choice was made implement functionalities only for this specific country.</p>
+<p>The lq_fleet_forms_IT.js, in the HTML code, is identified with by a specific (allows you to locate it faster):</p>
+<p>&lt;script type="text/javascript" src=" https://staticpromo.fiat.com/FIAT/IT/PORTAL/TEST/JS/fleetProd/lq_fleet_forms_IT.js"&gt;&lt;/script&gt;</p>
+<p>This is composed by the following JS files:</p>
+<ul>
+<li>lq_init_form.js</li>
+<li>digitalDataTracking.js</li>
+<li>lq_privacy.js</li>
+<li>lq_utility_function.js</li>
+<li>lq_configuration.js</li>
+<li>AskForInfoFunction.js</li>
+<li>lq_submit_fleetIT.js</li>
+<li>lq_thankyou_page.js</li>
+<li>lq_preload_business_IT.js</li>
+</ul>
+<h5><b>4.1.4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Build Core JS</b></h5>
+<p>&nbsp;</p>
+<p>When you need to apply changes to the JS files you have to modify always the inner JavaScript files and regenerate the Core JS through the <strong>Fiat.Forms.UniqueFile.Generator.</strong></p>
+<p>In order to build Core JS, in the configuration file under <strong>Fiat.Forms.UniqueFile.Generator</strong> folder, set the following key:</p>
+<ul>
+<li><strong>InputPathName</strong>: the local input GIT path</li>
+<li><strong>OutputPathName</strong>: the local path which you want to create new file</li>
+<li><strong>formType: </strong>value must be
+<ul>
+<li><em>"standard"</em> (standard forms)</li>
+<li><em>"promotion" </em>(promotion forms)</li>
+<li><em>"fleet"</em> (fleet form market IT)</li>
+</ul>
+</li>
+<li><strong>outputFileName: </strong>value must be
+<ul>
+<li><em>&ldquo;lq_standard_forms.js&rdquo;</em> for <em>standard</em> formTytpe</li>
+<li><em>&ldquo;lq_promotion_forms.js&rdquo;</em> for <em>promotion</em> formType</li>
+<li><em>&ldquo;lq_fleet_forms_IT.js&rdquo;</em> for <em>fleet</em> formType</li>
+</ul>
+</li>
+</ul>
+<p>Run console application to re-generate the Core JS files.</p>
+<h5><b>4.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Market JS structure</b></h5>
+<p>&nbsp;</p>
+<p>The file <strong>lq_message_configuration_MARKET.js </strong>contains the messages and the configurations for the market and is linked in the corresponding landing pages.</p>
+<p>The Market JS file is a union of other JavaScript files and built through <strong>Fiat.Forms.UniqueFile.Generator.exe</strong> script.</p>
+<p>This solution was adopted in order to separate basic functionalities and use them cross sites.</p>
+<p>On the other hand, in the page the number of JS files included was reduced to improve performances and SEO ranking.</p>
+<p>This files are stored on the Akamai server under <em>https://staticpromo.fiat.com</em> domain.</p>
+
+<h5><b>4.2.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lq_message_configuration_MARKET.js</b></h5>
+<p>&nbsp;</p>
+<p>The same <strong>lq_message_configuration_MARKET.js </strong>file is included in Standard, Promo and Fleet/Business Landing Pages for the specific market.</p>
+<p>This is composed by the following JS files:</p>
+<ul>
+<li>lq_form-message_MARKET.js</li>
+<li>lq_form-configuration_MARKET.js</li>
+</ul>
+<p>The<em> lq_message_configuration_MARKET.js</em>, in the HTML code, is identified with by a specific (allows you to locate it faster):</p>
+<p>&lt;script type="text/javascript" src=" https://staticpromo.fiat.com/FIAT/Portal/UK/lq_message_configuration_UK.js"&gt;&lt;/script&gt;</p>
+<p>(e.g. UK Market)</p>
+<p>The lq_message_configuration_UK.js is obtained concatenating:</p>
+<ul>
+<li>lq_form-message_UK.js</li>
+<li>lq_form-configuration_UK.js</li>
+</ul>
+<h5><b>4.2.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Build Market JS</b></h5>
+<p>&nbsp;</p>
+<p>When you need to apply changes to the JS files you have to modify always the inner JavaScript files and regenerate the Market JS through the <strong>Fiat.Forms.UniqueFile.Generator.</strong></p>
+<p>In order to build Market JS for messages and configuration, in the configuration file under <strong>Fiat.Forms.UniqueFile.Generator</strong> folder, set the following key:</p>
+<ul>
+<li><strong>InputPathName</strong>: the local input GIT path</li>
+<li><strong>OutputPathName</strong>: the local path in which you want to create new file</li>
+<li><strong>formType: </strong>value must be <em>"message_MARKET"</em></li>
+<li><strong>outputFileName: </strong>value must be <em>&ldquo;lq_message_configuration_MARKET.js&rdquo;</em></li>
+</ul>
+<p>Run Console application to re-generate the Message JS files.</p>
+			<hr class="breakline">
+			<h4 class="primary-color" id="eloqua_label">5. Label Configuration</h4>
+			
+<p>This chapter allows you to modify correctly the message labels of your landing page.</p>
+<p>&nbsp;</p>
+<h5><b>5.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Label replacement</b></h5>
+<p>&nbsp;</p>
+<p>If required to change a specific label, it is necessary to replace it in the specific Market JS file.</p>
+<p>In particular, the labels are stored in the lq_form-message_MARKET.js subfile.</p>
+<p>&nbsp;</p>
+<p>In this file there are several JS variables that contains JSONs with key and values of the specific labels.</p>
+<p>The replacement is realized in the Core JS files through specific JavaScript functions.</p>
+<p>The message, in the HTML code, is identified with a specific (allows you to locate it faster):</p>
+<ul>
+<li>name="&hellip;"</li>
+</ul>
+<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; In the correspondin JSON you will find particular variables (for market/language):</p>
+<p>var message =</p>
+<p>&nbsp; {</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uk:</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; en:</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "placeholder_nome": "Name*",</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+<p>&nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (e.g.lq_message_configuration_UK.js)</p>
+<p>&nbsp;</p>
+<p>The text containd in the JSON value will replace the label of the &lt;input&gt; in the HTML code that has the same <em>name=&rdquo;&rdquo;</em> value of the JSON key after the &ldquo;<em>placeholder_</em>&rdquo; prefix.</p>
+<p>&nbsp;</p>
+<p>&lt;input type="text" class="form-control required" name="nome"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (e.g. Standard UK form)</p>
+<p>&nbsp;</p>
+<p>The variables to change are in general:</p>
+<p>var message = {} (general messages)</p>
+<p>var select = {} (select options)</p>
+<p>var tabName = {} (tab names)</p>
+<p>var dealerMessage = {} (dealer page messages)</p>
+<p>var stepMessage = {} (step messages)</p>
+<p>var formLabel = {} (form labels like e.g. piva, submit button, fleet messages)</p>
+<p>var privacyMessage = {} (privacy messages)</p>
+<p>var typ_message = {} (thank you page messages)</p>
+
+			
+			<hr class="breakline">
+			<h4 class="primary-color" id="eloqua_validation">6. Validation Rules Configuration</h4>
+			
+<p>This chapter allows you to modify correctly the validation rules of the fields in your landing page.</p>
+<h5><b>1.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Validation rules of page fields</b></h5>
+<p>&nbsp;</p>
+<p>Each field of the page has specific validation rules.</p>
+<p>The validation of the page fields is managed through the specific Market JS file.</p>
+<p>In particular, the labels are stored in the - lq_form-configuration_MARKET.js subfile.</p>
+<p>&nbsp;</p>
+<p>There you have to modify the corresponding regex matching the request.</p>
+<p>&nbsp;</p>
+<p>The first level of validation specifies the accepted values that is possible to insert in a filed.</p>
+<p>In the correspondin JSON you will find a particular variable (for market/language):</p>
+<p>var regex =</p>
+<p>&nbsp; {</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uk:</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "current_name_rules":</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "accepted": <mark>/^[a-zA-Z\s\Z&Atilde;&nbsp;&Atilde;&iexcl;&Atilde;&cent;&Atilde;&curren;&Atilde;&pound;&Atilde;&yen;&Atilde;&uml;&Atilde;&copy;&Atilde;&ordf;&Atilde;&laquo;&Atilde;&not;&Atilde;&shy;&Atilde;&reg;&Atilde;&macr;&Atilde;&sup2;&Atilde;&sup3;&Atilde;&acute;&Atilde;&para;&Atilde;&micro;&Atilde;&cedil;&Atilde;&sup1;&Atilde;&ordm;&Atilde;&raquo;&Atilde;&frac14;&Atilde;&iquest;&Atilde;&frac12;&Atilde;&plusmn;&Atilde;&sect;&Auml;&Aring;&iexcl;&Aring;&frac34;&Atilde;&euro;&Atilde;&Atilde;&sbquo;&Atilde;&bdquo;&Atilde;&fnof;&Atilde;&hellip;&Atilde;&circ;&Atilde;&permil;&Atilde;&Scaron;&Atilde;&lsaquo;&Atilde;&OElig;&Atilde;&Atilde;Ž&Atilde;&Atilde;&rsquo;&Atilde;&ldquo;&Atilde;&rdquo;&Atilde;&ndash;&Atilde;&bull;&Atilde;&tilde;&Atilde;&trade;&Atilde;&scaron;&Atilde;&rsaquo;&Atilde;&oelig;&Aring;&cedil;&Atilde;&Atilde;&lsquo;&Atilde;&Yuml;&Atilde;&Dagger;OE&Atilde;&dagger;&Auml;&OElig;&Aring;&nbsp;&Aring;&frac12;&acirc;&circ;&sbquo;&Atilde;&deg;''-]+$/ig</mark>,</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+<p>&nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (e.g.lq_message_configuration_UK.js)</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>This can help you to locate the specific section to edit.</p>
+<p>The<em> &ldquo;accepted&rdquo; </em>regex limits the values that is possible to insert in the field.</p>
+<p>&nbsp;</p>
+<p>The second level of validation is related to the specific values and blocks the submit operation.</p>
+<p>In the correspondin JSON for the same regex variable (for market/language) there are specific rules with <em>&ldquo;reg_&rdquo;</em> prefix (allows you to locate it faster):</p>
+<p>var regex =</p>
+<p>&nbsp;&nbsp; {</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uk:</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</p>
+<p>...</p>
+<p>"reg_nome": /^[a-zA-Z...,</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;"reg_cognome": /^[a-zA-Z...,</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "reg_email": /^[a-&acirc;&euro;zA ...,</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "reg_cellulare":</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "reg_cellulare_1": <mark>/^0\d{10}$/</mark></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "reg_cap":</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "reg_cap_1": /^\d{5}$/</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;}</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(e.g.lq_message_configuration_UK.js)</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>This can help you to locate the specific section to edit.</p>
+
+			<hr class="breakline">
+			<h4 class="primary-color" id="eloqua_mask">7. Mask Configuration</h4>
+			
+<p>This chapter allows you to modify correctly the mask of the phone field of your landing page (only for some countries that use this feature).</p>
+<h5><b>1.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mask replacement</b></h5>
+<p>&nbsp;</p>
+<p>If required to change a specific mask, it is necessary to replace it in the Core JS file.</p>
+<p>In particular, the labels are stored in the <em>lq_init_form.js</em> subfile in the specific function (allows you to locate it faster):</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function Eloqua_initMask() {</p>
+<p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (typeof (market) != 'undefined' &amp;&amp; market == 'at') {</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $('input[name="cellulare"]').mask('<mark>+43-999-9999999?99', { autoclear: false });</mark></p>
+<p>&nbsp;&nbsp; }</p>
+<p>&nbsp;&nbsp;&nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (e.g Fiat Austria market)</p>
+<p>&nbsp;</p>
+<p>This can help you to locate the specific section to edit.</p>
+
+			
+			<hr class="breakline">
+			<h4 class="primary-color" id="eloqua_master">8. Master Key Configuration</h4>
+			<p>This chapter allows you to modify correctly the master key configuration of your landing page.</p>
+<p>&nbsp;</p>
+<h5><b>8.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Master Key replacement</b></h5>
+<p>&nbsp;</p>
+<p>The Fiat Portal includes the Dynamic Master Key (DMK):</p>
+<ol>
+<li>MK are defined into the <em>digitalData</em> provided by the portal</li>
+<li>If the specific value from Fiat portal is empty, it is used the related MK value included into the hidden input of the form into the Landing Page. This MK must be replaced with the correct value given from the market.</li>
+</ol>
+					<div>
+		<!-- <img src="/img/auto_expert_page2.png" class="img-responsive img-rounded zoom shadow-box"> -->
+						<a data-fancybox="gallery" href="//img/tools/eloqua/fiat/master_1.png"><img src="//img/tools/eloqua/fiat/master_1.png"  class="img-responsive"></a>
+					</div>
+<p>In particular, the Master Key <em>value</em> that may be required to change are:</p>
+<ul>
+<li><em>a) OFFER</em></li>
+</ul>
+<p>&lt;input type="hidden" id="field21" name="OFFER" value=""&gt;</p>
+<ul>
+<li><em>b) CAMPAIGN</em></li>
+</ul>
+<p>&lt;input type="hidden" name="CAMPAIGN" value="5096"&gt;</p>
+<ul>
+<li><em>c) MODEL DESCRIPTION</em></li>
+</ul>
+<p>&lt;input type="hidden" id="field18" name=" MODELDESCRIPTION" value=""&gt;</p>
+<ul>
+<li><em>d) MODEL COMMERCIALCODE</em></li>
+</ul>
+<p>&lt;input type="hidden" id="field19" name="MODELCOMMERCIALCODE" value=""&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>Remember that the following values are necessary for the Orchestrator system and must never change:</p>
+<ul>
+<li><em>LEADSOURCECODE</em></li>
+</ul>
+<p>&lt;input type="hidden" id="field15" name="LEADSOURCECODE" value="MAT"&gt;</p>
+<ul>
+<li><em>DTM_ENABLED</em></li>
+</ul>
+<p>&lt;input id="field92" name="DTM_ENABLED" type="hidden" value="1"&gt;</p>
+<p>(e.g. for Fiat UK Standard TD)</p>
+			
+			<hr class="breakline">
+			<h4 class="primary-color" id="eloqua_akamai">9. Akamai Server</h4>
+			<p>The Fiat JavaScript files are stored under Akamai host at <em>https://staticpromo.fiat.com</em> domain.</p>
+<p><u>Every time you overwrite a JS file under Akamai Server is necessary a flush of the specific resource in order to load the changes applied.</u></p>
+<p>To access to the Akamai server, you must download the <a href="https://filezilla-project.org/download.php">Filezilla</a> free client and use the following configuration:</p>
+				<div>
+		<!-- <img src="/img/auto_expert_page2.png" class="img-responsive img-rounded zoom shadow-box"> -->
+						<a data-fancybox="gallery" href="//img/tools/eloqua/fiat/aka_1.png"><img src="//img/tools/eloqua/fiat/aka_1.png"  class="img-responsive"></a>
+					</div>
+									<div>
+		<!-- <img src="/img/auto_expert_page2.png" class="img-responsive img-rounded zoom shadow-box"> -->
+						<a data-fancybox="gallery" href="//img/tools/eloqua/fiat/aka_2.png"><img src="//img/tools/eloqua/fiat/aka_2.png"  class="img-responsive"></a>
+					</div>
+									<div>
+									<ul>
+<li>Upload domain:&nbsp;<strong>upload.akamai.com</strong></li>
+<li>Account FTP/FTPS (username/password):
+<ul>
+<li>Username: fca_Eloqua</li>
+<li>Password: 1cd3d8dc2215ee52</li>
+</ul>
+</li>
+<li>CPCode:&nbsp;<strong>/436628</strong></li>
+</ul>
+<p>Under the root folder <strong>/436628</strong> youwill find the following structure:</p>
+		<!-- <img src="/img/auto_expert_page2.png" class="img-responsive img-rounded zoom shadow-box"> -->
+						<a data-fancybox="gallery" href="//img/tools/eloqua/fiat/aka_3.png"><img src="//img/tools/eloqua/fiat/aka_3.png"  class="img-responsive"></a>
+					</div>
+					<p><strong>Portal</strong> is the production folder and contains the Core and Market JS files:</p>
+									<div>
+		<!-- <img src="/img/auto_expert_page2.png" class="img-responsive img-rounded zoom shadow-box"> -->
+						<a data-fancybox="gallery" href="//img/tools/eloqua/fiat/aka_4.png"><img src="//img/tools/eloqua/fiat/aka_4.png"  class="img-responsive"></a>
+					</div>
+					<p>The <strong>IT</strong> folder is used only for test:</p>
+									<div>
+		<!-- <img src="/img/auto_expert_page2.png" class="img-responsive img-rounded zoom shadow-box"> -->
+						<a data-fancybox="gallery" href="//img/tools/eloqua/fiat/aka_5.png"><img src="//img/tools/eloqua/fiat/aka_5.png"  class="img-responsive"></a>
+					</div>
+					<p>The <strong>Privacy</strong> folder contains HTML privacy informative pages:</p>
+									<div>
+		<!-- <img src="/img/auto_expert_page2.png" class="img-responsive img-rounded zoom shadow-box"> -->
+						<a data-fancybox="gallery" href="//img/tools/eloqua/fiat/aka_6.png"><img src="//img/tools/eloqua/fiat/aka_6.png"  class="img-responsive"></a>
+					</div>
+		</div>
+		<nav class="col-sm-3" id="myScrollspy">
+			<ul class="nav nav-pills nav-stacked">
+				<li class="active"><a href="#eloqua_Introduction">Introduction</a></li>
+				<li class=""><a href="#eloqua_lpid">LPID Identification</a></li>
+				<li class=""><a href="#eloqua_git">GIT Versioning</a></li>
+				<li class=""><a href="#eloqua_js">JS Management</a></li>
+				<li class=""><a href="#eloqua_label">Label Configuration</a></li>
+				<li class=""><a href="#eloqua_validation">Validation Rules Configuration</a></li>
+				<li class=""><a href="#eloqua_mask">Mask Configuration</a></li>
+				<li class=""><a href="#eloqua_master">Master Key Configuration</a></li>
+				<li class=""><a href="#eloqua_akamai">Akamai Server</a></li>
+
+			</ul>
+		</nav>
+	</div>
+     
+      <br>
+
+	<script>$(document).ready(function(){
+			// Add smooth scrolling to all links
+			$("a").on('click', function(event) {
+		  
+			  // Make sure this.hash has a value before overriding default behavior
+			  if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+		  
+				// Store hash
+				var hash = this.hash;
+		  
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+				  scrollTop: $(hash).offset().top
+				}, 800, function(){
+			 
+				  // Add hash (#) to URL when done scrolling (default click behavior)
+				  window.location.hash = hash;
+				});
+			  } // End if
+			});
+		  });</script>

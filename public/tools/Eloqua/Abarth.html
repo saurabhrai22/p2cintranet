@@ -1,0 +1,430 @@
+
+	   <div class="container-fluid"> 
+	   <div class="col-sm-9">
+      <!-- breadcrumb start-->
+      <ul class="breadcrumb">
+         <li><a href="index.html">Home</a></li>
+         <li><a href="#">Tools</a></li>
+         <li><a href="#">Eloqua</a></li>
+         <li>Abarth</li>
+      </ul>
+      <!-- breadcrumb end-->
+     
+      
+	 <div id="introduction">
+	 
+	 <h4 class="primary-color">Introduction</h4>
+	 <h5><b>1.1 Assumption</b> </h5>
+	  <ul >		  
+			<li>LPID is the unique ID of the Landing Page</li>
+			<li>Each LP contains the form for a specific couple brand/market
+			<ul>
+			<li>For different layouts, there will be different landing pages (e.g. Standard and Promo forms)</li>
+			</ul>
+			</li>
+			<li>Every LP contains only one CTA/form</li>
+    </ul>
+    <hr class="breakline"/>
+	
+	<h5><b>1.2 Abarth Eloqua folder structure</b> </h5>
+	<p>Abarth Landing Pages are under All > EMEA > WEBPORTAL_INTEGRATION > ABARTH path.</p>
+	<p>For every country, there is a specific folder MARKET/MARKET-LANGUAGE that contains other two subfolders with the corresponding pages:</p>
+		<ul >		  
+				<li>CERT DMK (Certification LPID)</li>
+				<li>PROD DMK (Production LPID)</li>
+			</ul>
+	<p>If not present, create a TEST folder and duplicate the Production LP into it in order to apply the changes needed. If already present, copy always the content of the production LP into the test one to start to work from the most updated version available in production.</p>
+ 
+  <figure>
+    <a data-fancybox="gallery" href="/img/tools/eloqua/abarth/abarth1.png"><img src="/img/tools/eloqua/abarth/abarth1.png" class="img-responsive"></a>
+</figure>
+	<p>When done, report them in the corresponding PROD Landing Page.<br>When you create a new Landing Page you have to set the Microsite.<br>For Abarth it must be Abarth – Desktop.</p>
+
+  <figure>
+    <a data-fancybox="gallery" href="/img/tools/eloqua/abarth/abarth2.png"><img src="/img/tools/eloqua/abarth/abarth2.png" class="img-responsive"></a>
+</figure>
+	<p>Remember that after modifying a Landing Page is always necessary an Abarth AEM portal refresh.</p>
+	<p>In some cases, when the changes affect</p>
+	<ul >		  
+			<li>Orchestrator values</li>
+			<li>CCDB values</li>
+			<li>adding and removing fields operation</li>
+		</ul>
+	<p>they must be validated by the ICT team through the internal process on the AEM Test environment, before to be reported in AEM Prod<br>This kind of changes must pass the ICT test before to be published in Production.</p>
+  <hr class="breakline"/>
+ 
+  <h5><b>1.3 Landing Page Permissions</b> </h5>
+	<p>In order to integrate the Abarth Landing page into AEM Portal it is necessary to give it the correct permissions. Follow this steps:</p>
+	<ul >		  
+			<li>Open Landing page from Eloqua platform</li>
+			<li>In the right corner click on Actions button</li>
+			<li>Click on Permissions</li>
+			<li>Add group CloudConnector and give it View permission;</li>
+			<li>Save and save Landing page;</li>
+	</ul>
+  <figure>
+    <a data-fancybox="gallery" href="/img/tools/eloqua/abarth/abarth3.png"><img src="/img/tools/eloqua/abarth/abarth3.png" class="img-responsive"></a>
+</figure>
+  <figure>
+    <a data-fancybox="gallery" href="/img/tools/eloqua/abarth/abarth4.png"><img src="/img/tools/eloqua/abarth/abarth4.png" class="img-responsive"></a>
+</figure>
+  <figure>
+    <a data-fancybox="gallery" href="/img/tools/eloqua/abarth/abarth5.png"><img src="/img/tools/eloqua/abarth/abarth5.png" class="img-responsive"></a>
+</figure>
+
+	<hr class="breakline"/>
+
+	 </div>
+
+	<div id="lpid">
+	<h4 class="primary-color" > LPID Identification </h4><br>
+	<p>The LPID is the unique ID of the Landing Page<br>This chapter allows you to identify and locate the correct LPID of the form.</p>
+      
+			
+			<h5><b>2.1 LPID browser research</b> </h5>
+				  <p>To found quickly the LPID of the form to analyze, open the source code of the form in a browser (use a common developing tool).<br>The LPID, in the HTML code, is identified with a specific (allows you to locate it faster):</p>
+				  
+			<ul style=" ">
+			<li>tag: &lt;input&gt;</li>
+			<li>name: name="LPID"</li>
+		</ul>
+		<p>&lt;input&nbsp;id="lpid"&nbsp;name="LPID"&nbsp;type="hidden"&nbsp;value="11859"&gt;</p>
+    <figure>
+      <a data-fancybox="gallery" href="/img/tools/eloqua/abarth/abarth6.png"><img src="/img/tools/eloqua/abarth/abarth6.png" class="img-responsive"></a>
+  </figure>
+		
+		<h5><b>2.2 LPID Eloqua research</b> </h5>
+		<p>To found the corresponding Landing Page in Eloqua, having the LPID, go to any LP and change the “id” parameter directly in query string:<br>https://secure.p06.eloqua.com/Main.aspx#landing_pages&id={LPID}<br>(e.g. for Abarth UK TD: https://secure.p06.eloqua.com/Main.aspx#landing_pages&id=11859)</p>
+    
+    <figure>
+      <a data-fancybox="gallery" href="/img/tools/eloqua/abarth/abarth7.png"><img src="/img/tools/eloqua/abarth/abarth7.png" class="img-responsive"></a>
+  </figure>
+
+	<hr class="breakline"/>
+	</div>
+	
+	<div id="js">
+	<h4 class="primary-color" > JS Identification </h4><br>
+	<p>This chapter allows you to modify the correct JavaScript files included in the Landing Page that you are analyzing.</p>
+			
+			<h5><b>3.1 JS LP research</b> </h5>
+			<p>If you need to change a specific JavaScript file included in the page, you have to find the complete URL of the JS in the HTML code.</p>
+      <figure>
+        <a data-fancybox="gallery" href="/img/tools/eloqua/abarth/abarth8.png"><img src="/img/tools/eloqua/abarth/abarth8.png" class="img-responsive"></a>
+    </figure>
+			<p>The name of the file to search will be the one after the following code autogenereted by Eloqua:<br>/{…}_  or /NumericCode_<br>The complete URL of the file will be the one corresponding to the src parameter of the script included in the page.</p>
+			<p>&lt;script&nbsp;type="text/javascript"&nbsp;src="https://img06.en25.com/Web/FiatMarketing/{4b9429bb-c429-47d7-8b16-7aaa2b18cfe6}_validateUK.js"&gt;&lt;/script&gt;</p>
+      <p>(e.g. for Abarth validateUK.js)</p>
+      <hr class="breakline"/>
+			
+			<h5><b>3.2 JS File Storage research</b> </h5>
+			<p>To search for the JS file in the File Storage section you can past the name of the file in the search bar and the result will be showed in the below section.</p>
+			<p>Somethimes the results can be more then one, because in Eloqua is possible to upload files with the same name. In that case, you must compare the&nbsp;<em>Actual URL</em>&nbsp;of the file with the one included in the HTML page to locate the correct one to modify.</p>
+     
+      <figure>
+        <a data-fancybox="gallery" href="/img/tools/eloqua/abarth/abarth9.png"><img src="/img/tools/eloqua/abarth/abarth9.png" class="img-responsive"></a>
+    </figure>
+      <figure>
+        <a data-fancybox="gallery" href="/img/tools/eloqua/abarth/abarth10.png"><img src="/img/tools/eloqua/abarth/abarth10.png" class="img-responsive"></a>
+    </figure>
+			<p>Every time you need to modify a JavaScript file under Eloqua, open the Actual URL in the browser, save a copy on your local system and upload a new file under the same folder with the following naming convention:</p>
+			<p><em>actualDate_fileName_versionNumber.js</em></p>
+      <hr class="breakline"/>
+			
+			<h5><b>3.3 JS Files HTTPS Switch</b> </h5>
+			<p>Eloqua for files under File Storage section has two different URLs, one to reach the resource in http and the other one to reach the resource in https:</p>
+			<p><a href="http://images.promo.fiat.com/Web/FiatMarketing/%7b4b9429bb-c429-47d7-8b16-7aaa2b18cfe6%7d_validateUK.js">http://images.promo.fiat.com/Web/FiatMarketing/{4b9429bb-c429-47d7-8b16-7aaa2b18cfe6}_validateUK.js</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(HTTP)</p>
+			<p><a href="https://img06.en25.com/Web/FiatMarketing/%7b4b9429bb-c429-47d7-8b16-7aaa2b18cfe6%7d_validateUK.js">https://img06.en25.com/Web/FiatMarketing/{4b9429bb-c429-47d7-8b16-7aaa2b18cfe6}_validateUK.js</a>&nbsp;(HTTPS)</p>
+			<p>Due to the HTTPS switch of the AEM Abarth portal, also the resources included in the portal pages must be accessed through the security protocol.</p>
+			<p>When including a resource in the page is necessary to replace the domain of the Actual URL with the following one:</p>
+			<p><a href="http://images.promo.fiat.com/">http://images.promo.fiat.com</a>&nbsp;-&gt;&nbsp;<a href="https://img06.en25.com/">https://img06.en25.com</a></p>
+
+
+	<hr class="breakline"/>
+	</div>
+	
+	<div id="label">
+
+	<h5><b>Label Configuration</b> </h5>
+
+			<p>This chapter allows you to modify correctly the message labels of your landing page.</p>
+			<h4 class="primary-color" id="section1">4.1 Label replacement</h4>
+			<p>If required to change a specific label, it is necessary to replace it directly into the HTML code</p>
+			  
+			<hr class="breakline"/>
+			
+			<h5><b>4.2 Thank you page message replacement</b> </h5>
+
+			<p>If required to change a specific thank you page message, it is necessary to replace it directly in the HTML code.</p>
+			<p>This is managed through an iframe in the same Landing Page.</p>
+			<p>The typ message, in the HTML code, is identified with a specific (allows you to locate it faster):</p>
+			
+			<ul>
+				<li class="active">tag:&nbsp;&lt;h2&gt;</li>
+				<li>class:&nbsp;class="thank-title"&nbsp;</li>
+			</ul>
+			
+			<figure>
+				<a data-fancybox="gallery" href="/img/tools/eloqua/abarth/abarth11.png"><img src="/img/tools/eloqua/abarth/abarth11.png" class="img-responsive"></a>
+			</figure>
+			<hr class="breakline"/>
+			
+			<h5><b>4.3 Error message replacement</b> </h5>
+
+			<ul>
+				<ul>
+				<li class="active">
+				<p>The validation of the page fields is managed through a JavaScript file, versioned under Eloqua in the &ldquo;File Storage&rdquo; section.</p>
+				<p>The error message, in the HTML code, is identified with a specific (allows you to locate it faster):</p>
+				<ul>
+				<ul>
+				<li>tag:&nbsp;&lt;div&gt;</li>
+				<li>class:&nbsp;class="errorInput"</li>
+				</ul>
+				<br />
+				<p>&lt;div&nbsp;id="ErrorMail"&nbsp;class="errorInput"&gt;&amp;nbsp;&lt;/div&gt;&nbsp;&nbsp;</p>
+				<br />
+				<p>In the specific JS validation file, included into the LP, there will be a function that manages the validation of the field. There you have to replace the error message with the new one.</p>
+				<p>function validateFieldMail(){</p>
+				<p>&hellip;.</p>
+				<p>else{</p>
+				<p>}</p>
+				<p>}</p>
+				<p>}</p>
+				<br />
+				<p>(e.g. for Abarth validateUK.js)</p>
+				</li>
+				</ul>
+				</ul>
+
+	<hr class="breakline"/>
+	</div>
+	
+	<div id="privacy">
+	<h4 class="primary-color" >Privacy Configuration </h4><br>
+	<p>This chapter allows you to modify correctly the privacy section of your landing page.</p>
+			
+			<h5><b>5.1 Privacy layout and labels</b> </h5>
+			<p>Each market has different privacy configuration and different privacy messages.</p>
+			<p>You can find the privacy section at the bottom of the page.</p>
+			<p>The privacy section, in the HTML code, usually is identified with a specific (allows you to locate it faster):</p>
+			<p>Each market has different privacy configuration and different privacy messages.</p>
+			<p>You can find the privacy section at the bottom of the page.</p>
+			<p>The privacy section, in the HTML code, usually is identified with a specific (allows you to locate it faster):</p>	
+			<ul>
+				<li class="active">tag:&nbsp;&lt;p&gt;</li>
+				<li>class:&nbsp;class="privacy__text"&nbsp;</li>
+			</ul>
+			<p>This can help you to locate the specific section to edit.</p>
+			<p>Pay attention:</p>
+			<ul>
+				<li>edit the forms with proper layout of the text;</li>
+				<li>change the labels directly into the HTML</li>
+			</ul>	
+			<figure>
+				<a data-fancybox="gallery" href="/img/tools/eloqua/abarth/abarth12.png"><img src="/img/tools/eloqua/abarth/abarth12.png" class="img-responsive"></a>
+			</figure>
+			<hr class="breakline"/>
+			
+			<h5><b>5.2  Privacy Disclaimer ID</b> </h5>
+			<p>Each market has a different disclaimer code that corresponds to the document disclaimer number.</p>
+			<p>The disclaimer&rsquo;s id value can be modified changing its related&nbsp;<em>value</em>&nbsp;of the&nbsp;<em>hidden input</em>&nbsp;directly into the HTML code:</p>
+			<ol>
+			<li><em>DISCLAIMER</em></li>
+			</ol>
+			<p>&lt;input&nbsp;id="field29"&nbsp;name="DISCLAIMER"&nbsp;type="hidden"&nbsp;value="390"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(e.g. for Abarth UK)</p>
+		
+			<figure>
+				<a data-fancybox="gallery" href="/img/tools/eloqua/abarth/abarth13.png"><img src="/img/tools/eloqua/abarth/abarth13.png" class="img-responsive"></a>
+			</figure>
+			<hr class="breakline"/>
+	</div>
+	
+	<div id="master">
+	<h4 class="primary-color" >Master Key Configuration </h4><br>
+	<p>This chapter allows you to modify correctly the master key configuration of your landing page.</p>
+			
+			<h5><b>6.1 Master Key replacement</b> </h5>
+			<p>The Abarth Portal includes the Dynamic Master Key (DMK):</p>
+			<ol>
+			<ol>
+			<li>MK are defined into the&nbsp;<em>digitalData</em>&nbsp;provided by the portal</li>
+			<li>If the specific value from Abarth portal is empty, it is used the related MK value included into the&nbsp;<em>hidden input</em>&nbsp;of the form into the Landing Page. This MK must be replaced with the correct value given from the market.</li>
+			</ol>
+			<figure>
+				<a data-fancybox="gallery" href="/img/tools/eloqua/abarth/abarth14.png"><img src="/img/tools/eloqua/abarth/abarth14.png" class="img-responsive"></a>
+			</figure>
+			<p>In particular, the Master Key&nbsp;<em>value</em>&nbsp;that may be required to change are:</p>
+			<ol>
+			<ol>
+			<li><em>OFFER</em></li>
+			<p>&lt;input&nbsp;id="field21"&nbsp;name="OFFER"&nbsp;type="hidden"&nbsp;value=""&gt;</p>
+			<li><em>b.CAMPAIGN</em></li>
+			<p>&lt;input&nbsp;id="field27"&nbsp;name="CAMPAIGN"&nbsp;type="hidden"&nbsp;value=""&gt;</p>
+			<li>&nbsp;<em>MODEL DESCRIPTION</em></li>
+			<p>&lt;input&nbsp;id="field18"&nbsp;name="MODELDESCRIPTION"&nbsp;type="hidden"&nbsp;value="Abarth other models"&gt;</p>
+			<p>(e.g. for Abarth Newsletter UK)</p>
+			<li><em>MODEL COMMERCIALCODE</em></li>
+			&lt;input id="field19" name="MODELCOMMERCIALCODE"&nbsp;type="hidden"&nbsp;value="999"&gt; <br>(e.g. for Abarth Newsletter UK)
+			</ol>
+			<li><em>BUSINESS AREA</em></li>
+			<p>&lt;input&nbsp;id="field54"&nbsp;name="BUSAREA"&nbsp;type="hidden"&nbsp;value="1"&gt;</p>
+			<p>&nbsp;</p>
+			<p>Remember that the following values are necessary for the Orchestrator system and must never change:</p>
+			<p>&nbsp;</p>
+			<ul>
+			<li><em>LEADSOURCECODE</em></li>
+			<p>&lt;input&nbsp;id="field15"&nbsp;name="LEADSOURCECODE"&nbsp;type="hidden"&nbsp;value="MAT"&gt;</p>
+			<p>&nbsp;</p>
+			<li><em>DTM_ENABLED</em></li>
+			</ul>
+			<p>&lt;input&nbsp;id="field_dtm_enabled_td"&nbsp;type="hidden"&nbsp;value="1"&nbsp;name="DTM_ENABLED"&gt;</p>
+			<p>&nbsp;</p>
+			<p>(e.g. for Abarth TD UK)</p>
+	<hr class="breakline"/>
+	</div>
+	
+	<div id="variables">
+	<h4 class="primary-color" >Page Variables Configuration </h4><br>
+	<p>This chapter allows you to modify correctly the variables configuration of your landing page.</p>
+			
+			<h5><b>7.1 Variables configuration</b> </h5>
+			<p>The Abarth Landing Pages include some JS variables in the HTML page used by particular functions which are used to configure:</p>
+			<ul>
+			<li>_offer</li>
+			<li>_campaing</li>
+			<li>brandCode&nbsp;</li>
+			</ul>
+			<p>If asked to change that values,</p>
+			<ol>
+				<li>firstly you have to check if there is a script in the <eloquaform> tag with the following declared var (allows you to locate it faster):</li>
+			</ol>
+			<p><em>&lt;eloquaform&gt;</em></p>
+			<p><em>&hellip;</em></p>
+			<p>&lt;script&gt;</p>
+			<p>_offer='';</p>
+			<p>;_campaign='5139';</p>
+			<p>var&nbsp;brandCode="066";</p>
+			<p>&lt;/script&gt;</p>
+			<p>&hellip;</p>
+			<p>&lt;/eloquaForm&gt;(e.f. for Abarth TD UK)</p>
+			<ol>
+				<li start="2">secondly tou have to change that values only in the above case, otherwise the problem is not in Eloqua scope.</li>
+			</ol>
+			<p>This kind of changes must pass the ICT test before to be published in Production.</p>
+			<hr class="breakline"/>
+			
+			<h5><b>7.2 Digital Data configuration</b> </h5>
+			<p>The Abarth Landing Pages includes the digitalData configuration directly in the HTML page:</p>
+			<ul>
+			<li>page.component.form.leadType</li>
+			<li>page.component.form.nameType</li>
+			<li>page.component.form.stepName</li>
+			</ul>
+			<p>&nbsp;</p>
+			<p>If asked to change that values,</p>
+			<ol start="3">
+			<li>firstly, you have to check if there is a&nbsp;<em>script</em>&nbsp;in the &lt;eloquaform&gt; tag with the following declared variables (allows you to locate it faster):</li>
+			</ol>
+			<p><em>&lt;eloquaform&gt;</em></p>
+			<p><em>&hellip;</em></p>
+			<p>&lt;script&gt;</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; digitalData.page.component.form.leadType="test-drive-request";</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; digitalData.page.component.form.nameType="lead:test-drive-request";</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; digitalData.page.component.form.stepName="form";</p>
+			<p>&nbsp;&nbsp; &hellip;</p>
+			<p>&lt;/script&gt;</p>
+			<p>&hellip;</p>
+			<p>&lt;/eloquaForm&gt;<br> (e.f. for Abarth TD UK)</p>
+			<p>&nbsp;</p>
+			<ol>
+			<li>secondly, tou have to change that values only in the above case, otherwise the problem is not in Eloqua scope.&nbsp;</li>
+			</ol>
+			<p>This kind of changes must pass the ICT test before to be published in Production.</p>
+
+	<hr class="breakline"/>
+	</div>
+	
+	
+	<div id="rules">
+	<h4 class="primary-color" > Validation Rules Configuration</h4><br>
+	 <p>This chapter allows you to modify correctly the validation rules of the fields in your landing page.</p>
+			
+			<h5><b>8.1 Validation rules of page fields</b> </h5>
+			<p>Each field of the page has specific validation rules.</p>
+			<p>The validation of the page fields is managed through a JavaScript file, versioned under Eloqua in the &ldquo;File Storage&rdquo; section.</p>
+			<p>In the specific JS validation file, included into the LP, there will be specific functions that manage the validation of the field.</p>
+			<p>There you have to modify in the corresponding JS function the regex matching the request.</p>
+			<p>The validation rule usually is identified with a specific (allows you to locate it faster):</p>
+			<br />
+			<ul>
+			<li>function</li>
+			<li>var reg</li>
+			</ul>
+			<p>This can help you to locate the specific section to edit.</p>
+			<p>function validateEmail(email) {</p>
+			<p>var reg =&nbsp;/^[a-&shy;-zA-&shy;-Z0-&shy;-9._%-&shy;-]+@[a-&shy;-zA-&shy;-Z0-&shy;-9.-&shy;-]+\.[a-&shy;-zA-&shy;-Z]{2,4}$/;</p>
+			<br />
+			<p>if (!reg.test(email)) return false; else return true;</p>
+			<p>}</p>
+			<br />
+			<p>(e.g. for Abarth validateUK.js)</p>
+	<hr class="breakline"/>
+	
+	</div>
+
+
+		 </div>  
+		 <nav class="col-sm-3" id="myScrollspy">
+				<ul class="nav nav-pills nav-stacked">
+				  <li class="active"><a href="#introduction">Introduction</a></li>
+				  <li><a href="#lpid">LPID Identification</a></li>
+				  <li><a href="#js">JS Identification</a></li>
+				  <li><a href="#label">Label Configuration</a></li> 
+				   <li><a href="#privacy">Privacy Configuration</a></li>
+				   <li><a href="#master">Master Key Configuration</a></li>
+				   <li><a href="#variables">Page Variables Configuration</a></li>
+				   <li><a href="#rules">Validation Rules Configuration</a></li>
+				</ul>
+			  </nav></div>
+        
+      </div>
+      <br>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+	<script>
+		$(document).ready(function(){
+    $('.zoom').hover(function() {
+        $(this).addClass('transition');
+    }, function() {
+        $(this).removeClass('transition');
+    });
+});
+	</script>
+	<script>$(document).ready(function(){
+			// Add smooth scrolling to all links
+			$("a").on('click', function(event) {
+		  
+			  // Make sure this.hash has a value before overriding default behavior
+			  if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+		  
+				// Store hash
+				var hash = this.hash;
+		  
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+				  scrollTop: $(hash).offset().top
+				}, 800, function(){
+			 
+				  // Add hash (#) to URL when done scrolling (default click behavior)
+				  window.location.hash = hash;
+				});
+			  } // End if
+			});
+		  });</script>
+	</body>
+</html>

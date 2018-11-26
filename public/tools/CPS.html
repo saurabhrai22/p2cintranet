@@ -1,0 +1,1441 @@
+
+	   <div class="container-fluid"> 
+	   <div class="col-sm-9">
+      <!-- breadcrumb start-->
+      <ul class="breadcrumb">
+         <li><a href="index.html">Home</a></li>
+         <li><a href="#">Brands</a></li>
+         <li>CPS</li>
+      </ul>
+      <!-- breadcrumb end-->
+
+
+      <!-- /**********************cps site structure********************************/ -->
+
+      <section class="cps-site-structure" id="cps-structure-section">
+        <ul id="cms-structure">
+                <li>This CMS is structured in two hierarchical levels:
+                <ul>
+                <li>First Level: Brand name (E.g.: &ldquo;fiat&rdquo;, &ldquo;alfaromeo&rdquo;, &ldquo;jeep&rdquo;) in lowercase</li>
+                <li>Second Level: Market-Language (E.g.: &ldquo;IT-it&rdquo;)</li>
+                </ul>
+                </li>
+                <li>The URL is structured as follow:<a href="https://%3Cdomain%3E/%3CBrand%3E/%3CMarket-Language%3E/">https://&lt;Domain&gt;/&lt;Brand&gt;/&lt;Market-Language&gt;/</a></li>
+                </ul>
+                <table  class="table table-bordered  shadow-box">
+                        <thead>
+                <tr class="bg-primary">
+                        <th>
+                                Environment
+                        </th>
+                        <th>
+                                URL
+                        </th>
+                </tr>
+        </thead>
+        <tbody>
+                <tr>
+                        <td>
+                                <p>Certification</p>
+                        </td>
+                        <td>
+                                <p>https://testauth.contentservices.fcagroup.com</p>
+                        </td>
+                </tr>
+                <tr>
+                        <td>
+                                <p>Production</p>
+                        </td>
+                        <td>
+                                <p>https://auth.contentservices.fcagroup.com</p>
+                        </td>
+                </tr>
+        
+        </tbody>
+</table>
+<hr class="breakline"/>
+<h4 class="primary-color" id="list-in-cps"> Lists in CPS - Overview</h4>
+         <ul><p>As seen in the screenshots, these are the lists used. </p></ul>
+         <div>
+                <a data-fancybox="gallery" href="/img/tools/ft/cps-site-structure1.png"><img src="/img/tools/ft/cps-site-structure1.png" class="img-responsive"></a>
+        </div>
+      </section>
+     
+
+      <!-- /**********************aem and cps detail ********************************/ -->
+<hr class="breakline"/>
+      <section class="aem-cps-detail" id="aem-cps-detail-section">
+              <h4>Aem Cps Detail</h4>
+                <ul>
+                    <li>We generally have two pages in AME for CPS which are synched with CPS tool and gets updated as
+                        soon as we some updates in the CPS. The connectivity of these pages from AEM to CPS is done by
+                        backend team, they are :</li>
+                    <ol type="A">
+                        <li>Promo Hub Page</li>
+                        <li>Promo Detail Page</li>
+                    </ol>
+                </ul>
+                <p>&nbsp;</p>
+                <ol type="A">
+                    <li>
+                        <h4 id="hub-page"> Promotion Hub Page</h4>
+                    </li>
+                    <ul>
+                        <li>This page contains all promotions thumbnails for a market in all brand except jeep. In jeep
+                            we have model hub pages instead of promo hub page, this model hub page contains all
+                            promotions for a particular market.</li>
+                        <li>URL of Hub page :example:<a href="https://www.fiat.it/offerte">https://www.fiat.it/offerte</a></li>
+                    </ul>
+
+                    <div>
+                            <a data-fancybox="gallery" href="/img/tools/ft/promotion_hub_page1.png"><img src="/img/tools/ft/promotion_hub_page1.png" class="img-responsive"></a>
+                    </div>
+                </ol>
+                <ol type="B">
+                        <li>
+                            <h4 id="detail-page">Promotion Detail Page</h4>
+                        </li>
+                        <ul>
+                            <li>This page contains all promotion related details like promo images, financial table, legal notes, content and forms.</li>
+                            <li>URL of Hub page :example:https://www.fiat.it/offerte/promozione.500</a></li>
+                        </ul>
+    
+                        <div>
+                                <a data-fancybox="gallery" href="/img/tools/ft/promotion_detail.png"><img src="/img/tools/ft/promotion_detail.png" class="img-responsive"></a>
+                        </div>
+                </ol>
+        </section>    
+
+      <!-- end of aemm and cps detail -->
+        <hr class="breakline"/>
+
+
+      <!-- /**********************data entry section********************************/ -->
+
+      <section class="data-entry" id="data-entry-section">
+              <h4>Data Entry</h4>
+      <ul>
+        <li>This CMS is structured in two hierarchical levels:
+        <ul>
+        <li>First Level: Brand name (E.g.: &ldquo;fiat&rdquo;, &ldquo;alfaromeo&rdquo;, &ldquo;jeep&rdquo;) in lowercase</li>
+        <li>Second Level: Market-Language (E.g.: &ldquo;IT-it&rdquo;)</li>
+        </ul>
+        </li>
+        <li>The URL is structured as follow:<a href="https://%3Cdomain%3E/%3CBrand%3E/%3CMarket-Language%3E/">https://&lt;Domain&gt;/&lt;Brand&gt;/&lt;Market-Language&gt;/</a></li>
+        </ul>
+        <h4 class="text-center">Fields of Promotion list i</h4>       
+        <table  class="table table-bordered  shadow-box">
+	         <thead>
+                        <tr class="bg-primary">
+                        <th>Field</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Required</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <td>Title</td>
+                        <td>String</td>
+                        <td>Internal name, used only in CPS</td>
+                        <td>Y</td>
+                        </tr>
+                        <tr>
+                        <td>Name</td>
+                        <td>String</td>
+                        <td>External name that will be used as key for<br />promotion identification. This field, as a part of URL.<br />This field is unique.</td>
+                        <td>Y</td>
+                        </tr>
+                        <tr>
+                        <td>Display Title</td>
+                        <td>HTML</td>
+                        <td>Promotion title that can be used in related promotion page</td>
+                        <td>Y</td>
+                        </tr>
+                        <tr>
+                        <td>Abstract</td>
+                        <td>HTML</td>
+                        <td>Used for promotion visualization</td>
+                        <td>Y</td>
+                        </tr>
+                        <tr>
+                        <td>Content</td>
+                        <td>HTML</td>
+                        <td>Used for promotion visualization</td>
+                        <td>Y</td>
+                        </tr>
+                        <tr>
+                        <td>Notes</td>
+                        <td>HTML</td>
+                        <td>NA</td>
+                        <td>N</td>
+                        </tr>
+                        <tr>
+                        <td>Legal Notes</td>
+                        <td>HTML</td>
+                        <td>Legal Notes</td>
+                        <td>N</td>
+                        </tr>
+                        <tr>
+                        <td>Original Price</td>
+                        <td>String</td>
+                        <td>NA</td>
+                        <td>N</td>
+                        </tr>
+                        <tr>
+                        <td>Discounted Price</td>
+                        <td>String</td>
+                        <td>NA</td>
+                        <td>N</td>
+                        </tr>
+                        </tbody>
+                       
+    </table>
+    <br />
+    <h4 class="text-center">Fields of Promotion list ii</h4>
+
+    <table class="table table-bordered  shadow-box">
+            <thead>
+            <tr class="bg-primary">
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Required</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>Financial Table</td>
+            <td>Attachment</td>
+            <td>Link to financial table attachment, a csv file.</td>
+            <td>N</td>
+            </tr>
+            <tr>
+            <td>Thumbnail</td>
+            <td>File Picker</td>
+            <td>Picker Image used in promotion landing page</td>
+            <td>Y</td>
+            </tr>
+            <tr>
+            <td>Mobile Thumbnail</td>
+            <td>File Picker</td>
+            <td>Picker Image used in promotion landing page for mobile channels</td>
+            <td>Y</td>
+            </tr>
+            <tr>
+            <td>Thumbnail Alt</td>
+            <td>String</td>
+            <td>Alternate text when thumbnail is not available</td>
+            <td>Y</td>
+            </tr>
+            <tr>
+            <td>Image</td>
+            <td>File Picker</td>
+            <td>Image used in promotion details page</td>
+            <td>Y</td>
+            </tr>
+            <tr>
+            <td>Mobile Image</td>
+            <td>File Picker</td>
+            <td>Image used in promotion details page for mobile channels</td>
+            <td>Y</td>
+            </tr>
+            <tr>
+            <td>Image Alt</td>
+            <td>String</td>
+            <td>Alternate text when Image is not available</td>
+            <td>N</td>
+            </tr>
+            <tr>
+            <td>Header Image</td>
+            <td>File Picker</td>
+            <td>Image used in promotion hub page slider</td>
+            <td>N</td>
+            </tr>
+            <tr>
+            <td>Header Mobile Image</td>
+            <td>File Picker</td>
+            <td>Image used in promotion hub page slider for mobile channels</td>
+            <td>N</td>
+            </tr>
+            </tbody>
+            </table>
+            <br />
+
+            <h4 class="text-center">Fields of Promotion list iii</h4>
+
+            <table class="table table-bordered  shadow-box">
+                    <thead>
+                    <tr class="bg-primary">
+                    <th>Field</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Required</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td>Header Image Alt</td>
+                    <td>String</td>
+                    <td>Alternate text when Image is not available</td>
+                    <td>N</td>
+                    </tr>
+                    <tr>
+                    <td>Header Title</td>
+                    <td>String</td>
+                    <td>Header Promotion title that can be used in<br />related<br />promotion page.</td>
+                    <td>N</td>
+                    </tr>
+                    <tr>
+                    <td>Header Subtitle</td>
+                    <td>String</td>
+                    <td>Hubpage slider Promotion subtitle that can be used in related promotion page</td>
+                    <td>N</td>
+                    </tr>
+                    <tr>
+                    <td>Header Abstract</td>
+                    <td>HTML</td>
+                    <td>Used for promotion visualization on hub page slider</td>
+                    <td>N</td>
+                    </tr>
+                    <tr>
+                    <td>Header Notes</td>
+                    <td>HTML</td>
+                    <td>Used for promotion visualization on hub page slider</td>
+                    <td>N</td>
+                    </tr>
+                    <tr>
+                    <td>Box Position</td>
+                    <td>Dropdown</td>
+                    <td>NA</td>
+                    <td>N</td>
+                    </tr>
+                    <tr>
+                    <td>Default CTA</td>
+                    <td>Dropdown</td>
+                    <td>TD, GAQ, or RI, default form tab</td>
+                    <td>N</td>
+                    </tr>
+                    <tr>
+                    <td>CTA Selection</td>
+                    <td>Checkbox</td>
+                    <td>TD, GAQ and RI, check only those forms which are requested</td>
+                    <td>N</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <br />
+                    <p>&nbsp;</p>
+
+
+                    <h4 class="text-center">Fields of Promotion list iv</h4>
+
+                    <table class="table table-bordered  shadow-box">
+                            <thead>
+                            <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Required</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                            <td>Filters</td>
+                            <td>Multi lookup</td>
+                            <td>Categorization keywords that this promotion<br />belongs to. Select the filter items you want to<br />associate to this item.</td>
+                            <td>N</td>
+                            </tr>
+                            <tr>
+                            <td>Links</td>
+                            <td>Multi lookup</td>
+                            <td>For ctas below content</td>
+                            <td>N</td>
+                            </tr>
+                            <tr>
+                            <td>Media Items</td>
+                            <td>Multi lookup</td>
+                            <td>NA</td>
+                            <td>N</td>
+                            </tr>
+                            <tr>
+                            <td>Model</td>
+                            <td>Multi lookup</td>
+                            <td>The model for which this promotion is valid.</td>
+                            <td>Y</td>
+                            </tr>
+                            <tr>
+                            <td>Start Date</td>
+                            <td>Datetime</td>
+                            <td>Promotion validity start date</td>
+                            <td>Y</td>
+                            </tr>
+                            <tr>
+                            <td>End Date</td>
+                            <td>Datetime</td>
+                            <td>Promotion validity end date</td>
+                            <td>Y</td>
+                            </tr>
+                            <tr>
+                            <td>Channels</td>
+                            <td>Multi choice</td>
+                            <td>The channels for which this promotion is valid</td>
+                            <td>Y</td>
+                            </tr>
+                            <tr>
+                            <td>Campaign ID</td>
+                            <td>String</td>
+                            <td>Campaign identificator</td>
+                            <td>N</td>
+                            </tr>
+                            <tr>
+                            <td>Offer ID</td>
+                            <td>String</td>
+                            <td>Offer identificator</td>
+                            <td>N</td>
+                            </tr>
+                            <tr>
+                            <td>Sort ID</td>
+                            <td>Integer</td>
+                            <td>Default sort order used when promotions are&nbsp;<br />retrieved from service</td>
+                            <td>Y</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            <p>&nbsp;</p>
+                            <h4 class="text-center">Fields of Promotion list -v</h4>
+                            <table class="table table-bordered  shadow-box">
+                            <thead>
+                            <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Required</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                            <td>Data Tracking</td>
+                            <td>String</td>
+                            <td>General purpose field for future implementation of data tracking</td>
+                            <td>N</td>
+                            </tr>
+                            <tr>
+                            <td>Tags</td>
+                            <td>Multi lookup</td>
+                            <td>Categorization keywords that this promotion belongs to.</td>
+                            <td>N</td>
+                            </tr>
+                            <tr>
+                            <td>Seo Metadata Title</td>
+                            <td>String</td>
+                            <td>Metadata for SEO</td>
+                            <td>N</td>
+                            </tr>
+                            <tr>
+                            <td>Seo Metadata Description</td>
+                            <td>String</td>
+                            <td>Metadata for SEO</td>
+                            <td>N</td>
+                            </tr>
+                            <tr>
+                            <td>FB Metadata Title</td>
+                            <td>String</td>
+                            <td>Title for Facebook social network sharing</td>
+                            <td>N</td>
+                            </tr>
+                            <tr>
+                            <td>FB Metadata Description</td>
+                            <td>String</td>
+                            <td>Description for Facebook social network sharing</td>
+                            <td>N</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            <p><br /><br /></p>
+                            <h4 class="text-center">Fields of Promotion list -vi</h4>
+                            <table class="table table-bordered  shadow-box">
+                            <thead>
+                            <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th class="text-center">Required</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                            <td>FB Metadata Image</td>
+                            <td>File Picker</td>
+                            <td>Link to image for Facebook social network sharing</td>
+                            <td>N</td>
+                            </tr>
+                            <tr>
+                            <td>Tablet Thumbnail</td>
+                            <td>File Picker</td>
+                            <td>Image used in promotion landing page for tablet channels</td>
+                            <td>N</td>
+                            </tr>
+                            <tr>
+                            <td>Tablet Image</td>
+                            <td>File Picker</td>
+                            <td>Image used in promotion details page for tablet channels</td>
+                            <td>N</td>
+                            </tr>
+                            <tr>
+                            <td>Header Tablet Image</td>
+                            <td>File Picker</td>
+                            <td>Image used in promotion hub page slider for tablet Channels</td>
+                            <td>N</td>
+                            </tr>
+                            <tr>
+                            <td>DWSDetailImage</td>
+                            <td>File Picker</td>
+                            <td>Dealer website image</td>
+                            <td>N</td>
+                            </tr>
+                            <tr>
+                            <td>FB Metadata Description</td>
+                            <td>String</td>
+                            <td>Description for Facebook social network sharing</td>
+                            <td>N</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            <p>&nbsp;</p>
+
+                        <br />
+                        <h4>1. To add a promotion you have to:</h4>
+<p>Go from the landing page, to the &ldquo;Site Content&rdquo; section:</p>
+<ul>
+<li class="active">Press the "Site Action" menu</li>
+<li>Select &ldquo;View All Site Content</li>
+</ul>
+<p><br /><br /></p>
+<h5>URL:</h5>
+<p><a href="https://auth.contentservices.fcagroup.com/fiat/it-it/_layouts/viewlsts.aspx">"https://auth.contentservices.fcagroup.com/fiat/it-it/_layouts/viewlsts.aspx"</a>&nbsp;</p>
+<div>
+        <a data-fancybox="gallery" href="/img/tools/ft/text-promotion.png"><img src="/img/tools/ft/text-promotion.png" class="img-responsive"></a>
+</div>
+<h4>2. Open &ldquo;Promotion&rdquo; list by clicking on it</h4>
+<h4>3. Click &ldquo;Add new Item&rdquo; for create a new Promotion</h4>
+<p>&nbsp;</p>
+
+<p><a href="https://auth.contentservices.fcagroup.com/fiat/IT-it/Lists/Promotions/AllItems.aspx ">"https://auth.contentservices.fcagroup.com/fiat/IT-it/Lists/Promotions/AllItems.aspx "</a>&nbsp;</p>
+
+<div>
+        <a data-fancybox="gallery" href="/img/tools/ft/text-promotion2.png"><img src="/img/tools/ft/text-promotion2.png" class="img-responsive"></a>
+</div>
+
+<h4>4. Fill out the form with mandatory and optional fields</h4>
+<div>
+        <a data-fancybox="gallery" href="/img/tools/ft/text-promotion3.png"><img src="/img/tools/ft/text-promotion3.png" class="img-responsive"></a>
+</div>
+
+
+<h4>Models</h4>
+<h4>||. Model List</h4>
+<ul>
+<li>Navigation Link:<a href="https://auth.contentservices.fcagroup.com/fiat/CH-de/Lists/Models/AllItems.aspx">&nbsp;https://auth.contentservices.fcagroup.com/fiat/CH-de/Lists/Models/AllItems.aspx</a></li>
+<li>This list contains all individual models, which contain all model related information.</li>
+<li>Here you can create/update/reject/delete the model.</li>
+<li>Promotion item fetches the model data from this list in the form of the lookup.</li>
+<li>You can define a model with the specifications in next slide:</li>
+</ul>
+<br />
+<h4>Fields of Model List</h4>
+<p><br /><br /></p>
+<table class="table shadow-box">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th class="text-center">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title</td>
+<td>String</td>
+<td>Internal name, used only in CPS</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>External name that will be used as key for model identification.</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Display Title</td>
+<td>HTML</td>
+<td>Model title that can be used in related promotion page</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Vehicle Model</td>
+<td>Virtual Layer</td>
+<td>Valid model retrieved from Virtual Layer</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Code Override</td>
+<td>String</td>
+<td>Optionally override the selected vehicle code, retrieved from Virtual Layer</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Description Override</td>
+<td>String</td>
+<td>Optionally override the selected vehicle code, retrieved from Virtual Layer</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Vehicle Model Year Desc</td>
+<td>String</td>
+<td>N.A</td>
+<td>N</td>
+</tr>
+<tr>
+<td>V. Code Override</td>
+<td>String</td>
+<td>N.A</td>
+<td>N</td>
+</tr>
+<tr>
+<td>V. Description Override</td>
+<td>String</td>
+<td>N.A</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Vehicle Trim Desc</td>
+<td>String</td>
+<td>N.A</td>
+<td>N</td>
+</tr>
+</tbody>
+</table>
+
+<div>
+        <a data-fancybox="gallery" href="/img/tools/ft/text-promotion4.png"><img src="/img/tools/ft/text-promotion4.png" class="img-responsive"></a>
+</div>          
+
+
+<div class="model-renegade-slide21">
+        <h4>To add a model you have to:</h4>
+        1. Go from the landing page, to the &ldquo;Site Content&rdquo; section:
+        <ul>
+        <li>Press the &ldquo;Site Action&rdquo; menu</li>
+        <li>Select &ldquo;View All Site Content&rdquo;</li>
+        </ul>
+        2. Click &ldquo;Add new Item&rdquo; for create a new Model&nbsp;<br /><br />
+        <p>Screenshot shows the example of a model in a model list.</p>
+        </div>
+        <p><br /><br /></p>
+        <div class="Analytic-rule-text">
+                <h4>Analytic Rule for Model creation :</h4>
+                <ol>
+                <ol>
+                <li>Update the field &ldquo;Code Override&rdquo; with the model code requested, if the code is not present in the drop down of &ldquo;VehicleModel&rdquo;</li>
+                <li>&ldquo;Vehicle Description Mobile Forms&rdquo; field of Model list in CPS should be updated as &ldquo;Vehicle Model Code&rdquo; + &ldquo;Description Override&rdquo; + &ldquo;Vehicle Trim Desc&rdquo;</li>
+                <li>&ldquo;Vehicle Description Mobile Forms&rdquo; field in model list in CPS is a case sensitive field. So, update it properly.</li>
+                </ol>
+                </ol>
+        <h4>Analytic Rule for Model creation</h4>
+        <br />
+        <h5>Jeep:</h5>
+        <h5>&nbsp;</h5>
+        <h5>Whenever you add multiple models in single promotion then please follow below steps.</h5>
+        <ol>
+        <li>Go to AEM Jeep</li>
+        <li>Go to model look up</li>
+        <li>Open properties of same model which you have called in promotion.</li>
+        <li>Make sure model description of cps model which you have used in promotion and &ldquo;model description adobe&rdquo; of Analytics tab should be same.</li>
+        <li>Model code of cps model and model code of model info tab should be same.</li>
+        <li>In model data tab in Image filed image should be there</li>
+        </ol>
+        <br />
+        <h5>Alfa Romeo:</h5>
+        <h5>&nbsp;</h5>
+        <h5>Whenever you add multiple models in single promotion then please follow below steps.</h5>
+        <ol>
+        <li>Go to AEM Jeep</li>
+        <li>Go to following location&nbsp;<a href="https://author-fca-italy-brands-production63.adobecqms.net/siteadmin#/content/alfaromeo/alfaromeo-ch/de/home/reserved/offerte-anfordern">https://author-fca-italy-brands-production63.adobecqms.net/siteadmin#/content/alfaromeo/alfaromeo-ch/de/home/reserved/offerte-anfordern&nbsp;</a>-optimization this location changes according to market.</li>
+        <li>Open all forms(TD, GAB, GAQ, PROMO)</li>
+        <li>Make sure model description of cps model which you have used in promotion and &ldquo;description&rdquo; in this form are same.</li>
+        <li>Model code of cps model and code of in this form are same.</li>
+        <li>Check image is there in car image field for your model.</li>
+        </ol>
+        </div>
+        <p>&nbsp;</p>
+        <h4>III.&nbsp;Filters List</h4>
+        <p><br /><br /></p>
+        <ul>
+        <ul>
+        <li>Navigation Link:&nbsp;<a href="https://auth.contentservices.fcagroup.com/alfaromeo/CH-de/Lists/Filters/AllItems.aspx">https://auth.contentservices.fcagroup.com/alfaromeo/CH-de/Lists/Filters/AllItems.aspx</a></li>
+        </ul>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+        <ul>
+        <li>Here we create the filters which is used to filter the promotions according to requirements.</li>
+        </ul>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+        <ul>
+        <li>Filters are used in Alfaromeo and Fiatprofessional to filter promotions on the hub page.</li>
+        </ul>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+        <ul>
+        <li>You can define a Filter with the specifications in next slide:</li>
+        </ul>
+        </ul>
+        <p>&nbsp;</p>
+        <center>
+        <h4>Fields of Filter list</h4>
+        </center>
+        <p>&nbsp;</p>
+        <table class="table table-bordered  shadow-box">
+        <thead></thead>
+        <tbody>
+        <tr>
+        <th>  Field </th>
+        <th> Type </th>
+        <th> Description </th>
+        <th> Required </th>
+        </tr>
+        <tr>
+        <td>Title</td>
+        <td>String</td>
+        <td>Internal name, used only in CPS</td>
+        <td>Y</td>
+        </tr>
+        <tr>
+        <td>Display Title</td>
+        <td>String</td>
+        <td>Name of the filter visible on hub page</td>
+        <td>N</td>
+        </tr>
+        <tr>
+        <td>Name</td>
+        <td>String</td>
+        <td>External name that will be used as key for filter identification</td>
+        <td>Y</td>
+        </tr>
+        <tr>
+        <td>Sort ID</td>
+        <td>Integer</td>
+        <td>To sort filters</td>
+        <td>Y</td>
+        </tr>
+        <tr>
+        <td>Image</td>
+        <td>File picker</td>
+        <td>NA</td>
+        <td>N</td>
+        </tr>
+        <tr>
+        <td>Mobile Image</td>
+        <td>File picker</td>
+        <td>NA</td>
+        <td>N</td>
+        </tr>
+        <tr>
+        <td>Image Alt</td>
+        <td>String</td>
+        <td>NA</td>
+        <td>N</td>
+        </tr>
+        <tr>
+        <td>Cta tracking</td>
+        <td>Lookup</td>
+        <td>NA</td>
+        <td>N</td>
+        </tr>
+        </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <div><strong>To add a filter you have to:</strong>
+        <ol>
+        <li>Go from the landing page, to the &ldquo;Site Content&rdquo; section:</li>
+        </ol>
+        <ul>
+        <li>Press the &ldquo;Site Action&rdquo; menu</li>
+        <li>Select &ldquo;View All Site Content&rdquo;</li>
+        </ul>
+        &nbsp;
+        <ol start="2">
+        <li>Click &ldquo;Add new Item&rdquo; for create a new Filter</li>
+        </ol>
+        &nbsp;
+        <p>Screenshot shows the example of a filter in a Filters list.</p>
+        </div>
+
+        <div>
+                <a data-fancybox="gallery" href="/img/tools/ft/text-promotion6.png"><img src="/img/tools/ft/text-promotion6.png" class="img-responsive"></a>
+        </div>
+        <h4 class="text-center">Alfaromeo Example</h4>
+        <p>All the promotions where Filter &ldquo;SPECIALS&rdquo; is called will appear under this filter on promotion hub page as shown in the screenshot :</p>
+        <p>&nbsp;</p>
+
+        <div>
+                <a data-fancybox="gallery" href="/img/tools/ft/text-promotion7.png"><img src="/img/tools/ft/text-promotion7.png" class="img-responsive"></a>
+        </div>
+        <h4 class="text-center">Fiatprofessional Example</h4>
+        <p>All the promotions where Filter “SPECIALS” is called will appear under this filter on promotion hub page as shown in the screenshot :</p>
+        <p>&nbsp;</p>
+
+        <div class="tag-list">
+                        <h4>IV.&nbsp;Tags List</h4>
+                        <p>&nbsp;</p>
+                        <ul>
+                        <ul>
+                        <li>Navigation Link: <a href="https://auth.contentservices.fcagroup.com/fiat/CH-de/Lists/Tags/AllItems.aspx">https://auth.contentservices.fcagroup.com/fiat/CH-de/Lists/Tags/AllItems.aspx</a></li>
+                        <li>The role of tag changes according to brand, which is as below:</li>
+                        <ul style="list-style-type: circle;">
+                        <li>Fiat: Here tag list work as filters for promotion.</li>
+                        <ul style="list-style-type: none;">
+                        <li>There are 2 main tags, "Sales" and "Business" depending on promotion type.</li>
+                        <li>If one of these tag is not called in the promotion, then promo will not appear on the hub page.</li>
+                        </ul>
+                        </ul>
+                        </ul>
+                        </ul>
+                        <ul>
+                        <ul>
+                        <li>Jeep: Here according to tag promotion is reflects on model promotion page ( https://www.jeep.ch/de/angebote/renegade )</li>
+                        </ul>
+                        <ul style="list-style-type: circle;">
+                        <li>Fiatprofessional:Here tag defines for which model promotion is created.</li>
+                        <ul style="list-style-type: none;">
+                        <li>In Fiatprofessional, "Business" tag is used, if not called in promotion, promo will not appear on hub page.</li>
+                        </ul>
+                        </ul>
+                        </ul>
+                        <ul>
+                        <ul>
+                        <li>We don't use tag list in Abarth and Alfaromeo.</li>
+                        </ul>
+                        </ul>
+                        <br />
+                        <p>&nbsp;</p>
+<table class="table shadow-box">
+<tbody>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+<tr>
+<td>Title</td>
+<td>String</td>
+<td>Internal name, used only in CPS</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>External name that will be used as key for tag identification</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Display Title</td>
+<td>String</td>
+<td>Tag name visible on hub page</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Tag Value</td>
+<td>Integer</td>
+<td>Value of the tag</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Cta tracking</td>
+<td>Lookup</td>
+<td>NA</td>
+<td>N</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+        </div>
+
+       
+                <h4>To add a tag you have to:</h4>
+                <h4>&nbsp;</h4>
+                <ol>
+                <li>Go from the landing page, to the &ldquo;Site Content&rdquo; section:</li>
+                <ul>
+                <li class="active">Press the "Site Action" menu</li>
+                <li>Select "View All Site Content"</li>
+                </ul>
+                <li>Click "Add new Item" for create a new Tag</li>
+                </ol>
+                <p>Note that For creating any anchor tag, this nomenclature is to followed: "Anchor-TAG XXX</p>
+                <p>Screenshot shows the example of a tag s list.</p>
+                <h4><strong> that client gets the required information on live.</strong></h4>
+
+               <figure>
+                         <a data-fancybox="gallery" href="/img/tools/ft/fiat_Example.png"><img src="/img/tools/ft/fiat_Example.png" class="img-responsive"></a>
+               </figure>
+
+               <p>Fiat Example: Fiat tags are created and used as filters, as shown below: All the promotions where tag "Sommer Deals" is called, will appear under this filter.</p>
+               <center>
+                        <h4>Table having details of where we need to use filter and tag list</h4>
+                        <br />
+                        <table class="table shadow-box">
+                        <tbody>
+                        <tr>
+                        <th>Brand</th>
+                        <th>Filter</th>
+                        <th>Tag</th>
+                        </tr>
+                        <tr>
+                        <td>Fiat</td>
+                        <td>No</td>
+                        <td>Yes</td>
+                        </tr>
+                        <tr>
+                        <td>Abarth</td>
+                        <td>No</td>
+                        <td>No</td>
+                        </tr>
+                        <tr>
+                        <td>Jeep</td>
+                        <td>No</td>
+                        <td>Yes</td>
+                        </tr>
+                        <tr>
+                        <td>Alfa Romeo</td>
+                        <td>Yes</td>
+                        <td>No</td>
+                        </tr>
+                        <tr>
+                        <td>Fiat professional</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        </center>
+                        <h4>V. Financial Table - CSV</h4>
+                        <ul>
+                        <li>CSV file contains all financial details related to promotion.</li>
+                        <li>There is specific format which need to follow while creating the CSV files.</li>
+                        <li>It appears as a table on a promotion detail page.</li>
+                        <li>It is an excel file with .csv extension.</li>
+                        <li>It should be edited by opening in notepad++.</li>
+                        <li>Please use below CSV file for reference while creating the new CSV file.</li>
+                        <li>FIAT:<a href="https://cps.contentservices.fcagroup.com/contentservice/fiat/CH-de/Documents/2018-summer-deal-DE.csv">https://cps.contentservices.fcagroup.com/contentservice/fiat/CH-de/Documents/2018-summer-deal-DE.csv</a></li>
+                        </ul>
+                        <h4>Preview of CSV with Accordion</h4>
+                        <figure>
+                                        <a data-fancybox="gallery" href="/img/tools/ft/preview_csv_acc.jpg"><img src="/img/tools/ft/preview_csv_acc.jpg" class="img-responsive"></a>
+                        </figure>
+
+                        <h4>Preview of CSV without Accordion</h4>
+                        <figure>
+                                <a data-fancybox="gallery" href="/img/tools/ft/preview_csv_no_acc.jpg"><img src="/img/tools/ft/preview_csv_no_acc.jpg" class="img-responsive"></a>
+                        </figure>
+
+                        <h4>VI Image Dimensions - Fiat & Fiatpro</h4>
+                    
+                                        <table class="table shadow-box">
+                                        <thead>
+                                        <tr>
+                                        <th class="text-center" colspan="2">FIAT</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                        <td>Thumbnail</td>
+                                        <td>570x288</td>
+                                        </tr>
+                                        <tr>
+                                        <td>Mobile Thumbnail</td>
+                                        <td>300x152</td>
+                                        </tr>
+                                        <tr>
+                                        <td>Image</td>
+                                        <td>677x462</td>
+                                        </tr>
+                                        <tr>
+                                        <td>Mobile Image</td>
+                                        <td>373x188</td>
+                                        </tr>
+                                        <tr>
+                                        <td>Header Image</td>
+                                        <td>727x364</td>
+                                        </tr>
+                                        <tr>
+                                        <td>Header Mobile Image</td>
+                                        <td>373x188</td>
+                                        </tr>
+                                        <tr>
+                                        <td>Tablet Thumbnail</td>
+                                        <td>767X384</td>
+                                        </tr>
+                                        <tr>
+                                        <td>Header Tablet Image</td>
+                                        <td>374x390</td>
+                                        </tr>
+                                        <tr>
+                                        <td>DWS Detail Image</td>
+                                        <td>1440x810</td>
+                                        </tr>
+                                        </tbody>
+                                        </table>\
+                                <br />
+                        
+<table class="table shadow-box">
+                <thead>
+                <tr>
+                <th class="text-center" colspan="2">FIATPROFESSIONAL</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Thumbnail</td>
+                <td>290x290</td>
+                </tr>
+                <tr>
+                <td>Mobile Thumbnail</td>
+                <td>300X185</td>
+                </tr>
+                <tr>
+                <td>Image</td>
+                <td>1180x400</td>
+                </tr>
+                <tr>
+                <td>Mobile Image</td>
+                <td>602x354</td>
+                </tr>
+                <tr>
+                <td>Header Image</td>
+                <td>590x400</td>
+                </tr>
+                <tr>
+                <td>Header Mobile Image</td>
+                <td>352x207</td>
+                </tr>
+                <tr>
+                <td>Tablet Thumbnail</td>
+                <td>724x309</td>
+                </tr>
+                <tr>
+                <td>Header Tablet Image</td>
+                <td>363x300</td>
+                </tr>
+                <tr>
+                <td>DWS Detail Image</td>
+                <td>1440x810</td>
+                </tr>
+                </tbody>
+                </table>
+              
+
+        <br>
+
+
+        <table class="table shadow-box">
+                        <thead>
+                        <tr>
+                        <th class="text-center" colspan="2">ALFAROMEO</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <td>Thumbnail</td>
+                        <td>630x300</td>
+                        </tr>
+                        <tr>
+                        <td>Mobile Thumbnail</td>
+                        <td>630x300</td>
+                        </tr>
+                        <tr>
+                        <td>Image</td>
+                        <td>1600x700</td>
+                        </tr>
+                        <tr>
+                        <td>Mobile Image</td>
+                        <td>700x335</td>
+                        </tr>
+                        <tr>
+                        <td>Header Image</td>
+                        <td>1600x700</td>
+                        </tr>
+                        <tr>
+                        <td>Header Mobile Image</td>
+                        <td>770x830</td>
+                        </tr>
+                        <tr>
+                        <td>Tablet Thumbnail</td>
+                        <td>630x300</td>
+                        </tr>
+                        <tr>
+                        <td>Tablet Image</td>
+                        <td>630x300</td>
+                        </tr>
+                        <tr>
+                        <td>Header Tablet Image</td>
+                        <td>1240x600</td>
+                        </tr>
+                        <tr>
+                        <td>DWS Detail Image</td>
+                        <td>1440x810</td>
+                        </tr>
+                        </tbody>
+                        </table>
+
+                        <br />
+                        <table class="table shadow-box">
+                                        <thead>
+                                        <tr>
+                                        <th class="text-center" colspan="2">JEEP</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                        <td>Thumbnail</td>
+                                        <td>725x517</td>
+                                        </tr>
+                                        <tr>
+                                        <td>Mobile Thumbnail</td>
+                                        <td>377x269</td>
+                                        </tr>
+                                        <tr>
+                                        <td>Image</td>
+                                        <td>1450x510</td>
+                                        </tr>
+                                        <tr>
+                                        <td>Mobile Image</td>
+                                        <td>400x141</td>
+                                        </tr>
+                                        <tr>
+                                        <td>Header Image</td>
+                                        <td>300x160</td>
+                                        </tr>
+                                        <tr>
+                                        <td>Header Mobile Image</td>
+                                        <td>500x357</td>
+                                        </tr>
+                                        <tr>
+                                        <td>Tablet Thumbnail</td>
+                                        <td>1000x352</td>
+                                        </tr>
+                                        <tr>
+                                        <td>Header Tablet Image</td>
+                                        <td>768x270</td>
+                                        </tr>
+                                        <tr>
+                                        <td>DWS Detail Image</td>
+                                        <td>1440x810</td>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+
+                        <h4>VI Image Dimensions - Abarth & Lancia
+                                        </h4>
+                                        <table class="table shadow-box">
+                                                        <thead>
+                                                        <tr>
+                                                        <th class="text-center" colspan="2">ABARTH</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                        <td>Thumbnail</td>
+                                                        <td>520x325</td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td>Mobile Thumbnail</td>
+                                                        <td>230x245</td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td>Image</td>
+                                                        <td>1600x700</td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td>Mobile Image</td>
+                                                        <td>768x828</td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td>Header Image</td>
+                                                        <td>1600x700</td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td>Header Mobile Image</td>
+                                                        <td>768x828</td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td>DWS Detail Image</td>
+                                                        <td>1440x810</td>
+                                                        </tr>
+                                                        </tbody>
+                                                        </table>
+
+                                         <table class="table shadow-box">
+                                                                        <thead>
+                                                                        <tr>
+                                                                        <th class="text-center" colspan="2">LANCIA</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                        <tr>
+                                                                        <td>Thumbnail</td>
+                                                                        <td>640x362</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                        <td>Mobile Thumbnail</td>
+                                                                        <td>640x362</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                        <td>Image</td>
+                                                                        <td>980x554</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                        <td>Mobile Image</td>
+                                                                        <td>640x362</td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                        </table>
+
+</section>
+
+<br />
+<hr class="breakline"/>
+
+<section class="Form Testing" id="form-testing">
+                <h4>Form Testing - Step 1</h4>
+                <ul>
+          <li>Check if correct MK is provided.</li>
+                <li>Check model code is in the product catalogue. If it is in NO_PROD status then ask LAL for approval, without approval we can't proceed for ICT approval. Check if the model code is given as per correct market and brand.</li>
+                <li>We can check the updated model code on below location:</li>
+                <li><a href="https://ts.accenture.com/sites/FGA_P2C_Proposal/SitePages/modelcode.aspx">https://ts.accenture.com/sites/FGA_P2C_Proposal/SitePages/modelcode.aspx</a></li>
+                </ul>
+                <p>&nbsp;</p>
+                <h4>Form Testing - Step 2</h4>
+                <p>&nbsp;</p>
+                <ul>
+                <li><u><strong>COMMON Validations needs to be followed for promotion form:</strong></u></li>
+                </ul>
+                <p>&nbsp;</p>
+                <ul>
+                <li>In Name and Last Name fields,
+                <ul>
+                <li>2-50 total characters</li>
+                <li>any kind of alphabet letters</li>
+                <li>no consecutive spaces (keyboard locked)</li>
+                <li>no numbers or special characters</li>
+                <li>Special character exception:</li>
+                </ul>
+                </li>
+                <li>- (hyphen) and ' (apostrophe) must be accepted and consecutive "--" and '' are not allowed.</li>
+                <li>In Email id fields,
+                <ul>
+                <li>Consecutive "@@" and ".." are not allowed. eg. test-test@@test...com.</li>
+                <li>Also, in the domain name, the characters should be more than 1 character. e.g.&nbsp;<u>test@t.com</u>&nbsp;should not be acceptable.</li>
+                <li>In the Confirmation email field, the email id should not be copied (copy &amp; paste).</li>
+                </ul>
+                </li>
+                <li>Check for Phone Number field also as per validation document.</li>
+                <li>These are the some common validation rule but always refer the "form fields CTA_ValidationRules" validation file at below location
+                <a href="https://collab.extra.fcagroup.com/sites/lmdocumentation/Shared%20Documents
+                /Forms/AllItems.aspx?
+                RootFolder=%2Fsites%2Flmdocumentation%2FShared%20Documents%2FCRM%20guidelines%20-%20CTA%20fields%20and%20validation%20rules%2C%20MK%20setup%20procedures&amp;FolderCTID=0x012000F1231E34AC4ED040AE5346E6441EBFF4&amp;View=%7B5DF8B50B-3148-45BB-949E-3237F94104D9%7D">
+                https://collab.extra.fcagroup.com/sites/lmdocumentation/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2Fsites%2Flmdocumentation%2FShared%20Documents%2FCRM%20guidelines%20-%20CTA%20fields%20and%20validation%20rules%2C%20MK%20setup%20procedures&amp;FolderCTID=0x012000F1231E34AC4ED040AE5346E6441EBFF4&amp;
+                        View=%7B5DF8B50B-3148-45BB-949E-3237F94104D9%7D&nbsp;</a>
+                        (Ask Kaushal/Drishti/Kirti for access to this location).</li>
+                </ul>
+
+                <h4>Validated highlighted fields.
+                        </h4>
+
+                        <figure>
+                                    <a data-fancybox="gallery" href="/img/tools/ft/cps-site-structure1.png"><img src="/img/tools/ft/cps-site-structure1.png" class="img-responsive"></a>
+                        </figure>
+        
+                        <h4>Form Testing - Step 3</h4>
+<p>&nbsp;</p> 
+ <ul>
+<li><u><strong>We need to check below details in F2:</strong></u></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Check all the data (basic information) is passing as we have filled in the form like title, name, surname, Address, email, confirm email, etc...</li>
+<li>Check market, language and brand are passing correctly.</li>
+<li>Below parameters to be checked by the provided MK are:
+<ul>
+<li>Offer ID</li>
+<li>Campaign ID</li>
+<li>CTA Type</li>
+<li>Country Code</li>
+<li>Brand</li>
+<li>Market</li>
+<li>Language</li>
+<li>Level 1 &amp; 4 should pass same as provided in MK File i.e. LEVEL1: web corporate &amp; LEVEL4: brand respectively.</li>
+<li>Level 2: For Promo form level 2 should pass promotions, i.e. LEVEL2: brand:market:promotions</li>
+<li>Level 3: Level 3 should pass lead, i.e. LEVEL3: lead: type (e.g. for Test Drive form level 3 will be LEVEL3: lead:test-drive-request)</li>
+<li>BUSAREA for business promo will pass "business" for other promo BUSAREA will pass blank or sales.</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Form Testing &ndash; Step 3 continued</h4>
+<p>&nbsp;</p>
+<ul>
+<ul>
+<li>Check below Privacy values according to market:
+<ul>
+<li>PRIVACYPROFILATION</li>
+<li>PRIVACYTHIRDPARTY</li>
+<li>PRIVACYEXTRAEU</li>
+<li>PRIVACYGEOLOCATION</li>
+<li>MARKETING_POST1</li>
+<li>MARKETING_MAIL1</li>
+<li>MARKETING_SMS1</li>
+<li>MARKETING_PHONE1</li>
+</ul>
+</li>
+</ul>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Check the visitor ID is passing or not.</li>
+<li>If you find any issue while validation or in F2 data, then please check whether it is solve by ELOQUA Team or BT Team or we can change it through CPS/AEM(You). According to issue assign the task to respective team and once issue is resolved then again follow above procedure from step 2.</li>
+</ul>
+<br>
+
+<h4>Form Testing – Step 3 Cont (F2 Screenshot)</h4>
+
+<figure>
+        <a data-fancybox="gallery" href="/img/tools/ft/formtestingstep3.png"><img src="/img/tools/ft/formtestingstep3.png" class="img-responsive"></a>
+</figure> 
+</section> 
+
+<section class="publishing" id="publishing-section">
+        <h4>Publishing</h4>
+        <figure>
+                 <a data-fancybox="gallery" href="/img/tools/ft/publishing1.png"><img src="/img/tools/ft/publishing1.png" class="img-responsive"></a>
+
+        </figure>
+
+        <br />
+        <ul>
+                        <li>
+                        <p>a. Publish Promo along with all related list and images</p>
+                        <p>Images uploaded on CPS automatically gets published</p>
+                        <p>https://auth.contentservices.fcagroup.com/fiat/IT-it/Lists/Promotions/AllItems.aspx</p>
+                        oval.</li>
+                        </ul>
+
+<h4>  Publishing - 1 </h4>
+<figure>
+                <a data-fancybox="gallery" href="/img/tools/ft/publishing2.png"><img src="/img/tools/ft/publishing2.png" class="img-responsive"></a>
+
+       </figure>
+       <p>b. Purging Process</p>
+       <p>1. Flush the CPS cache by using below URL&nbsp;<br />eg: https://auth.contentservices.fcagroup.com/fiat/IT-it/_layouts/CPSUtilityPages/CacheManagement.aspx</p>
+       <p>Click on the Reset Cache CTA to flush the cache</p>
+       <p>Change the market, language and brand according to requirement</p>
+
+
+       <h4>  Publishing - 2 </h4>
+       <figure>
+                <a data-fancybox="gallery" href="/img/tools/ft/publishing3.png"><img src="/img/tools/ft/publishing3.png" class="img-responsive"></a>
+       </figure>
+
+       <p>2. Check CPS output to be updated on below mentioned URL</p>
+       <p>http://cps.contentservices.fcagroup.com/list?brand=fiat&amp;market=it&amp;language=it&amp;channel=responsive.fiat&amp;pagesize=100</p>
+       <p>Change the market, language and brand according to requirement</p>
+
+
+       <h4>  Publishing - 3 </h4>
+
+       <figure>
+                <a data-fancybox="gallery" href="/img/tools/ft/publishing4.png"><img src="/img/tools/ft/publishing4.png" class="img-responsive"></a>
+
+       </figure>
+       <p>3. Run the Importer on AEM&nbsp;<br />For eg: https://author-fca-italy-brands-production63.adobecqms.net/editor.html/content/fiat/fiat-it/it.html</p>
+<p>Click on the CPS Importer CTA . it will show the message ["OPERATION COMPLETED - update promo for&nbsp;<br />Brand: fiat&nbsp;<br />Market: it&nbsp;<br />Language: it Channel: responsive.fiat"]</p>
+<h4>  Publishing - 4 </h4>
+<figure>
+                <a data-fancybox="gallery" href="/img/tools/ft/publishing5.png"><img src="/img/tools/ft/publishing5.png" class="img-responsive"></a>
+
+       </figure>
+       <p>4.Re-publish promos HUB page</p>
+<p>Eg:https://author-fca-italy-brands-production63.adobecqms.net/sites.html/content/fiat/fiat-it/it/offerte</p>
+<br />
+
+<h4>Publishing &ndash; 5 (Reflection - Origin &amp; Live)</h4>
+<ul>
+<ul>
+<li>Check changes on origin https://aemoriginms3-www.fiat.it/offerte</li>
+</ul>
+</ul>
+<ul>
+<ul>
+<li>If the changes are reflecting on origin, Ask Akamai flush (to IDC/BT)</li>
+</ul>
+</ul>
+<ul>
+<li>Check the changes on live.</li>
+</ul>
+</div>
+
+</section>
+<br />
+
+
+<!-- ***********************************scroll spy*************************************************** -->
+<nav class="col-sm-3" id="myScrollspy">
+    <ul class="nav nav-pills nav-stacked side-section">
+      <li class="active"><a href="#cps-structure-section">CMS Structure</a></li>
+      <li><a href="#aem-cps-detail-section">Aem Cps Detail</a></li>    
+      <li><a href="#data-entry-section">Data Entry</a></li>  
+      <li><a href="#form-testing">Form Testing</a></li>    
+      <li><a href="#publishing-section">Publishing Section</a></li>    
+
+
+    </ul>
+  </nav>
+	</ul>
+	
+
+		 </div>  
+		</div>
+      
+      </div>
+      <br>
+
+	<script>$(document).ready(function(){
+			// Add smooth scrolling to all links
+			$("a").on('click', function(event) {
+		  
+			  // Make sure this.hash has a value before overriding default behavior
+			  if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+		  
+				// Store hash
+				var hash = this.hash;
+		  
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+				  scrollTop: $(hash).offset().top
+				}, 800, function(){
+			 
+				  // Add hash (#) to URL when done scrolling (default click behavior)
+				  window.location.hash = hash;
+				});
+			  } // End if
+			});
+		  });</script>

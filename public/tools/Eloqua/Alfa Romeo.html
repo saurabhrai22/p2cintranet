@@ -1,0 +1,439 @@
+
+
+<div class="container-fluid">
+	<div class="col-md-9">
+		<!-- breadcrumb start-->
+		<ul class="breadcrumb">
+			<li><a href="">Home</a></li>
+			<li><a href="">Brands</a></li>
+			<li>Eloqua</li>
+			<li>Alfa Romeo</li>
+		</ul>
+		<!-- breadcrumb end-->
+
+
+		<h4 class="primary-color" id="eloqua_alfa_romeo_introduction">Introduction</h4>
+		<p>The document has the purpose to illustrate the procedure in order to modify Alfaromeo forms.</p>
+		<ol>
+			<li><b><u>Assumption</u></b>
+				<ul>
+					<li>LPID is the unique ID of the Landing Page</li>
+					<li>Each LP contains the form for a specific couple brand/market for different layouts, there will be different
+						landing pages (e.g. Standard, Promo and Fleet/Business forms)</li>
+					<li>One LP contains only one CTA/form</li>
+				</ul>
+			</li>
+			<li><b><u>Alfaromeo Eloqua folder structur</u></b>
+				<p>Alfaromeo Landing Pages are under All > EMEA > WEBPORTAL_INTEGRATION > ALFAROMEO path. For every country, there
+					is a specific folder MARKET/LANGUAGE that contains other two subfolders with the corresponding pages:</p>
+				<p>- CERT DMK (Certification LPID)</p>
+				<p>- PROD DMK (Production LPID)</p>
+
+				<div>
+					<!-- <img src="/img/chi_siamo_page1.png" class="img-responsive img-rounded zoom shadow-box">
+-->
+					<a data-fancybox="gallery" href="/img/tools/eloqua/alfaromeo/eloqua_landing_page.png"><img src="/img/tools/eloqua/alfaromeo/eloqua_landing_page.png" class="img-responsive img-rounded"></a>
+
+				</div>
+
+				<p>If not present, create a TEST folder and duplicate the Production LP into it in order to apply the changes
+					needed. If already present, copy always the content of the production LP into the test one to start to work from
+					the most updated version available in production.</p>
+				<p>When you create a new Landing Page you have to set the Microsite</p>
+				<p>For Abarth it must be Alfa Romeo – Desktop.</p>
+				<div>
+					<!-- <img src="/img/chi_siamo_page1.png" class="img-responsive img-rounded zoom shadow-box">
+	 -->
+					<a data-fancybox="gallery" href="/img/tools/eloqua/alfaromeo/eloqua_draft.png"><img src="/img/tools/eloqua/alfaromeo/eloqua_draft.png" class="img-responsive img-rounded"></a>
+
+				</div>
+
+
+				<p>When done, report them in the corresponding PROD Landing Page.</p>
+				<p>Remember that after modifying a Landing Page is always necessary an Alfaromeo AEM portal refresh.</p>
+				<p>In some cases, when the changes affect:</p>
+				<p>- Orchestrator values</p>
+				<p>- CCDB values</p>
+				<p>- adding and removing fields operation</p>
+
+				<p>they must be validated by the ICT team through the internal process on the AEM Test environment, before to be
+					reported in AEM Prod.</p>
+				<span style="background: yellow;">This kind of changes must pass the ICT test before to be published in Production.</span>
+			</li>
+			<li><b><u>Landing Page Permissions</u></b>
+				<p>In order to integrate the Alfaromeo Landing page into AEM Portal it is necessary to give it the correct
+					permissions. Follow this steps:</p>
+				<ol>
+					<li>Open Landing page from Eloqua platform</li>
+					<li>In the right corner click on Actions button</li>
+					<div>
+						<!-- <img src="/img/chi_siamo_page1.png" class="img-responsive img-rounded zoom shadow-box">
+		 -->
+						<a data-fancybox="gallery" href="/img/tools/eloqua/alfaromeo/landing_page_permission_action_button.png"><img src="/img/tools/eloqua/alfaromeo/landing_page_permission_action_button.png"
+							 class="img-responsive img-rounded"></a>
+
+					</div>
+					<li>Click on Permissions</li>
+					<div>
+						<!-- <img src="/img/chi_siamo_page1.png" class="img-responsive img-rounded zoom shadow-box">
+		 -->
+						<a data-fancybox="gallery" href="/img/tools/eloqua/alfaromeo/landing_page_permission_permission.png"><img src="/img/tools/eloqua/alfaromeo/landing_page_permission_permission.png"
+							 class="img-responsive img-rounded"></a>
+
+					</div>
+					<li>Add group CloudConnector and give it View permission</li>
+					<li>Save and save Landing page</li>
+					<div>
+						<!-- <img src="/img/chi_siamo_page1.png" class="img-responsive img-rounded zoom shadow-box">
+		 -->
+						<a data-fancybox="gallery" href="/img/tools/eloqua/alfaromeo/landing_page_permission_save.png"><img src="/img/tools/eloqua/alfaromeo/landing_page_permission_save.png"
+							 class="img-responsive img-rounded"></a>
+
+					</div>
+				</ol>
+			</li>
+		</ol>
+		<hr class="breakline">
+
+		<h4 class="primary-color" id="eloqua_Alfa_Romeo_lpid_identification">LPID Identification</h4>
+		<p>The LPID is the unique ID of the Landing Page. This chapter allows you to identify and locate the correct LPID of
+			the form.</p>
+		<ol>
+			<li><b><u>LPID browser research</u></b>
+				<h5>To found quickly the LPID of the form to analyze, open the source code of the form in a browser (use a common
+					developing tool).</h5>
+				<h5>The LPID, in the HTML code, is identified with a specific (allows you to locate it faster):</h5>
+				<p>- tag:&nbsp;&lt;input&gt;</p>
+				<p>- name:&nbsp;name ="LPID"</p>
+				<p>&lt;inputid ="lpid_td"name ="LPID"type ="hidden"value ="11248"&gt;(e.g. Alfaromeo UK TD)</p>
+			</li>
+			<div>
+				<!-- <img src="/img/chi_siamo_page1.png" class="img-responsive img-rounded zoom shadow-box">-->
+				<a data-fancybox="gallery" href="/img/tools/eloqua/alfaromeo/lpo_browser_research.png"><img src="/img/tools/eloqua/alfaromeo/lpo_browser_research.png" class="img-responsive img-rounded"></a>
+			</div>
+			<li><b><u>LPID Eloqua research</u></b>
+				<h5>To found the corresponding Landing Page in Eloqua, having the LPID, go to any LP and change the “id” parameter
+					directly in query string:</h5>
+				<a href="https://secure.p06.eloqua.com/Main.aspx#landing_pages&amp;id={LPID} ">https://secure.p06.eloqua.com/Main.aspx#landing_pages&amp;id={LPID}
+				</a>
+				<h5>(e.g. for Alfaromeo UK TD: <a href="https://secure.p06.eloqua.com/Main.aspx#landing_pages&id=11248">https://secure.p06.eloqua.com/Main.aspx#landing_pages&id=11248)</a></h5>
+			</li>
+			<div>
+				<!-- <img src="/img/chi_siamo_page1.png" class="img-responsive img-rounded zoom shadow-box">-->
+				<a data-fancybox="gallery" href="/img/tools/eloqua/alfaromeo/lpo_eloqua_research.png"><img src="/img/tools/eloqua/alfaromeo/lpo_eloqua_research.png" class="img-responsive img-rounded"></a>
+			</div>
+		</ol>
+		<hr class="breakline">
+
+		<h4 class="primary-color" id="eloqua_Alfa_Romeo_js_identification">JS Identification</h4>
+		<p>This chapter allows you to modify the correct JavaScript files included in the Landing Page that you are
+			analyzing.</p>
+		<ol>
+			<li><b><u>JS LP research</u></b>
+				<h5>If you need to change a specific JavaScript file included in the page, you have to find the complete URL of the
+					JS in the HTML code</h5>
+				<div>
+					<!-- <img src="/img/chi_siamo_page1.png" class="img-responsive img-rounded zoom shadow-box">
+	 -->
+					<a data-fancybox="gallery" href="/img/tools/eloqua/alfaromeo/js_lp_research.png"><img src="/img/tools/eloqua/alfaromeo/js_lp_research.png" class="img-responsive img-rounded"></a>
+
+				</div>
+				<h5>The name of the file to search will be the one after the following code autogenereted by Eloqua: </h5>
+				<p>/{…}_ or /NumericCode_ </p>
+				<p>The complete URL of the file will be the one corresponding to the src parameter of the script included in the
+					page.</p>
+				<pre>
+				<p>&lt;script&nbsp;type="text/javascript"&nbsp;src="https://img06.en25.com/Web/FiatMarketing/{b380cbb4-3981-4916-99cb-734b11f85fc9}_20160520_Alfaromeo_validate_UK_TD.js?v=1"&gt;&lt;/script&gt;</p>
+			</pre>
+			</li>
+			<li><b><u>JS File Storage research</u></b>
+				<h5>To search for the JS file in the File Storage section you can past the name of the file in the search bar and
+					the result will be showed in the below section. Somethimes the results can be more then one, because in Eloqua is
+					possible to upload files with the same name. In that case, you must compare the Actual URL of the file with the
+					one included in the HTML page to locate the correct one to modify. </h5>
+
+				<div>
+					<!-- <img src="/img/chi_siamo_page1.png" class="img-responsive img-rounded zoom shadow-box">
+	 -->
+					<a data-fancybox="gallery" href="/img/tools/eloqua/alfaromeo/js_file_storage_research_1.png"><img src="/img/tools/eloqua/alfaromeo/js_file_storage_research_1.png"
+						 class="img-responsive img-rounded"></a>
+
+				</div>
+				<div>
+					<!-- <img src="/img/chi_siamo_page1.png" class="img-responsive img-rounded zoom shadow-box">
+	 -->
+					<a data-fancybox="gallery" href="/img/tools/eloqua/alfaromeo/js_file_storage_research_2.png"><img src="/img/tools/eloqua/alfaromeo/js_file_storage_research_2.png"
+						 class="img-responsive img-rounded"></a>
+
+				</div>
+				<p>Every time you need to modify a JavaScript file under Eloqua, open the Actual URL in the browser, save a copy on
+					your local system and upload a new file under the same folder with the following naming convention: </p>
+				<p>actualDate_fileName_versionNumber.js</p>
+			</li>
+			<li><b><u>JS Files HTTPS Switch</u></b>
+				<p>Eloqua for files under File Storage section has two different URLs, one to reach the resource in http and the
+					other one to reach the resource in https:</p>
+				<a href="http://images.promo.fiat.com/Web/FiatMarketing/{b380cbb4-3981-4916-99cb-734b11f85fc9}_20160520_Alfaromeo_validate_UK_TD.js?v=1">http://images.promo.fiat.com/Web/FiatMarketing/{b380cbb4-3981-4916-99cb-734b11f85fc9}_20160520_Alfaromeo_validate_UK_TD.js?v=1
+					(HTTP)</a>
+				<a href="https://img06.en25.com/Web/FiatMarketing/{b380cbb4-3981-4916-99cb-734b11f85fc9}_20160520_Alfaromeo_validate_UK_TD.js?v=1">https://img06.en25.com/Web/FiatMarketing/{b380cbb4-3981-4916-99cb-734b11f85fc9}_20160520_Alfaromeo_validate_UK_TD.js?v=1
+					(HTTPS)</a>
+
+				<p>Due to the HTTPS switch of the AEM Alfaromeo portal, also the resources included in the portal pages must be
+					accessed through the security protocol.</p>
+				<p>When including a resource in the page is necessary to replace the domain of the Actual URL with the following
+					one:</p>
+				<a href="http://images.promo.fiat.com">http://images.promo.fiat.com</a>
+			</li>
+		</ol>
+		<hr class="breakline">
+
+		<h4 class="primary-color" id="eloqua_Alfa_Romeo_label_configuration">Label Configuration</h4>
+		<p>This chapter allows you to modify correctly the message labels of your landing page.</p>
+		<ol>
+			<li><b><u>Label replacement</u></b>
+				<p>If required to change a specific label, it is necessary to replace it directly into the HTML code.</p>
+			</li>
+			<li><b><u>Thank you page message replacement</u></b>
+				<h5>If required to change a specific thank you page message, it is necessary to replace it directly in the HTML
+					code.</h5>
+				<h5>This is managed through an iframe in the same Landing Page.</h5>
+				<h5>The typ message, in the HTML code, is identified with a specific (allows you to locate it faster):</h5>
+				<p>- tag :&nbsp;&lt;p&gt;</p>
+				<p>- class :&nbsp;class="text--big"</p>
+				<div>
+					<!-- <img src="/img/chi_siamo_page1.png" class="img-responsive img-rounded zoom shadow-box">
+-->
+					<a data-fancybox="gallery" href="/img/tools/eloqua/alfaromeo/thankyou+page_message_replacsement.png"><img src="/img/tools/eloqua/alfaromeo/thankyou+page_message_replacsement.png"
+						 class="img-responsive img-rounded"></a>
+
+				</div>
+			</li>
+			<li><b><u>Error message replacement</u></b>
+				<h5>The validation of the page fields is managed through a JavaScript file, versioned under Eloqua in the “File
+					Storage” section.</h5>
+				<h5>The error message, in the HTML code, is identified with a specific (allows you to locate it faster):</h5>
+				<p>- tag :&nbsp;&lt;span&gt;</p>
+				<p>- id :&nbsp;id="Error&hellip;"</p>
+				<p>&lt;spanid="ErrorNome_td"&gt;&lt;/span&gt;</p>
+				<p>In the specific JS validation file, included into the LP, there will be a function that manages the validation
+					of the field. There you have to replace the error message with the new one.</p>
+				<p>var str_error_nome_td = "Invalid name";</p>
+				<pre>
+	function validateFieldName_td() {
+		…
+		if (!reg.test($("#field0_td").val())) {
+		   $("#ErrorNome_td").html(str_error_nome_td);
+		   $('#field0_td').parent().addClass("error");
+		   return false;
+		   }
+		   …
+		 }
+	   } 
+	   //(e.g. for Alfaromeo_UK_TD.js)
+</pre>
+
+			</li>
+		</ol>
+		<hr class="breakline">
+
+		<h4 class="primary-color" id="eloqua_Alfa_Romeo_privacy_configuration">Privacy configuration</h4>
+		<p>This chapter allows you to modify correctly the privacy section of your landing page.</p>
+		<ol>
+			<li><b><u>Privacy layout and labels</u></b>
+				<p>Each market has different privacy configuration and different privacy messages. You can find the privacy section
+					at the bottom of the page. Usually in this section of the HTML code there are specific div tags with the
+					following classes:</p>
+				<p>&lt;divclass="form-row"&gt;<br />&lt;divclass="form-row__inner"&gt;</p>
+				<p>This can help you to locate the specific section to edit. If required, edit the privacy of the forms whit the
+					correct layout of the market or change the labels directly into the html.</p>
+			</li>
+			<div>
+				<!-- <img src="/img/chi_siamo_page1.png" class="img-responsive img-rounded zoom shadow-box">-->
+				<a data-fancybox="gallery" href="/img/tools/eloqua/alfaromeo/privacy_layout_and_labels.png"><img src="/img/tools/eloqua/alfaromeo/privacy_layout_and_labels.png"
+					 class="img-responsive img-rounded"></a>
+			</div>
+			<li><b><u>Privacy Disclaimer ID</u></b>
+				<p>Each market has a different disclaimer code that corresponds to the document disclaimer number. The disclaimer’s
+					id value can be modified changing its related value of the hidden input directly into the HTML code:</p>
+				<p>a) DISCLAIMER</p>
+				<p>&lt;inputid="field29"name="DISCLAIMER"type="hidden"&nbsp;value="390"&nbsp;&ensp;&ensp;&ensp;(e.g. for Alfaromeo
+					UK)</p>
+			</li>
+			<div>
+				<!-- <img src="/img/chi_siamo_page1.png" class="img-responsive img-rounded zoom shadow-box">
+				-->
+				<a data-fancybox="gallery" href="/img/tools/eloqua/alfaromeo/privacy_disclaimer_id.png"><img src="/img/tools/eloqua/alfaromeo/privacy_disclaimer_id.png" class="img-responsive img-rounded"></a>
+
+			</div>
+		</ol>
+		<hr class="breakline">
+
+		<h4 class="primary-color" id="eloqua_Alfa_Romeo_master_key_configuration">Master Key Configuration</h4>
+		<p>This chapter allows you to modify correctly the master key configuration of your landing page.</p>
+		<ol>
+			<li><b><u>Master Key replacement</u></b>
+				<h5><b>The Alfaromeo Portal includes the Dynamic Master Key (DMK):</b></h5>
+				<p>a) MK are defined into the digitalData provided by the portal</p>
+				<p>b) If the specific value from Alfaromeo portal is empty, it is used the related MK value included into the
+					hidden input of the form into the Landing Page. This MK must be replaced with the correct value given from the
+					market.</p>
+				<div>
+					<!-- <img src="/img/chi_siamo_page1.png" class="img-responsive img-rounded zoom shadow-box">
+	-->
+					<a data-fancybox="gallery" href="/img/tools/eloqua/alfaromeo/master_key_replacement.png"><img src="/img/tools/eloqua/alfaromeo/master_key_replacement.png" class="img-responsive img-rounded"></a>
+
+				</div>
+
+
+				<p>In particular, the Master Key value that may be required to change are:</p>
+				<p>a) OFFER&nbsp;&lt;inputid ="field21_td"name ="OFFER"type ="hidden"value =" "&gt;</p>
+				<p>b) CAMPAIGN&nbsp;&lt;inputid ="field27_td"name ="CAMPAIGN"type ="hidden"value =" "&gt;</p>
+				<p>c) MODEL DESCRIPTION&nbsp;&lt;inputid ="field18_td"name ="MODELDESCRIPTION"type ="hidden"value =" "&gt;</p>
+				<p>d) MODEL COMMERCIALCODE&nbsp;&lt;inputid ="field19_td"name ="MODELCOMMERCIALCODE"type ="hidden"value =" "&gt;</p>
+				<p>e) BUSINESS AREA&nbsp;&lt;inputid ="field54_td"name ="BUSAREA"type ="hidden"value ="1"&gt;</p>
+				<p>Remember that the following values are necessary for the Orchestrator system and must never change:</p>
+				<p>- LEADSOURCECODE&nbsp;&lt;inputid ="field15_td"name ="LEADSOURCECODE"type ="hidden"value ="MAT"&gt;</p>
+				<p>- DTM_ENABLED&nbsp;&lt;inputid ="field_dtm_enabled_td"name ="DTM_ENABLED"type ="hidden"value ="1"&gt;</p>
+				<p>(e.g. for Alfaromeo TD UK)</p>
+			</li>
+		</ol>
+		<hr class="breakline">
+
+		<h4 class="primary-color" id="eloqua_Alfa_Romeo_page_variables_configuration">Page Variables Configuration</h4>
+		<p>This chapter allows you to modify correctly the variables configuration of your landing page.</p>
+		<ol>
+			<li><b><u>Variables configuration</u></b>
+				<p>The Alfaromeo Landing Pages include some JS variables in the HTML page used by particular functions which are
+					used to configure:
+				</p>
+				<ul>
+					<li class="">_offer</li>
+					<li>_campaing</li>
+					<li>brandCode</li>
+					<li class="active">_offer_kmi</li>
+					<li class="">_campaign_kmi</li>
+				</ul>
+				<p>If asked to change that values,</p>
+				<p>1. firstly you have to check if there is a script in the tag with the following declared var (allows you to
+					locate it faster):</p>
+				<pre>
+								&lt;eloquaform&gt;
+									&hellip;
+									&lt;script&gt;
+										   var _offer_kmi='3523';
+										   var _campaign_kmi='7508';
+										&hellip;
+									&lt;/script&gt;
+									&hellip;
+									&lt;/eloquaForm&gt;                                                                                               
+									//(e.f. for Alfaromeo IT KMI) </pre>
+				<p>2. Secondly tou have to change that values only in the above case, otherwise the problem is not in Eloqua scope.</p>
+				<span style="background:yellow;">This kind of changes must pass the ICT test before to be published in Production.</span>
+			</li>
+			<li><b><u>Digital Data configuration</u></b>
+				<p>The Alfaromeo Landing Pages includes the digitalData configuration directly in the HTML page:</p>
+				<ul>
+					<li class="active">digitalData.page.component.form.leadType</li>
+					<li>digitalData.page.component.form.nameType</li>
+					<li class="">digitalData.page.component.form.stepName</li>
+				</ul>
+				<p>If asked to change that values,</p>
+				<p>1. firstly, you have to check if there is a script in the&nbsp;tag with the following declared variables (allows
+					you to locate it faster):</p>
+				<pre>
+							&lt;eloquaform&gt;
+								&hellip;
+								&lt;script&gt;
+									   digitalData.page.component.form.stepName="form";
+									&hellip;
+								&lt;/script&gt;
+								&hellip;
+								&lt;/eloquaForm&gt;                                                                                               
+								//(e.f. for Alfaromeo IT KMI)
+							</pre>
+				<p>2. secondly, you have to change that values only in the above case, otherwise the problem is not in Eloqua
+					scope.</p>
+				<span style="background:yellow;">This kind of changes must pass the ICT test before to be published in Production.</span>
+
+			</li>
+		</ol>
+		<hr class="breakline">
+
+		<h4 class="primary-color" id="eloqua_Alfa_Romeo_business_fleet_size_configuration">Business Fleet Size Configuration</h4>
+		<p>This chapter allows you to modify correctly the fleet size configuration of your business landing page.</p>
+		<ol>
+			<li><b><u>Fleet Size replacement</u></b>
+				<p>The Alfaromeo Portal includes also the Business/Fleet forms. They are located under the specific BUSINESS
+					folder:</p>
+				<div>
+					<!-- <img src="/img/chi_siamo_page1.png" class="img-responsive img-rounded zoom shadow-box">
+			-->
+					<a data-fancybox="gallery" href="/img/tools/eloqua/alfaromeo/fleed_size_replacement_1.png"><img src="/img/tools/eloqua/alfaromeo/fleed_size_replacement_1.png"
+						 class="img-responsive img-rounded"></a>
+
+				</div>
+				<p>Each market has different fleet size values. You can find the fleet size at the bottom of the anagrafic section
+					of business pages. Usually in this section of the HTML code there is a specific</p>
+				<div>tag with the following class:
+					<p>&lt;divclass ="fleet-size"&gt;</p>
+					<p>This can help you to locate the specific section to edit. If required, edit the fleet size section of the forms
+						whit the correct layout of the market or change the labels and the values directly into the html:</p>
+					<p>&lt;divclass ="fleet-size"&gt;</p>
+					<p>&ensp;&ensp;&ensp;&lt;labelfor ='radio_fleet_size_1_td'&gt;1-4&lt;/label&gt;</p>
+					<p>&ensp;&ensp;&ensp;&lt;inputid ='radio_fleet_size_1_td'name ='fleet_size'type ='radio'&gt;1-4&gt;</p>
+					<p>&lt;/div&gt;</p>
+					<p>(e.g. for BUSINESS GR TD)</p>
+				</div>
+				<div>
+					<!-- <img src="/img/chi_siamo_page1.png" class="img-responsive img-rounded zoom shadow-box">
+-->
+					<a data-fancybox="gallery" href="/img/tools/eloqua/alfaromeo/fleed_size_replacement_2.png"><img src="/img/tools/eloqua/alfaromeo/fleed_size_replacement_2.png"
+						 class="img-responsive img-rounded"></a>
+
+				</div>
+			</li>
+		</ol>
+
+	</div>
+	<nav class="col-sm-3" id="myScrollspy">
+		<ul class="nav nav-pills nav-stacked">
+			<li class="active"><a href="#eloqua_alfa_romeo_introduction">Introduction</a></li>
+			<li class=""><a href="#eloqua_Alfa_Romeo_lpid_identification">LPID Identification</a></li>
+			<li class=""><a href="#eloqua_Alfa_Romeo_js_identification">JS Identification</a></li>
+			<li class=""><a href="#eloqua_Alfa_Romeo_label_configuration">Label Configuration</a></li>
+			<li class=""><a href="#eloqua_Alfa_Romeo_privacy_configuration">Privacy configuration</a></li>
+			<li class=""><a href="#eloqua_Alfa_Romeo_master_key_configuration">Master Key Configuration</a></li>
+			<li class=""><a href="#eloqua_Alfa_Romeo_page_variables_configuration">Page Variables Configuration</a></li>
+			<li class=""><a href="#eloqua_Alfa_Romeo_business_fleet_size_configuration">Business Fleet Size Configuration</a></li>
+
+
+		</ul>
+	</nav>
+</div>
+
+<br>
+
+<script>$(document).ready(function () {
+		// Add smooth scrolling to all links
+		$("a").on('click', function (event) {
+
+			// Make sure this.hash has a value before overriding default behavior
+			if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+
+				// Store hash
+				var hash = this.hash;
+
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 800, function () {
+
+					// Add hash (#) to URL when done scrolling (default click behavior)
+					window.location.hash = hash;
+				});
+			} // End if
+		});
+	});</script>

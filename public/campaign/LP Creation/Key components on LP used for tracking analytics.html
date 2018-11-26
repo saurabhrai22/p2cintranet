@@ -1,0 +1,52 @@
+
+
+<div class="container-fluid">
+	<div class="col-md-12">
+
+		<!-- breadcrumb end-->
+
+		<h4 class="primary-color" id="chi_siamo_page">Key Components on LP used for Tracking/Analytics</h4>
+		<ol>
+			<li>Meta Tags:<br> Meta tags contain some very important information about the LP. </li>
+			<li>adobedtm script: <br>These is an external script which is specific to country and brand (Even sometimes specific
+				to model as well). It is used to track the page and for analytics purpose. For e.g. script link will be different
+				for fiat Germany and abarth Germany. </li>
+			<li>Cloudfront script: Cloudfront script also called as opentag script, is used for analytics as well. These also
+				changes with country, brand and model.</li>
+			<li>Datalayer: It is also used for analytics purpose. It is implemented through coding on LP, Dealer Page and Thank
+				You page as well.</li>
+			<li>Dynamic MK js: This script auto fetches MK meta values</li>
+		</ol>
+		<p>All above tags and scripts have some syntax and format of implementation.</p>
+
+	</div>
+
+</div>
+
+<br>
+
+
+<script>$(document).ready(function () {
+		// Add smooth scrolling to all links
+		$("a").on('click', function (event) {
+
+			// Make sure this.hash has a value before overriding default behavior
+			if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+
+				// Store hash
+				var hash = this.hash;
+
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 800, function () {
+
+					// Add hash (#) to URL when done scrolling (default click behavior)
+					window.location.hash = hash;
+				});
+			} // End if
+		});
+	});</script>

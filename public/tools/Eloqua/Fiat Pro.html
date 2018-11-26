@@ -1,0 +1,410 @@
+
+
+        <div class="container-fluid">
+		<div class="col-md-9">
+			<!-- breadcrumb start-->
+			<ul class="breadcrumb">
+				<li><a href="">Home</a></li>
+				<li><a href="">Tools</a></li>
+				<li><a href="">Eloqua</a></li>
+				<li>Fiat Pro</li>
+			</ul>
+			<!-- breadcrumb end-->
+
+
+			<h4 class="primary-color " id="e_fiat_pro_intro">Introduction</h4>
+
+
+			<p>The document has the purpose to illustrate the procedure in order to modify <strong>Fiat Professional </strong>forms.</p>
+			
+			<div>
+	<h5><b>1.1 Assumption</b> </h5>
+	<br />
+	<ul>
+		<li>LPID is the unique ID of the Landing Page</li>
+		<li>Each LP contains the form for a specific brand/market/language
+			<ul>
+				<li>For different layouts, there will be only one landing page (e.g. one LPID for Standard/Promo/Business forms)</li>
+			</ul>
+		</li>
+		<li>One LP is multiCTA/forms</li>
+		<li>Fiat Professional Prod Landing Pages use the Eloqua form&nbsp;<em>&ldquo;ProdFormFiatProAEM&rdquo;</em>&nbsp;associated with the&nbsp;<em>&ldquo;LeadEvent&rdquo;</em>&nbsp;Custom Object</li>
+		<li>Fiat Professional Test Landing Pages use the Eloqua form&nbsp;<em>&ldquo;TestFormAbarthAEM&rdquo;</em>&nbsp;associated with the&nbsp;<em>&ldquo;TestLeadEvent&rdquo;</em>&nbsp;Custom Object</li>
+	</ul>
+</div>
+<p>&nbsp;</p>
+<div>
+	<h5> <b> 1.2 Fiat Professional Eloqua folder structure </b></h5>
+	<br />
+	<ul>
+		<li>
+			<p>Fiat Professional Landing Pages are under All &gt; INTEGRATION -&gt; AEM -&gt; FIATPROFESSIONAL path.</p>
+			<p>The main folder contains three subfolders with the corresponding pages:</p>
+			<ul>
+				<li>TEST (Test LPID)</li>
+				<li>PROD (Production LPID)</li>
+				<li>PRIVACY_DOCS (Privacy pages)</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<a data-fancybox="gallery" href="/img/tools/eloqua/fiatpro/introduction/1.png"><img src="/img/tools/eloqua/fiatpro/introduction/1.png" class="img-responsive img-rounded zoom shadow-box"></a>
+
+
+<center> <p>Under TEST and PROD folders there is a folder for each market that contains the related LP: </p> </center>
+<br/>
+
+<!-- <img src="img/introduction/2.png" class="img-responsive img-rounded zoom shadow-box"> -->
+<a data-fancybox="gallery" href="/img/tools/eloqua/fiatpro/introduction/2.png"><img src="/img/tools/eloqua/fiatpro/introduction/2.png" class="img-responsive img-rounded zoom shadow-box"></a>
+<p>
+	If not present,&nbsp;
+	<u>
+		duplicate the Production LP
+	</u>
+	&nbsp;into the&nbsp;
+	<strong>
+		TEST
+	</strong>
+	&nbsp;folder at the corresponding path in order to apply the changes needed. If already present, copy always the content of the production LP into the test one to start to work from the most updated version available in production.
+</p>
+<p>
+	When you create a new Landing Page you have to set the&nbsp;
+	<strong>
+		Microsite
+	</strong>
+	.
+</p>
+<p>
+	For Fiat Professional it must be&nbsp;
+	<em>
+		Fiat &ndash; Desktop
+	</em>
+	<strong>
+		.
+	</strong>
+</p>
+
+<!-- <center> <img src="img/introduction/3.png" class="img-responsive img-rounded zoom shadow-box"> </center> -->
+<center><a data-fancybox="gallery" href="/img/tools/eloqua/fiatpro/introduction/3.png"><img src="/img/tools/eloqua/fiatpro/introduction/3.png" class="img-responsive img-rounded zoom shadow-box"></a></center>
+
+<div>
+	<p>When done, report the changes in the corresponding PROD Landing Page.</p>
+	<p>Remember that after modifying a Landing Page is always necessary a Fiat Professional AEM portal refresh.</p>
+	<p>&nbsp;</p>
+	<p>In some cases, when the changes affect:</p>
+	<ul>
+		<li>Orchestrator values</li>
+		<li>CCDB values</li>
+		<li>adding and removing fields operation</li>
+	</ul>
+	<p>they must be validated by the ICT team through the internal process on the AEM Test environment, before to be reported in AEM Prod.</p>
+	<p>This kind of changes must pass the ICT test before to be published in Production.</p>
+</div>
+<p>&nbsp;</p>
+<div>
+	<h5><b> 1.3 Landing Page Permissions </b></h5>
+	<br />
+	<p>In order to integrate the Fiat Professional Landing page into AEM Portal it is necessary to give it the correct permissions. Follow this steps:</p>
+	<ol>
+		<li>Open Landing page from Eloqua platform</li>
+		<li>In the right corner click on&nbsp;<em>Actions</em>&nbsp;button</li>
+		<li>Click on&nbsp;<em>Permissions</em></li>
+		<li>Add User&nbsp;<em>PortalConnector&nbsp;</em>and give it<em>&nbsp;View&nbsp;</em>permission;</li>
+		<li>Save and save Landing page;</li>
+	</ol>
+</div>
+
+<!-- <center> <img src="img/introduction/4.png"  class="img-responsive img-rounded zoom shadow-box">  -->
+	<a data-fancybox="gallery" href="/img/tools/eloqua/fiatpro/introduction/4.png"><img src="/img/tools/eloqua/fiatpro/introduction/4.png" class="img-responsive img-rounded zoom shadow-box"></a>
+	<center><a data-fancybox="gallery" href="/img/tools/eloqua/fiatpro/introduction/5.png"><img src="/img/tools/eloqua/fiatpro/introduction/5.png" class="img-responsive img-rounded zoom shadow-box"></a></center>
+	<!-- <a data-fancybox="gallery" href="img\Eloqua\fiat_pro\LPID_Identification\1.png"><img src="img\Eloqua\fiat_pro\introduction\1.png" class="img-responsive img-rounded zoom shadow-box"></a>	 -->
+<!-- <img  src="img/LPID_Identification/1.png" class="img-responsive img-rounded zoom shadow-box">  </center> -->
+<br/>
+<!-- Introduction part over -->
+<h4 class="primary-color " id="e_fiat_pro_LPID">LPID Identification</h4>
+
+
+<p id="e_fiat_pro_LPID">The LPID is the unique ID of the Landing Page.</p>
+<p>This chapter allows you to identify and locate the correct LPID of the form.</p>
+<p>&nbsp;</p>
+<div>
+	<h5><b>2.1 LPID browser research</b></h5>
+	<br />
+	<p>To found quickly the LPID of the form to analyze, open the source code of the form in a browser (use a common developing tool).</p>
+	<p>The LPID, in the HTML code, is identified with a specific (allows you to locate it faster):</p>
+	<ul>
+		<ul>
+			<li>tag:&nbsp;<code>&lt;input&gt;</code></li>
+			<li>name: name="LPID"</li>
+		</ul>
+	</ul>
+	<code>&lt;input type="hidden" id="field62" name="LPID" value="15861"&gt;</code></div>
+<p>&nbsp;</p>
+
+<center> <a data-fancybox="gallery" href="/img/tools/eloqua/fiatpro/LPID_Identification/1.png"><img src="/img/tools/eloqua/fiatpro/LPID_Identification/1.png" class="img-responsive img-rounded zoom shadow-box"></a>  </center>
+<br/>
+<h5>
+	<b>2.2 LPID Eloqua research</b>
+</h5>
+
+<p>
+	To found the corresponding Landing Page in Eloqua, having the LPID, go to any LP and change the &ldquo;id&rdquo; parameter directly in query string:
+</p>
+<p>
+	<a href="https://secure.p06.eloqua.com/Main.aspx#landing_pages&amp;id={LPID}">
+		https://secure.p06.eloqua.com/Main.aspx#landing_pages&amp;id={LPID}
+	</a>
+</p>
+<p>
+
+	(e.g. for Fiat Professional IT:&nbsp;
+	<a href="https://secure.p06.eloqua.com/Main.aspx#landing_pages&amp;id=11859">
+		https://secure.p06.eloqua.com/Main.aspx#landing_pages&amp;id=15861
+	</a>
+	)
+</p>
+<br/>
+<center> <a data-fancybox="gallery" href="/img/tools/eloqua/fiatpro/LPID_Identification/2.png"><img src="/img/tools/eloqua/fiatpro/LPID_Identification/2.png" class="img-responsive img-rounded zoom shadow-box"></a>  </center>
+
+<br/>
+
+<h4 class="primary-color " id="e_fiat_pro_GIT">GIT Versioning</h4>
+
+<p>The FIAT PROFESSIONAL code is versioned under the following GIT repository:&nbsp;<a href="https://ci.fiatauto.com/scm/git/B2C_MKT_EloquaAssets">https://ci.fiatauto.com/scm/git/B2C_MKT_EloquaAssets</a></p>
+<p>In order to access to the repo is possible to use&nbsp;<strong>FIATAUTO</strong>&nbsp;credentials.</p>
+<p>You can access to the repository through&nbsp;<a href="https://tortoisegit.org/download/">Tortoise GIT</a>&nbsp;free client or through another GIT client.</p>
+<p>The first operation to do is to&nbsp;<em>clone&nbsp;</em>the repository in local in order to modify it.</p>
+<p>The repository has the following folder structure:</p>
+<ul>
+	<li>BackEnd</li>
+	<li>FrontEnd
+		<ul>
+			<li><strong>Fiat Professional Form Eloqua</strong>
+				<ul>
+					<li>JS</li>
+					<li>PAGES</li>
+					<li>PRIVACY</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+<center> <a data-fancybox="gallery" href="/img/tools/eloqua/fiatpro/GIT_Versioning/1.png"><img src="/img/tools/eloqua/fiatpro/GIT_Versioning/1.png" class="img-responsive img-rounded zoom shadow-box"></a>  </center>
+<!-- <center> <img src="img/GIT_Versioning/1.png"  class="img-responsive img-rounded zoom shadow-box" > </center> -->
+<br/>
+<p>
+	If different users are working on the same file and they commit their changes on the repo, the GIT client reports the conflict.
+</p>
+<p>
+	If the file is of mergeable type, in the file will be added markers that highlight the differences. To resolve the conflict we have to join the changes with a merge, taking advantage of the markers added by GIT.
+</p>
+<p>
+	Tortoise GIT official guide for reference:&nbsp;
+	<a href="https://tortoisegit.org/docs/tortoisegit/tgit-dug-conflicts.html">
+		https://tortoisegit.org/docs/tortoisegit/tgit-dug-conflicts.html
+	</a>
+</p>
+
+<br/>
+
+<h4 class="primary-color " id="e_fiat_pro_JS">JS Management</h4>
+<p>This chapter allows you to modify the correct JavaScript files included in the Landing Page that you are analyzing.</p>
+<div>
+	<br/>
+	<h5><b>4.1 Core JS structure</b></h5>
+	
+	<p>The file&nbsp;<strong>lq_fiatpro_forms.js</strong>&nbsp;contains the core functionalities and is linked in all the corresponding landing pages.</p>
+	<p>This solution was adopted in order to include in one file all the functionalities and use them cross markets.</p>
+	<br />
+	<div class="sub">
+			<h5><b>4.1.1 lq_fiatpro_forms.js</b></h5>
+		
+		<p>The&nbsp;<strong>lq_fiatpro_forms.js&nbsp;</strong>file is included in all the Landing Pages.</p>
+		<p>The lq_fiatpro_forms.js, in the HTML code, is identified with by a specific (allows you to locate it faster):</p>
+		<code>&lt;script type="text/javascript" src="https://img06.en25.com/Web/FiatMarketing/{d7b5ebcc-87ce-4130-8655-3fb989ed2f32}_lq_fiatpro_forms.js"&gt;&lt;/script&gt;</code>
+		<p>This file is located under Eloqua File Storage section al the following path: All -&gt; EMEA -&gt; FIATPROFESSIONAL -&gt; JS -&gt; FORMS.</p>
+		<p>Remember to include the file in the page with https prefix:&nbsp;<a href="https://img06.en25.com/">https://img06.en25.com</a>&nbsp;for https.</p>
+	</div>
+</div>
+
+<!-- <center> <img src="img/JS_management/1.png"  class="img-responsive img-rounded zoom shadow-box" > </center> -->
+<center> <a data-fancybox="gallery" href="/img/tools/eloqua/fiatpro/JS_management/1.png"><img src="/img/tools/eloqua/fiatpro/JS_management/1.png" class="img-responsive img-rounded zoom shadow-box"></a>  </center>
+<br/>
+
+<h5><b>4.2 Market JS structure</b></h5>
+<p>&nbsp;</p>
+<p>The file&nbsp;<strong>lq_fiatpro_configuration_MARKET.js&nbsp;</strong>contains the configuration rules for the market and is linked in the corresponding landing pages.</p>
+<p>&nbsp;</p>
+<div class="sub">
+	<h5><b>4.2.1 lq_fiatpro_configuration_MARKET.js</b></h5>
+	<br />
+	<p>The same&nbsp;<strong>lq_fiatpro_configuration_MARKET.js&nbsp;</strong>file is included in the Landing Page for the specific market.</p>
+	<p>The<em>&nbsp;lq_fiatpro_configuration_MARKET.js</em>, in the HTML code, is identified with by a specific (allows you to locate it faster):</p>
+	<code>&lt;script type="text/javascript" src="https://img06.en25.com/Web/FiatMarketing/{9b760d15-096b-44da-b997-7cd1983cf59b}_lq_fiatpro_configuration_IT.js"&gt;&lt;/script&gt;</code>
+	<p class="pull-right">(e.g. IT Market)</p>
+	<p>This file is located under Eloqua File Storage section al the following path: All -&gt; EMEA -&gt; FIATPROFESSIONAL -&gt; JS-&gt;FORMS-&gt;MARKET_FOLDER.</p>
+	<p>Remember to include the file in the page with https prefix:&nbsp;<a href="https://img06.en25.com/">https://img06.en25.com</a>&nbsp;for https.</p>
+</div>
+
+<!-- <center> <img src="img/JS_management/2.png"  class="img-responsive img-rounded zoom shadow-box" > </center> -->
+<center> <a data-fancybox="gallery" href="/img/tools/eloqua/fiatpro/JS_management/2.png"><img src="/img/tools/eloqua/fiatpro/JS_management/2.png" class="img-responsive img-rounded zoom shadow-box"></a>  </center>
+<center>If there is more than one file under the MARKET_FOLDER modify the file with most recent “Last Modified By” date.</center>
+<br>
+
+<h4 class="primary-color " id="e_fiat_pro_rules">Validation Rules Configuration</h4>
+
+<p>This chapter allows you to modify correctly the validation rules of the fields in your landing page.</p>
+<p>&nbsp;</p>
+<div>
+	<h5><b>5.1 Validation rules of page fields</b></h5>
+
+	<p>Each field of the page has specific validation rules.</p>
+	<p>The validation of the page fields is managed through the specific Market JS file.</p>
+	<p>In particular, the labels are stored in the lq_fiatpro_configuration_MARKET.js file.</p>
+	<p>There you have to modify the corresponding regex matching the request.</p>
+	<p>The first level of validation specifies the accepted values that is possible to insert in a filed.</p>
+	<p>In the correspondin JSON you will find a particular variable (for market/language):</p>
+</div>
+<br>
+<pre><code>var regex = 
+		{
+			it:
+				{
+					"current_name_rules":
+						{
+							"accepted": /^[a-zA-Z\s\Z&agrave;&aacute;&acirc;&auml;&atilde;&aring;&egrave;&eacute;&ecirc;&euml;&igrave;&iacute;&icirc;&iuml;&ograve;&oacute;&ocirc;&ouml;&otilde;&oslash;&ugrave;&uacute;&ucirc;&uuml;&yuml;&yacute;&ntilde;&ccedil;č&scaron;ž&Agrave;&Aacute;&Acirc;&Auml;&Atilde;&Aring;&Egrave;&Eacute;&Ecirc;&Euml;&Igrave;&Iacute;&Icirc;&Iuml;&Ograve;&Oacute;&Ocirc;&Ouml;&Otilde;&Oslash;&Ugrave;&Uacute;&Ucirc;&Uuml;&Yuml;&Yacute;&Ntilde;&szlig;&Ccedil;OE&AElig;Č&Scaron;Ž&part;&eth;'-]+$/ig,
+						}
+				}
+		}
+		</code></pre>
+<br/>
+		<p>This can help you to locate the specific section to edit.</p>
+<p>The<em>&nbsp;&ldquo;accepted&rdquo;&nbsp;</em>regex limits the values that is possible to insert in the field.</p>
+<p>The second level of validation is related to the specific values and blocks the submit operation.</p>
+<p>In the correspondin JSON for the same regex variable (for market/language) there are specific rules with&nbsp;<em>&ldquo;reg_&rdquo;</em>&nbsp;prefix (allows you to locate it faster):</p>
+<br/>
+<pre><code>
+		var regex =
+			{
+				it:
+					{
+				"reg_nome": /^[a-zA-Z\s\Z&agrave;&aacute;&acirc;&auml;&atilde;&aring;&egrave;&eacute;&ecirc;&euml;&igrave;&iacute;&icirc;&iuml;&ograve;&oacute;&ocirc;&ouml;&otilde;&oslash;&ugrave;&uacute;&ucirc;&uuml;&yuml;&yacute;&ntilde;&ccedil;č&scaron;ž&Agrave;&Aacute;&Acirc;&Auml;&Atilde;&Aring;&Egrave;&Eacute;&Ecirc;&Euml;&Igrave;&Iacute;&Icirc;&Iuml;&Ograve;&Oacute;&Ocirc;&Ouml;&Otilde;&Oslash;&Ugrave;&Uacute;&Ucirc;&Uuml;&Yuml;&Yacute;&Ntilde;&szlig;&Ccedil;OE&AElig;Č&Scaron;Ž&part;&eth;'-]+$/ig,
+				"reg_cognome": /^[a-zA-Z\s\Z&agrave;&aacute;&acirc;&auml;&atilde;&aring;&egrave;&eacute;&ecirc;&euml;&igrave;&iacute;&icirc;&iuml;&ograve;&oacute;&ocirc;&ouml;&otilde;&oslash;&ugrave;&uacute;&ucirc;&uuml;&yuml;&yacute;&ntilde;&ccedil;č&scaron;ž&Agrave;&Aacute;&Acirc;&Auml;&Atilde;&Aring;&Egrave;&Eacute;&Ecirc;&Euml;&Igrave;&Iacute;&Icirc;&Iuml;&Ograve;&Oacute;&Ocirc;&Ouml;&Otilde;&Oslash;&Ugrave;&Uacute;&Ucirc;&Uuml;&Yuml;&Yacute;&Ntilde;&szlig;&Ccedil;OE&AElig;Č&Scaron;Ž&part;&eth;'-]+$/ig,
+				"reg_email": /^[a-‐zA-‐Z0-‐9._%-‐]+@[a-‐zA-‐Z0-‐9.-]+\.[a-‐zA-‐Z]{2,4}$/,
+				"reg_cellulare":
+				 {
+					 "reg_cellulare_1": /^3\d{8,9}$/
+					},
+				 "reg_cap":
+					 {
+						 "reg_cap_1": /^\d{5}$/
+					 },
+		 	},
+			}
+	</code>
+</pre>
+<p class="pull-right">(e.g.lq_fiatpro_configuration_IT.js)</p>
+<p>This can help you to locate the specific section to edit.</p>
+
+<br>
+
+<h4 class="primary-color " id="e_fiat_pro_mask">Mask Configuration</h4>
+
+<p>This chapter allows you to modify correctly the mask of the phone field of your landing page (only for some countries that use this feature).</p>
+<p>&nbsp;</p>
+<div>
+	<h5><b>6.1 Mask replacement</b></h5>
+	
+	<p>If required to change a specific mask, it is necessary to replace it in the Core JS file.</p>
+	<p>In particular, the labels are stored in the&nbsp;<em>lq_fiatpro_forms.js</em>&nbsp;file in the specific function (allows you to locate it faster):</p>
+	<br />
+	<pre><code>
+			function eloqua_initMask() {
+					if (typeof (market) != 'undefined' &amp;&amp; market == 'at') {
+					$('input[name="cellulare"]').mask('+43-999-9999999?99', { autoclear: false });
+																		}
+			}
+		</code>
+	</pre>
+	<p class="pull-right">(e.g Fiat Professional Austria market)</p>
+	<p>This can help you to locate the specific section to edit.</p>
+</div>
+
+<br>
+
+<h4 class="primary-color " id="e_fiat_pro_master">Master Key Configuration</h4>
+
+<p>This chapter allows you to modify correctly the master key configuration of your landing page.</p>
+<p>&nbsp;</p>
+<div>
+	<h5><b>7.1 Master Key replacement</b></h5>
+	
+	<p>The Fiat Professional Portal includes the Dynamic Master Key (DMK):</p>
+	<ol style="list-style-type: lower-alpha;">
+			<li>MK are defined into the&nbsp;<em>digitalData</em>&nbsp;provided by the portal</li>
+			<li>If the specific value from Fiat Professional portal is empty, it is used the related MK value included into the&nbsp;<em>hidden input</em>&nbsp;of the form into the Landing Page. This MK must be replaced with the correct value given from the market.</li>
+		</ol>
+		<!-- <center> <img src="img/Master_Key_Configuration/1.png"  class="img-responsive img-rounded zoom shadow-box" > </center> -->
+		<center> <a data-fancybox="gallery" href="/img/tools/eloqua/fiatpro/Master_Key_Configuration/1.png"><img src="/img/tools/eloqua/fiatpro/Master_Key_Configuration/1.png" class="img-responsive img-rounded zoom shadow-box"></a>  </center>
+		<br>
+		<p>In particular, the Master Key&nbsp;<em>value</em>&nbsp;that may be required to change are:</p>
+<ol>
+	<li><em>OFFER</em><br /><code>&lt;input type="hidden" id="field21" name="OFFER" value=""&gt;</code></li>
+	<li><em>CAMPAIGN</em><br /><code>&lt;input type="hidden" name="CAMPAIGN" value="0"&gt;</code></li>
+	<li><em>MODEL DESCRIPTION</em><br /><code>&lt;input type="hidden" id="field18" name=" MODELDESCRIPTION" value="Fiat Pro altri modelli"&gt;</code></li>
+	<li><em>MODEL COMMERCIALCODE</em><br /><code>&lt;input type="hidden" id="field19" name="MODELCOMMERCIALCODE" value="999"&gt;</code></li>
+</ol>
+<p>&nbsp;</p>
+<p>Remember that the following values are necessary for the Orchestrator system and must never change:</p>
+<ul>
+	<li><em>LEADSOURCECODE</em><br /><code>&lt;input type="hidden" id="field15" name="LEADSOURCECODE" value="MAT"&gt;</code></li>
+	<li><em>DTM_ENABLED</em><br /><code>&lt;input id="field92" name="DTM_ENABLED" type="hidden" value="1"&gt;</code></li>
+</ul>
+<p>&nbsp;</p>
+<p>(e.g. for Fiat Professional IT NL)</p>
+
+</div>
+
+
+		</div>
+		<nav class="col-sm-3" id="myScrollspy">
+			<ul class="nav nav-pills nav-stacked">
+				<li class=""><a href="#e_fiat_pro_intro">Introduction</a></li>
+				<li class=""><a href="#e_fiat_pro_LPID">LPID Identification</a></li>
+				<li class=""><a href="#e_fiat_pro_GIT">GIT Versioning</a></li>
+				<li class=""><a href="#e_fiat_pro_JS">JS Management</a></li>
+				<li class=""><a href="#e_fiat_pro_rules">Validation Rules Configuration</a></li>
+				<li class=""><a href="#e_fiat_pro_mask">Mask Configuration</a></li>
+				<li class=""><a href="#e_fiat_pro_master">Master Key Configuration</a></li>
+			</ul>
+		</nav>
+	</div>
+     
+      <br>
+    
+
+	<script>$(document).ready(function(){
+			// Add smooth scrolling to all links
+			$("a").on('click', function(event) {
+		  
+			  // Make sure this.hash has a value before overriding default behavior
+			  if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+		  
+				// Store hash
+				var hash = this.hash;
+		  
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+				  scrollTop: $(hash).offset().top
+				}, 800, function(){
+			 
+				  // Add hash (#) to URL when done scrolling (default click behavior)
+				  window.location.hash = hash;
+				});
+			  } // End if
+			});
+		  });</script>

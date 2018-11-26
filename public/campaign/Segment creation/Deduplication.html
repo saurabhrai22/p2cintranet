@@ -1,0 +1,100 @@
+
+
+<div class="container-fluid">
+    <div class="col-md-12">
+
+        <!-- breadcrumb end-->
+
+        <h4 class="primary-color" id="chi_siamo_page">Deduplication</h4>
+        <p>Deduplication rules are rules that let you check data entities (contacts and/or accounts) to ensure that
+            there are not duplicate records
+            in the database. You can create a deduplication rule that uses multiple fields, partial matches, and
+            phonetic matches to identify contacts
+            or accounts that are duplicated.</p><br>
+
+        <p>Deduplication process ensures that a single contact is not present in more than one segment.
+            This avoids targeting the same contact multiple times for the same campaign with the same newsletter.</p>
+        <br>
+
+        <p><b>Important Rule: Deduplication process is performed only when the count in atleast one segment is more
+                than 1k.</b></p>
+        <br>
+
+        <p>Deduplication is the final step in the segment and campaign creation process. Kindly below the steps to
+            perform Deduplication.</p>
+
+        <ol>
+            <li> Find the segment created previously&gt;rename and add “_01” at the end (“_01” is the deduplication
+                order, the next segment if
+                any will have “_02” and so on. </li>
+            <br>
+            <div>
+                <!-- <img src="../img/image1.png class="img-responsive img-rounded zoom shadow-box">-->
+                <a data-fancybox="gallery" href="/img/campaign/image6.1.1.png"><img src="/img/campaign/image6.1.1.png" class="img-responsive img-rounded"></a>
+            </div>
+            <br>
+
+
+            <li> The name changed will automatically appear in the campaign. Please add “_01” to the step name as well.</li>
+            <br>
+            <div>
+                <!-- <img src="/img/campaign/image1.png class="img-responsive img-rounded zoom shadow-box">-->
+                <a data-fancybox="gallery" href="/img/campaign/image6.2.2.png"><img src="/img/campaign/image6.2.2.png" class="img-responsive img-rounded"></a>
+            </div>
+            <br>
+
+            <li> The final and most important step of deduplication is to add “_DD” at the end of campaign name.
+                Without this the deduplication process won’t start.<br>
+                <br>
+                <div>
+                    <!-- <img src="/img/campaign/image1.png class="img-responsive img-rounded zoom shadow-box">-->
+                    <a data-fancybox="gallery" href="/img/campaign/image6.2.3.png"><img src="/img/campaign/image6.2.3.png" class="img-responsive img-rounded"></a>
+                </div>
+                <br>
+                <p>Kindly close the campaign once all the above changes has been done. And please the counts on the
+                    ticket once the deduplication is completed.</p>
+
+                <b>
+                    <ul style="list-style-type:disc">Note:
+                        <li> Deduplication process starts after every 2 hours.</li>
+                        <li> All the above steps of segments and campaign needs to be followed while doing Quality
+                            Check.</li>
+                    </ul>
+                </b>
+            </li>
+        </ol>
+
+
+
+
+    </div>
+
+</div>
+
+<br>
+
+
+<script>$(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on('click', function (event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });</script>

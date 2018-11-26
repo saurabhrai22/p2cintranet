@@ -1,0 +1,94 @@
+
+	   <div class="container-fluid"> 
+	   <div class="col-sm-12">
+      <!-- breadcrumb start-->
+      <!-- <ul class="breadcrumb"> -->
+         <!-- <li><a href="index.html">Home</a></li> -->
+         <!-- <li><a href="#">Brands</a></li> -->
+         <!-- <li>Fiat</li> -->
+      <!-- </ul> -->
+      <!-- breadcrumb end-->
+	  <h3 class="primary-color text-center"> Adobe DTM and Page bottom scripts</h3>
+			<h4>Implementation:</h4>
+      <p>Since these two scripts are shared for any page in the portal, usually these scripts are inserted in the shared content list of the CMS, you have just to create e new item ad check if it is inserted in the correct section of the page and follows the above guidelines.</p>
+      <div>
+      <h4>Implementation on new AEM portals</h4>
+      <p>On AEM the DTM script is hereditary, so in the section "cloud services" that you can reach by clicking on "view properties" of each folder, the DTM script is correctly set in these two situations:</p>
+      </div>
+      <figure>
+        <a data-fancybox="gallery" href="/img/autotagging/tagging1.jpg"><img src="/img/autotagging/tagging1.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+      </figure>
+			
+      <figure>
+        <a data-fancybox="gallery" href="/img/autotagging/tagging2.jpg"><img src="/img/autotagging/tagging2.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+      </figure>
+      <p>If you notice the situation below, our DTM script is disabled so it must be enabled following these steps:</p>
+      <h4>Step 1:</h4><br>
+      <figure>
+        <a data-fancybox="gallery" href="/img/autotagging/tagging3.jpg"><img src="/img/autotagging/tagging3.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+      </figure>
+      <h4>Step 2:</h4><br>
+      <figure>
+        <a data-fancybox="gallery" href="/img/autotagging/tagging4.jpg"><img src="/img/autotagging/tagging4.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+      </figure>
+      <h4>Step 3:</h4><br>
+      <figure>
+        <a data-fancybox="gallery" href="/img/autotagging/tagging5.jpg"><img src="/img/autotagging/tagging5.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+      </figure>
+      <h4>Common errors:</h4>
+      <p>The most common reported errors are the following:</p>
+      <ul>
+      <li>adobedtm script of another country inserted on the portal</li>
+      <li>scripts inserted more than one time in the pages</li>
+      <li>script disabled or commented</li>
+      </ul>
+      <h4>Checks of correctness:</h4>
+      <ul>
+      <li>Inspect the code of the page</li>
+      <li>Verify if the adobe DTM script appears only one time and after the cookie law section in the page</li>
+      </ul>
+      <figure>
+        <a data-fancybox="gallery" href="/img/autotagging/tagging6.jpg"><img src="/img/autotagging/tagging6.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+      </figure>
+      <ul>
+        <li>Verify if the adobedtm script is correct for market/brand/device/environment (check ?Script Adobe_configurators_All brands.xlsx? file)</li>
+        <li>Verify if the pagebottom script appears only one time in the page</li>
+        </ul>
+        <figure>
+          <a data-fancybox="gallery" href="/img/autotagging/tagging7.jpg"><img src="/img/autotagging/tagging7.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+        </figure>
+
+
+
+	<hr class="breakline"/>
+
+     </div>
+    </div>
+       
+      </div>
+      <br>
+
+	<script>$(document).ready(function(){
+			// Add smooth scrolling to all links
+			$("a").on('click', function(event) {
+		  
+			  // Make sure this.hash has a value before overriding default behavior
+			  if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+		  
+				// Store hash
+				var hash = this.hash;
+		  
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+				  scrollTop: $(hash).offset().top
+				}, 800, function(){
+			 
+				  // Add hash (#) to URL when done scrolling (default click behavior)
+				  window.location.hash = hash;
+				});
+			  } // End if
+			});
+		  });</script>

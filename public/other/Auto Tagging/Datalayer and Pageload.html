@@ -1,0 +1,294 @@
+
+	   <div class="container-fluid"> 
+	   <div class="col-sm-12">
+      <!-- breadcrumb start-->
+      <!-- <ul class="breadcrumb"> -->
+         <!-- <li><a href="index.html">Home</a></li> -->
+         <!-- <li><a href="#">Brands</a></li> -->
+         <!-- <li>Fiat</li> -->
+      <!-- </ul> -->
+      <!-- breadcrumb end-->
+	   <h3 class="primary-color text-center"> Datalayer and Pageload</h3>
+	  <p>The pageload is a sort of "tagging on the SEO":</p>
+	  <p>The final scope of the pageload is showing information about the page within an environment variable "digitalData":</p>
+      <figure>
+        <a data-fancybox="gallery" href="/img/autotagging/datalayer1.jpg"><img src="/img/autotagging/datalayer1.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+      </figure>		
+      <p>Here is some general guideline:</p>
+		<ul>
+		<li>"category" and "pageInfo" usually should be populated for any page of the portal</li>
+		<li>In case of form presence on the page also the "form" sub-section under "component" have to be populated</li>
+		<li>In case of dealer locator presence on the page also the "dealerSearch" sub-section under "component" have to be populated</li>
+		<li>Usually the pageload is populated through data entry on SEO items, at the moment the only CMS where this data entry is not available is Teamsite for Jeep. In this case the pageload is realized by a javascript</li>
+		<li>Form informations on digitalData change any time a forms steps is completed (e.g. stepName="form", stepName="dealerselection", stepName="thankyou")</li>
+		</ul>
+		<h4>Implementation by data entry:</h4>
+		<p>(Fiat, Fiat Professional, Alfa, Lancia):</p>
+		<ul>
+		<li>If the digitalData variable is not available on the portal, contact&nbsp;<a href="mailto:fiatgroup.support@accenture.com">support@accenture.com</a>&nbsp;to request the creation of the variable on the environment.</li>
+		<li>Retrieve where the SEO (friendly URL) are located, usually they are located in a list at market level (e.g. FiatSeoPagesList, lstPortalPages )</li>
+		<li>In the Adobe section of the item, enter the values related to the page (below more detail)</li>
+		</ul>
+		<p>Here is some example of various page typologies:</p>
+		<p>Homepage</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer2.jpg"><img src="/img/autotagging/datalayer2.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>	
+		<p>Model Page</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer3.jpg"><img src="/img/autotagging/datalayer3.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>	
+		<p>Note: the Adobe Section 3 have to be populated in case of model sub-pages (e.g. design, options, interiors, etc"). Naturally theAdobe Section 2 and Adobe Model are related to the model of car that appears in the page</p>
+		<p>Car Configurator</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer4.jpg"><img src="/img/autotagging/datalayer4.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>Promotions</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer5.jpg"><img src="/img/autotagging/datalayer5.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>News</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer6.jpg"><img src="/img/autotagging/datalayer6.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>Test Drive</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer7.jpg"><img src="/img/autotagging/datalayer7.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>In this case the form is within the page, so the Form fields are populated</p>
+		<p>Quote Request</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer8.jpg"><img src="/img/autotagging/datalayer8.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>Newsletter</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer9.jpg"><img src="/img/autotagging/datalayer9.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>Contact Us</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer10.jpg"><img src="/img/autotagging/datalayer10.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>Brochure Request</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer11.jpg"><img src="/img/autotagging/datalayer11.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>Dealer Locator</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer12.jpg"><img src="/img/autotagging/datalayer12.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>Model End of Life</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer13.jpg"><img src="/img/autotagging/datalayer13.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>In general in the various sections of these examples you can view the expected values on digitalData for any page typology, the best practice for new pages is to copy the same values of existing pages of the same type (except for specific values like the model).</p>
+
+		<p>In case the page also contains a form, the "form" fields have to be populated, here is some example:</p>
+
+		<p>Keep Me Informed</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer14.jpg"><img src="/img/autotagging/datalayer14.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>Suggestions</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer15.jpg"><img src="/img/autotagging/datalayer15.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>Information</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer16.jpg"><img src="/img/autotagging/datalayer16.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>Claims</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer17.jpg"><img src="/img/autotagging/datalayer17.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>This form tagging is valid for the initial step of the form.</p>
+		<p>Tagging of the next steps should be implemented in javascript and will be described in the next pages.</p>
+		<p><u>Note&nbsp;</u>: if a value is not available in the drop down list, you have to insert the related value in one of the lists at market level of CMS.</p>
+		<p>Usually there is a list for the Adobe Model information and another one for the other values (e.g. AdobeModelList and AdobeGeneralList)</p>
+		<p>&nbsp;</p>
+		<h4>Implementation on new AEM portals</h4>
+		<p>In the new AEM environments, the only data entry that has to be done is related to the data layer (page information).</p>
+		<p>On each page item on the AEM CMS, there is an Analytics section dedicated to Adobe tagging in the item properties</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer19.jpg"><img src="/img/autotagging/datalayer19.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+
+		<p>This form tagging is valid for the initial step of the form.</p>
+		<p>Tagging of the next steps should be implemented in javascript and will be described in the next pages.</p>
+		<p><u>Note&nbsp;</u>: if a value is not available in the drop down list, you have to insert the related value in one of the lists at market level of CMS.</p>
+		<p>Usually there is a list for the Adobe Model information and another one for the other values (e.g. AdobeModelList and AdobeGeneralList)</p>
+		<p>&nbsp;</p>
+		<h4>Implementation on new AEM portals</h4>
+		<p>In the new AEM environments, the only data entry that has to be done is related to the data layer (page information).</p>
+		<p>On each page item on the AEM CMS, there is an Analytics section dedicated to Adobe tagging in the item properties</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer20.jpg"><img src="/img/autotagging/datalayer20.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>But in the "model reference" you have to add the URL of the model that you created in the folder Model Form Lookup:</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer21.jpg"><img src="/img/autotagging/datalayer21.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>In the Model Form Lookup you have to add the model folder and fill the values in the "Analytics" tab with the model information:</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer22.jpg"><img src="/img/autotagging/datalayer22.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>If you have a doubt about the model naming you can use this service:</p>
+		<p><a href="http://vl.auth.fiat.com/Service/VirtualLayerService.svc/vehicles/version/xml">http://vl.auth.fiat.com/Service/VirtualLayerService.svc/vehicles/version/xml"market=it&amp;language=it&amp;brand=fiat&amp;model=1504</a></p>
+		<p>If you want to change brand/country/language you have to change the values in green with the values below (for the model code in red, use the codes given by the market):&nbsp;</p>
+		<p>If you need to populate the model naming in the Models Form Lookup folder, for example, for the model 500 mirror, you can take "500" in the MD field for filling the value in the "Model Description Adobe" and "mirror" in the TD field for filling the value in the "Version Description Adobe":</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer23.jpg"><img src="/img/autotagging/datalayer23.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>To check if the analytics data of the page is correctly inserted, you can verify the digitalData variable on the console as showed previously.</p>
+		<p>Note: on Alfaromeo the Models Form Lookup folder doesn't exist, so you have only to populate the model information in the "Analytics" tab of the model folder:</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer24.jpg"><img src="/img/autotagging/datalayer24.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>If the model has a link to the car configurator, you have to add the folder in the CMS, as shown below:</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer25.jpg"><img src="/img/autotagging/datalayer25.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+
+		<p>And the values in the Analytics tab have to be populated in this way:</p>
+		<ul>
+		<li>Section 1: shopping-tools</li>
+		<li>Section 2: configurator</li>
+		<li>Section 3: &lt;modelDescription&gt;:&lt;versionDescription&gt;*</li>
+		<li>Page Type: shopping-tools</li>
+		</ul>
+		<p>*If you have a doubt about the correct model valorization, you can use the service shown above:</p>
+		<p><a href="http://vl.auth.fiat.com/Service/VirtualLayerService.svc/vehicles/version/xml">http://vl.auth.fiat.com/Service/VirtualLayerService.svc/vehicles/version/xml"market=it&amp;language=it&amp;brand=fiat&amp;model=1504</a></p>
+		<p>If you need to add a new&nbsp;<strong>slide</strong>&nbsp;in the carousel folder you have to follow these steps in accordance with the kind of slide that you need to add:</p>
+		<ul>
+		<li>Slide with a link to a model page: in the CMS folder the values in the Analytics tab have to be:</li>
+		<li>Section 1: promotions</li>
+		<li>Section 2: &lt;promotion-name&gt;*</li>
+		<li>Section 3: EMPTY</li>
+		<li>Page Type: promotions</li>
+		</ul>
+		<p>You can find the promo name in the url of the promo, for example in this url&nbsp;<a href="https://www.fiat.it/offerte/promozione.500-mirror-be-free">https://www.fiat.it/offerte/promozione.500-mirror-be-free</a>&nbsp;the promo name is "500-mirror-be-free"</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer26.jpg"><img src="/img/autotagging/datalayer26.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<ul>
+			<li>Slide with a link to a model page: in the CMS folder the values in the Analytics tab have to be:</li>
+			<ul>
+			<li>Section 1: showroom</li>
+			<li>Section 2: &lt;modelDescription&gt;:&lt;versionDescription&gt;*</li>
+			<li>Section 3: EMPTY</li>
+			<li>Page Type: showroom</li>
+			</ul>
+			</ul>
+			<p>*If you have a doubt about the correct model valorization, you can use the service shown above:</p>
+			<p><a href="http://vl.auth.fiat.com/Service/VirtualLayerService.svc/vehicles/version/xml">http://vl.auth.fiat.com/Service/VirtualLayerService.svc/vehicles/version/xml"market=it&amp;language=it&amp;brand=fiat&amp;model=1504</a></p>
+			<figure>
+				<a data-fancybox="gallery" href="/img/autotagging/datalayer27.jpg"><img src="/img/autotagging/datalayer27.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+			</figure>
+			<p>If you need to create a page with price list and brochure download links, the better way is to create a father folder (for i.e Pricelist and brochure) with two son folders:</p>
+		<ul>
+		<li>Pricelist: in this folder could be put all the models price list links where you can valorize the model name with our adobe naming</li>
+		<li>Brochure: in this folder could be put all the models brochure links where you can valorize the model name with our adobe naming</li>
+		</ul>
+		<p>Here the correct valorization of the analytics tab for each folder:</p>
+		<ul>
+		<li>Pricelist and brochure:
+		<ul>
+		<li>Section 1: editorial</li>
+		<li>Section 2: brochures</li>
+		<li>Section 3: EMPTY</li>
+		<li>Page Type: editorial</li>
+		</ul>
+		</li>
+		<li>Pricelist:
+		<ul>
+		<li>Section 1:&nbsp;<em>populated by the previous folder</em></li>
+		<li>Section 2: pricelist-download</li>
+		<li>Section 3: EMPTY</li>
+		<li>Page Type:&nbsp;<em>populated by the previous folder</em></li>
+		</ul>
+		</li>
+		<li>Brochure:
+		<ul>
+		<li>Section 1:&nbsp;<em>populated by the previous folder</em></li>
+		<li>Section 2: brochure-download</li>
+		<li>Section 3: EMPTY</li>
+		<li>Page Type:&nbsp;<em>populated by the previous folder</em></li>
+		</ul>
+		</li>
+		<li>Model download link:
+		<ul>
+		<li>Section 1:&nbsp;<em>populated by the previous folder</em></li>
+		<li>Section 2:&nbsp;<em>populated by the previous folder</em></li>
+		<li>Section 3: &lt;modelDescription&gt;:&lt;versionDescription&gt;*</li>
+		<li>Page Type:&nbsp;<em>populated by the previous folder</em></li>
+		</ul>
+		</li>
+		</ul>
+		<p>*If you have a doubt about the correct model valorization, you can use the service shown above:</p>
+		<p><a href="http://vl.auth.fiat.com/Service/VirtualLayerService.svc/vehicles/version/xml">http://vl.auth.fiat.com/Service/VirtualLayerService.svc/vehicles/version/xml"market=it&amp;language=it&amp;brand=fiat&amp;model=1504</a></p>
+		<p>&nbsp;</p>
+		<h4>Implementation by data script:</h4>
+		<p>(Jeep)</p>
+		<ul>
+		<li>Under the folder /js/adobeTagging (if not available, create the folder), create two new files: adobeTracking.js and xLayer.js</li>
+		<li>In adobeTracking.js define the variable digitalData</li>
+		<li>In xLayer.js define the population of the digitalData variable based on the current page</li>
+		<li>Usually these two files are called in the file header_injection.html that is included in header.html, verify if the page recall them</li>
+		</ul>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer28.jpg"><img src="/img/autotagging/datalayer28.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<p>Note that if the portal is tagged these two files will be available, in this case you have to edit xLayer.js if you want to tag the pageload of a new page.</p>
+		<p>For more specific information about pageload on Jeep, check the file Guidelines for Jeep Adobe tagging.docx.</p>
+		<p>Basically the pages have to be mapped in xLayer.js to valorize the digitalData values with the same values showed in data entry examples listed above for the other brands.</p>
+		<p>The final purpose is to have the digitalData variable populated with page information:</p>
+		<figure>
+			<a data-fancybox="gallery" href="/img/autotagging/datalayer29.jpg"><img src="/img/autotagging/datalayer29.jpg" class="img-responsive img-rounded zoom shadow-box"></a>
+		</figure>
+		<h4>Common errors:</h4>
+		<p>The most common reported errors are the following:</p>
+		<ul>
+		<li>Wrong language or market in the digitalData variable (in this case the competence is of&nbsp;<a href="mailto:fiatgroup.support@accenture.com">support@accenture.com</a>&nbsp;for non-Jeep brands)</li>
+		<li>Missing population of digitalData variable</li>
+		<li>Wrong population of digitalData variable (e.g. pagetype as "homepage" on a promotion page)</li>
+		</ul>
+		<h4>Checks of correctness:</h4>
+		<ul>
+		<li>Digit "digitalData" in the browser console</li>
+		<li>Verify if the values inserted in page.category and page.pageInfo sections have coherence with the page (e.g. if you find "showroom" as page category in a promotion page).</li>
+		<li>If a form is present, verify the sub-component form under component section of digitalData</li>
+		</ul>
+
+	<hr class="breakline"/>
+	<div class="content">
+
+	</div>
+     </div>
+    </div>
+         
+      </div>
+      <br>
+ 
+	<script>$(document).ready(function(){
+			// Add smooth scrolling to all links
+			$("a").on('click', function(event) {
+		  
+			  // Make sure this.hash has a value before overriding default behavior
+			  if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+		  
+				// Store hash
+				var hash = this.hash;
+		  
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+				  scrollTop: $(hash).offset().top
+				}, 800, function(){
+			 
+				  // Add hash (#) to URL when done scrolling (default click behavior)
+				  window.location.hash = hash;
+				});
+			  } // End if
+			});
+		  });</script>

@@ -1,0 +1,137 @@
+
+	   <div class="container-fluid"> 
+	   <div class="col-sm-12">
+      <!-- breadcrumb start-->
+      <!-- <ul class="breadcrumb"> -->
+         <!-- <li><a href="index.html">Home</a></li> -->
+         <!-- <li><a href="#">Brands</a></li> -->
+         <!-- <li>Fiat</li> -->
+      <!-- </ul> -->
+      <!-- breadcrumb end-->
+			<!--Content-->
+			
+			 <h3 class="primary-color text-center"> CTA tagging</h3>
+			<p>Generally every link that you can find on a page should contain a tagging attribute.</p>
+			<figure>
+				<a data-fancybox="gallery" href="/img/autotagging/cta1.png"><img src="/img/autotagging/cta1.png" class="img-responsive img-rounded zoom shadow-box"></a>
+			  </figure>
+			<h4>&nbsp;</h4>
+			<p>Some general rule for CTA tagging:</p>
+			<ul>
+			<li>The attribute values are always in English language</li>
+			<li>The various components of attribute are separated by &ldquo;:&rdquo; -&gt; &ldquo;section1:section2:section3&rdquo; (the sections can be only two, for instance in the CTA of page body)</li>
+			<li>The various section usually identify the components and subcomponents of the page:
+			<ul>
+			<li>section1: the section of the page.&nbsp;<strong>main-nav</strong>&nbsp;for header,&nbsp;<strong>footer</strong>&nbsp;for footer,&nbsp;<strong>cta</strong>&nbsp;for a CTA in page body (can be also top-cta and bottom-cta),&nbsp;<strong>content</strong>&nbsp;for home slider elements</li>
+			<li>section2: the menu or sub-section within the element is contained (e.g. shopping-tools)</li>
+			</ul>
+			</li>
+			<li>If a value is composed of more than one word, the words will be separated by &ldquo;-&ldquo; (e.g. &ldquo;test-drive-request&rdquo;)</li>
+			<li>The name of attribute can change for brand:
+			<ul>
+			<li><em>data-link_tracking=&rdquo; &rdquo;</em>&nbsp;for Fiat</li>
+			<li><em>link-tracking=&rdquo; &rdquo;</em>&nbsp;for Alfa Romeo Fiat Professional and Lancia</li>
+			<li><em>data-adobe=&rdquo; &rdquo;</em>&nbsp;for Jeep and Abarth</li>
+			</ul>
+			</li>
+			<li>Basically, if you don&rsquo;t know how to valorize a CTA, you can check how the same component has been valorized on other markets</li>
+			<li>Usually links that redirect to sub-sections of the model (design, interiors, security&hellip;) are not tagged</li>
+			<li>For Fiat, the model grid in the header is not tagged</li>
+			</ul>
+			<h4>&nbsp;</h4>
+			<h4>Implementation:</h4>
+			<p>Usually the CTA tagging can be done by data entry or by directly inserting the attribute in the HTML code of the page.</p>
+			<p>For Fiat, Fiat Professional, Alfa Romeo, Lancia and Abarth usually the CTA tagging is done by data entry. For Jeep at the moment all the CTAs are tagged by HTML attribute insertion.</p>
+			<p>Example of data entry:</p>
+			<ul>
+			<li>Locate the element to tag in the various lists of the CMS</li>
+			<li>Open the element in edit mode</li>
+			<li>Populate the section dedicated to CTA tracking</li>
+			</ul>
+			<figure>
+				<a data-fancybox="gallery" href="/img/autotagging/cta2.png"><img src="/img/autotagging/cta2.png" class="img-responsive img-rounded zoom shadow-box"></a>
+			  </figure>
+			<h4>&nbsp;</h4>
+			<p>In this case the tracking is related to a slide of Fiat homepage, on the left side you have the various component (sections), you have to add the various sections to track the CTA.</p>
+			<p>If the value is not present (e.g. N_star-wars-promotion), usually there are dedicated lists at market level on the CMS to insert these components (in this case AdobeCTATrackingList)</p>
+			<figure>
+				<a data-fancybox="gallery" href="/img/autotagging/cta3.png"><img src="/img/autotagging/cta3.png" class="img-responsive img-rounded zoom shadow-box"></a>
+			  </figure>
+			<h4>&nbsp;</h4>
+			<p>When the values have been inserted, check on the page if the tagging is correctly populated:</p>
+			<figure>
+				<a data-fancybox="gallery" href="/img/autotagging/cta4.png"><img src="/img/autotagging/cta4.png" class="img-responsive img-rounded zoom shadow-box"></a>
+			  </figure>
+			<h4>&nbsp;</h4>
+			<p>In some case an element (e.g a button) is implemented directly in HTML code, in this case you have to:</p>
+			<ul>
+			<li>Open the item that contains the element or the page code if the whole page is in HTML (e.g. for Jeep)</li>
+			<li>Once you find the code, insert the complete attribute (e.g. data-adobe=&rdquo;cta:dealers&rdquo;)</li>
+			</ul>
+			<p>Here is an example in Fiat portal, the dynamic CTA on the model image are directly implemented in HTML</p>
+			<figure>
+				<a data-fancybox="gallery" href="/img/autotagging/cta5.png"><img src="/img/autotagging/cta5.png" class="img-responsive img-rounded zoom shadow-box"></a>
+			  </figure>
+			<h4>&nbsp;</h4>
+			<p>In the correspondent item, there is an embedded html code for the buttons. The attribute for tagging have to be inserted manually in the code:</p>
+			<figure>
+				<a data-fancybox="gallery" href="/img/autotagging/cta6.png"><img src="/img/autotagging/cta6.png" class="img-responsive img-rounded zoom shadow-box"></a>
+			  </figure>
+			<h4>&nbsp;</h4>
+			<h4>Implementation on new AEM portals</h4>
+			<p>In the new AEM portals, it&rsquo;s not possible to directly insert the CTA tagging by data entry.</p>
+			<p>The tagging of CTAs is automatically created; the tag will be based on Analytics attributes of destination pages.</p>
+			<h4>&nbsp;</h4>
+			<h4>Common errors:</h4>
+			<p>The most common reported errors are the following:</p>
+			<ul>
+			<li>Missing tagging</li>
+			<li>Wrong tagging on CTA</li>
+			<li><u>Wrong tagging on homepage slider</u>; many times, a new slide is inserted copying another slide and the tagging is not coherent with the content of the slide e.g.</li>
+			</ul>
+			<figure>
+				<a data-fancybox="gallery" href="/img/autotagging/cta7.png"><img src="/img/autotagging/cta7.png" class="img-responsive img-rounded zoom shadow-box"></a>
+			  </figure>
+			<h4>&nbsp;</h4>
+			<p>The tagging is &ldquo;slider:contact:quote-request:124-spider:spider&rdquo; but the slide refers to qubo promotion page, so it is wrong and must be changed.</p>
+			<h4>Checks of correctness:</h4>
+			<ul>
+			<li>Right click on the element to check &gt; inspect element</li>
+			<li>Check the if data-adobe attribute is present</li>
+			<li>Check if the value of the attribute is coherent with the link (e.g. "cta:dealers" for the dealer locator)</li>
+			</ul>
+
+
+	<hr class="breakline"/>
+	<!--/Content-->
+
+     </div>
+    </div>
+        
+      </div>
+      <br>
+
+	<script>$(document).ready(function(){
+			// Add smooth scrolling to all links
+			$("a").on('click', function(event) {
+		  
+			  // Make sure this.hash has a value before overriding default behavior
+			  if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+		  
+				// Store hash
+				var hash = this.hash;
+		  
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+				  scrollTop: $(hash).offset().top
+				}, 800, function(){
+			 
+				  // Add hash (#) to URL when done scrolling (default click behavior)
+				  window.location.hash = hash;
+				});
+			  } // End if
+			});
+		  });</script>

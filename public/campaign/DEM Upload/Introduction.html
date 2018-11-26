@@ -1,0 +1,52 @@
+
+
+<div class="container-fluid">
+	<div class="col-md-12">
+
+		<!-- breadcrumb end-->
+
+		<h4 class="primary-color" id="chi_siamo_page">Introduction </h4>
+
+		<p><strong>Introduction</strong></p>
+		<p>DEMs(Digital Electronic Messaging) are the emailers used for marketing of a product/service or commercial
+			communication playing a vital role in digital marketing. These emailers give a brief idea about a particular
+			product/service (e.g. various offers on car models, Launch events/anniversaries etc) and specific details are
+			further viewed by opening various links present in the emailers which redirect a user to a landing page, company or
+			brand website, event pages etc.</p>
+		<p>Sample DEM :</p>
+		<div>
+			<!-- <img src="../img/image1.png class="img-responsive img-rounded zoom shadow-box">-->
+			<a data-fancybox="gallery" href="/img/campaign/fiatcelebre.png"><img src="/img/campaign/fiatcelebre.png" class="img-responsive img-rounded"></a>
+		</div>
+
+	</div>
+
+</div>
+
+<br>
+
+
+<script>$(document).ready(function () {
+		// Add smooth scrolling to all links
+		$("a").on('click', function (event) {
+
+			// Make sure this.hash has a value before overriding default behavior
+			if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+
+				// Store hash
+				var hash = this.hash;
+
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 800, function () {
+
+					// Add hash (#) to URL when done scrolling (default click behavior)
+					window.location.hash = hash;
+				});
+			} // End if
+		});
+	});</script>

@@ -1,0 +1,117 @@
+
+	   <div class="container-fluid"> 
+	   <div class="col-sm-9">
+      <!-- breadcrumb start-->
+      <ul class="breadcrumb">
+         <li><a href="index.html">Home</a></li>
+         <li><a href="#">Brands</a></li>
+		 <li><a href="#">Fiat pro</a></li>
+		 <li>Dealer Locator</li>
+      </ul>
+      <!-- breadcrumb end-->
+          <!-- breadcrumb end-->
+          
+            <h4 class="primary-color" id="dealer-locator-create">HOW TO CREATE THE DEALER LOCATOR PAGE</h4>
+			<p>In order to create the Dealer Locator Page, follow these steps:</p>
+			<ol>
+				<li> Select the language page (e.g. fiatprofessional/ fiatprofessional-it/it)</li>
+				<li> Click: <strong>Create > Create Page</strong></li>
+				<li> Choose <strong>“Fiat Pro Website Dealer Locator”</strong> as page layout</li>
+				<li> Click <strong> Next</strong></li>
+				<li> Insert page data (a title can be “Trova concessionarie”)</li><br>
+                <a data-fancybox="gallery" href="/img/fiatpro/title.png"><img src="/img/fiatpro/title.png" class="img-responsive"></a><br>
+                <li>Click <strong> “Create”;</strong></li>
+                <li>Click <strong>“Done”</strong> in the opened popup</li><br>
+                <a data-fancybox="gallery" href="/img/fiatpro/create.png"><img src="/img/fiatpro/create.png" class="img-responsive"></a><br>
+            </ol>
+
+            <hr class="breakline"/>
+            <h4 class="primary-color" id="dealer-locator-config">HOW TO CONFIGURE DEALER LOCATOR PAGE</h4>
+            <p>In order to configure the Dealer locator page follow these steps:</p>
+			<ol>
+				<li> Select the language page (e.g. fiatprofessional/ fiatprofessional-it/it)</li>
+				<li> Click: <strong>“Properties”</strong></li>
+				<li> In the <strong>“i18N” </strong> tab configure this field:</li>
+            </ol>
+            <p class="text-bold"><b>Dealer Locator</b></p>
+            <a data-fancybox="gallery" href="/img/fiatpro/dealer1.png"><img src="/img/fiatpro/dealer1.png" class="img-responsive"></a>
+           
+	       <ul>
+                <li><strong>bodyshop:</strong> the label of body shop section;</li>
+                <li> <strong>dealer:</strong> the label of dealer section;</li>
+                <li> <strong>garage:</strong> the label of garage section;</li>
+                <li> <strong>camper:</strong> the label of camper section;</li>
+                <li> <strong>specialist:</strong> the label of specialist section;</li>
+                <li> <strong>organized:</strong> the label of organized section;</li>
+                <li><strong> website:</strong> the label of website section;</li>
+                <li> <strong>measure:</strong>the label of measure section;</li>
+                <li> <strong>Find dealer placeholder:</strong> the label of find dealer placeholder section;</li>
+                <li> <strong>Filter by services:</strong> the label of filter by services section;</li>
+                <li> <strong>Services label:</strong> the label of Services label section;</li>
+            </ul>
+            <a data-fancybox="gallery" href="/img/fiatpro/dealer2.png"><img src="/img/fiatpro/dealer2.png" class="img-responsive"></a>
+            <a data-fancybox="gallery" href="/img/fiatpro/dealer3.png"><img src="/img/fiatpro/dealer3.png" class="img-responsive"></a>
+            <a data-fancybox="gallery" href="/img/fiatpro/dealer4.png"><img src="/img/fiatpro/dealer4.png" class="img-responsive"></a>
+          
+            <hr class="breakline"/>
+            <h4 class="primary-color" id="dealer-locator-view">HOW TO CONFIGURE DEALER LOCATOR VIEWER IN DEALER LOCATOR PAGE</h4>
+          
+            <p>In order to add the “Dealer Locator Viewer” component into the page follow these steps:</p>
+			<ol>
+				<li> Click toggle side panel on the page ribbon</li>
+				<li> Select “Components” tab</li>
+                <li> Choose <strong>“Dealer Locator Viewer” </strong> component</li>
+                <li>Drag and drop the component in the page.</li>
+                <li>Click on the “Configure” icon in order to set the information of the component.</li>
+                <li>In the dialog, configure these fields:</li>
+            </ol>
+            <p class="text-bold"><b>GENERAL</b></p>
+            <a data-fancybox="gallery" href="/img/fiatpro/dealer-gen-a.png"><img src="/img/fiatpro/dealer-gen-a.png" class="img-responsive"></a>
+           
+            <ul>
+                    <li><strong>Title:</strong> the title of the section;</li>
+                    <li><strong>Title tag:</strong>  the style of title text (H1,H2 or H3);</li>
+                    <li> <strong>Subtitle: </strong> the subtitle of the section;</li>
+                    <li> <strong>Included page path: </strong> the path of the dealer locator page (the path should be for example: /content/fiatprofessional/fiatprofessional-it/it/trova-concessionarie);
+                        </li>
+                </ul>
+                <a data-fancybox="gallery" href="/img/fiatpro/dealer-1-a.png"><img src="/img/fiatpro/dealer-1-a.png" class="img-responsive"></a>
+            <div class="content"></div>
+
+		 </div>  
+		 <nav class="col-sm-3" id="myScrollspy">
+				<ul class="nav nav-pills nav-stacked">
+                  <li class="active"><a href="#dealer-locator-create">How To Create The Dealer Locator Page</a></li>
+				  <li><a href="#dealer-locator-config">How To Configure Dealer Locator Page</a></li>
+				  <li><a href="#dealer-locator-view">How To Configure Dealer Locator Viewer In Dealer Locator Page</a></li>
+				  
+				</ul>
+			  </nav></div>
+
+      </div>
+      <br>
+
+	<script>$(document).ready(function(){
+			// Add smooth scrolling to all links
+			$("a").on('click', function(event) {
+		  
+			  // Make sure this.hash has a value before overriding default behavior
+			  if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+		  
+				// Store hash
+				var hash = this.hash;
+		  
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+				  scrollTop: $(hash).offset().top
+				}, 800, function(){
+			 
+				  // Add hash (#) to URL when done scrolling (default click behavior)
+				  window.location.hash = hash;
+				});
+			  } // End if
+			});
+		  });</script>
